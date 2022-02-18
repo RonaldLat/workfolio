@@ -15,6 +15,7 @@
 	<div class="grid md:grid-cols-3 gap-4 w-full bg-[#F2E8CF]">
 		{#each $category_links as category}
 			<a class="w-full relative " href={'/category'+category.link}>
+				<img src={'/ui/' + category.img} class="w-full h-full brightness-50 object-fit" alt={category.title} />
 				<div class="absolute text-gray-100  top-5 left-4">
 					<p class="uppercase text-xl mb-2">{category.title}</p>
 					<span class="border p-1 uppercase text-xs border-gray-100">explore now</span>
