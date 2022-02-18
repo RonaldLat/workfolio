@@ -1,0 +1,146 @@
+{
+  ".svelte-kit/runtime/client/start.js": {
+    "file": "start-5801e610.js",
+    "src": ".svelte-kit/runtime/client/start.js",
+    "isEntry": true,
+    "imports": [
+      "_vendor-eef82a10.js"
+    ],
+    "dynamicImports": [
+      "src/routes/__layout.svelte",
+      ".svelte-kit/runtime/components/error.svelte",
+      "src/routes/index.svelte",
+      "src/routes/category/[category].svelte",
+      "src/routes/details/__layout.reset.svelte",
+      "src/routes/details/index.svelte",
+      "src/routes/details/[id].svelte",
+      "src/routes/todo/index.svelte",
+      "src/routes/todo/TodoForm.svelte",
+      "src/routes/todo/Todo.svelte"
+    ]
+  },
+  "src/routes/__layout.svelte": {
+    "file": "pages/__layout.svelte-07fb1d93.js",
+    "src": "src/routes/__layout.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-eef82a10.js",
+      "_products-2cedfa1e.js"
+    ],
+    "css": [
+      "assets/pages/__layout.svelte-0fdbf445.css"
+    ]
+  },
+  ".svelte-kit/runtime/components/error.svelte": {
+    "file": "error.svelte-b7535415.js",
+    "src": ".svelte-kit/runtime/components/error.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-eef82a10.js"
+    ]
+  },
+  "src/routes/index.svelte": {
+    "file": "pages/index.svelte-0a200124.js",
+    "src": "src/routes/index.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-eef82a10.js",
+      "_products-2cedfa1e.js"
+    ]
+  },
+  "src/routes/category/[category].svelte": {
+    "file": "pages/category/_category_.svelte-46d19778.js",
+    "src": "src/routes/category/[category].svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-eef82a10.js",
+      "_stores-06e6963c.js",
+      "_products-2cedfa1e.js"
+    ]
+  },
+  "src/routes/details/__layout.reset.svelte": {
+    "file": "pages/details/__layout.reset.svelte-c81d46b9.js",
+    "src": "src/routes/details/__layout.reset.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-eef82a10.js"
+    ]
+  },
+  "src/routes/details/index.svelte": {
+    "file": "pages/details/index.svelte-06237c81.js",
+    "src": "src/routes/details/index.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-eef82a10.js"
+    ]
+  },
+  "src/routes/details/[id].svelte": {
+    "file": "pages/details/_id_.svelte-7c30a738.js",
+    "src": "src/routes/details/[id].svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-eef82a10.js",
+      "_stores-06e6963c.js"
+    ]
+  },
+  "src/routes/todo/index.svelte": {
+    "file": "pages/todo/index.svelte-debf2b40.js",
+    "src": "src/routes/todo/index.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-eef82a10.js",
+      "src/routes/todo/TodoForm.svelte",
+      "src/routes/todo/Todo.svelte",
+      "_todoStore-ef8d3079.js"
+    ]
+  },
+  "src/routes/todo/TodoForm.svelte": {
+    "file": "pages/todo/TodoForm.svelte-afa229f8.js",
+    "src": "src/routes/todo/TodoForm.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-eef82a10.js",
+      "_todoStore-ef8d3079.js"
+    ]
+  },
+  "src/routes/todo/Todo.svelte": {
+    "file": "pages/todo/Todo.svelte-9f22cad9.js",
+    "src": "src/routes/todo/Todo.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-eef82a10.js",
+      "_todoStore-ef8d3079.js"
+    ]
+  },
+  "_vendor-eef82a10.js": {
+    "file": "chunks/vendor-eef82a10.js"
+  },
+  "_products-2cedfa1e.js": {
+    "file": "chunks/products-2cedfa1e.js",
+    "imports": [
+      "_vendor-eef82a10.js"
+    ]
+  },
+  "_stores-06e6963c.js": {
+    "file": "chunks/stores-06e6963c.js",
+    "imports": [
+      "_vendor-eef82a10.js"
+    ]
+  },
+  "_todoStore-ef8d3079.js": {
+    "file": "chunks/todoStore-ef8d3079.js",
+    "imports": [
+      "_vendor-eef82a10.js"
+    ]
+  }
+}
