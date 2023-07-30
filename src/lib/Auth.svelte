@@ -1,5 +1,5 @@
 <script>
-	import { supabase } from '../supabase.js';
+	import { supabase } from '$lib/supabaseClient.js';
 	async function signUp() {
 		const { user, session, error } = await supabase.auth.signUp({
 			email: 'joylat@email.com',
@@ -26,8 +26,7 @@
 </div>
 <button on:click|preventDefault={fetchSupabase}>fetch</button>
 
-  
+
 {#if users }
-  
 <p>data: {users[0].user_name}</p>
 {/if}

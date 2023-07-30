@@ -1,10 +1,10 @@
 <script>
   import { fly } from "svelte/transition";
-  export let url = "";
+  export let data ;
   const pageTransitionDuration = 500;
 </script>
 
-{#key url}
+{#key data.currentPath}
   <div in:fly={{  x:-5, duration: pageTransitionDuration, delay: pageTransitionDuration }}
        out:fly={{ x: 5, duration: pageTransitionDuration }}>
     <slot />
