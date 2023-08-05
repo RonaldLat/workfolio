@@ -5,6 +5,6 @@ const options = {
   autoRefreshToken: true
 }
 
-export const supabase = createClient( 'https://zczqzdecymzwwawhjaeh.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpjenF6ZGVjeW16d3dhd2hqYWVoIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NDQ4NzUwNTksImV4cCI6MTk2MDQ1MTA1OX0.gf8I2zPQUDY4EriIPXypraVPxANLu_twaSy6XBNxoUI', options )
+export const supabase = createClient( 'https://meglulbkwhtuzjstgwau.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1lZ2x1bGJrd2h0dXpqc3Rnd2F1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODQ3NDg3MjUsImV4cCI6MjAwMDMyNDcyNX0.nPinHAPKykUMzFqwLzFLQ7KsmtMgoJXD0HcCQtggIJI', options )
 
 

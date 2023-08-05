@@ -1,5 +1,5 @@
 <script>
-	import { category_links } from '../store/products';
+	import { category_links } from '$lib/store/products';
 </script>
 
 <ul

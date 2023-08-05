@@ -1,5 +1,5 @@
 <script>
-	import { category_links } from '../store/products';
+	import { category_links } from '$lib/store/products';
 </script>
 
 <section class="grid place-items-center w-full space-y-6">

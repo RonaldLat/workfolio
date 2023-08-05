@@ -1,22 +1,11 @@
-<script context="module">
-  /** @type {import('@sveltejs/kit').Load} */
-//  export const load = async ({ url }) => ({ props: { url } });
-  /** @type {import('./$types').PageLoad} */
-  export async function load({ url }) {
-  return {
-    currentPath: url.pathname,
-  };
-};
-
-</script>
 
 <script>
-  import PageTransition from '$lib/PageTransition.svelte';
+      import { fly } from "svelte/transition";
 	import '../app.css';
 	import Categories from '$lib/category_links.svelte';
 	import Cart from '$lib/Cart.svelte';
 
-  export let url;
+  export let data;
 </script>
 
 <main
@@ -26,7 +15,12 @@
 		<Categories />
 		<Cart />
 	</header>
-  <PageTransition {url}>
-	<slot></slot >
-  </PageTransition>
+  {#key data.pathname}
+  <div
+    in:fly={{ x: -30, duration: 200, delay: 150 }}
+    out:fly={{ x: -30, duration: 150 }}
+  >
+    <slot />
+  </div>
+{/key}
 </main>

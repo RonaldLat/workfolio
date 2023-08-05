@@ -1,6 +1,8 @@
 <script>
 	export let item;
-	import { cart } from '../store/products';
+	import { cart } from '$lib/store/products';
+
+    const imgurl = item.name.toLowerCase().replace(/ /g, '_')
 
   let disabled =false
 	function addToCart(item) {
@@ -18,7 +20,7 @@
 <div class=" rounded p-2 space-y-2  grid justify-items-center bg-slate-50 text-center  place-items-end ">
 	<img
 		class="bg-slate-200 h-auto w-auto object-contain"
-		src="/all_images/{item.name.toLowerCase().replace(/ /g, '_')}.jpg"
+		src={'$lib/bedroom/'+imgurl+".jpg"}}
 		alt={item.name}
 	/>
 	<a href="/details/{item.name.toLowerCase().replace(/ /g, '-')}" class="text-center text-gray-600 "
