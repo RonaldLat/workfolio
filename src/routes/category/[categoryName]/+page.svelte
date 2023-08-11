@@ -5,7 +5,6 @@
 
 	const category = $page.params.categoryName;
 	export let data;
-	console.log(data);
 	let items = data.categoryData;
 </script>
 
