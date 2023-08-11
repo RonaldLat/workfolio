@@ -1,9 +1,4 @@
 <script>
-export function load({ route }) {
-    console.log(route.id); // '/a/[b]/[...c]'
-}
-</script>
-<script>
 	import TodoForm from './TodoForm.svelte';
 	import Todo from './Todo.svelte';
 	import { todos, ron } from '../../store/todoStore';
