@@ -10,7 +10,7 @@
 
 <section>
 	<h2
-		class="bg-slate-50 capitalize text-center py-6 mb-8 text-2xl tracking-wide font-bold text-gray-700"
+		class="bg-slate-50 rounded-md capitalize text-center py-6 mb-8 text-2xl tracking-wide font-bold text-gray-700"
 	>
 		{category} Category
 	</h2>
