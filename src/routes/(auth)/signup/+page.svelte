@@ -1,0 +1,76 @@
+<script>
+	import { supabase } from '$lib/supabaseClient.js';
+
+	let credentials = {
+		username: 'Joy',
+		email: 'joylat@email.com',
+		password: 'example-password'
+	};
+	async function signUp() {
+		const { data, error } = await supabase.auth.signUp({
+			email: credentials.email,
+			password: credentials.password,
+			options: {
+				data: {
+					username: credentials.username,
+				}
+			}
+		});
+		console.log('signup data: ', data);
+		if (error) {
+			console.log(error);
+		}
+	}
+
+	let users = '';
+	async function fetchSupabase() {
+		const { data, error } = await supabase.from('users').select();
+		users = data;
+		console.log(data);
+		console.log(error);
+	}
+</script>
+
+<form on:submit|preventDefault={signUp} class="relative space-y-3 rounded-md p-6 lg:p-10 m-10">
+	{#if users}
+		<p>data: {users[0].user_name}</p>
+	{/if}
+	<h1 class="text-xl font-semibold lg:text-2xl">Login</h1>
+	<p class="pb-4 text-gray-500">Sign up to create an account</p>
+
+	<div>
+		<label class=""> Username </label>
+		<input
+			bind:value={credentials.username}
+			type="text"
+			placeholder="Username"
+			class="mt-2 h-12 w-full rounded-md bg-gray-100 px-3 outline-none focus:ring"
+		/>
+	</div>
+	<div class="">
+		<label class=""> Email Address </label>
+		<input
+			bind:value={credentials.email}
+			type="email"
+			placeholder="Info@example.com"
+			class="mt-2 h-12 w-full rounded-md bg-gray-100 px-3 outline-none focus:ring"
+		/>
+	</div>
+	<div>
+		<label class=""> Password </label>
+		<input
+			bind:value={credentials.password}
+			type="password"
+			placeholder="******"
+			class="mt-2 h-12 w-full rounded-md bg-gray-100 px-3 outline-none focus:ring"
+		/>
+	</div>
+
+	<div>
+		<button
+			type="submit"
+			class="mt-5 w-full rounded-md bg-blue-600 p-2 text-center font-semibold text-white outline-none focus:ring"
+			>Sign Up</button
+		>
+	</div>
+</form>

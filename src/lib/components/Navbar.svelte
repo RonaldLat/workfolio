@@ -1,6 +1,7 @@
 <script>
 	import Dropdown from 'svelte-atoms/Dropdown.svelte';
 	import Button from 'svelte-atoms/Button.svelte';
+	import Auth from '$lib/Auth.svelte';
 </script>
 
 <div class=" w-fit rounded-md py-2">
@@ -14,6 +15,7 @@
 		</li>
 	</ul>
 </Dropdown>
+<Auth/>
 
 </div>
 

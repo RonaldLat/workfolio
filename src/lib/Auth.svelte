@@ -1,32 +1,20 @@
 <script>
 	import { supabase } from '$lib/supabaseClient.js';
-	async function signUp() {
-		const { user, session, error } = await supabase.auth.signUp({
-			email: 'joylat@email.com',
-			password: 'example-password'
-		});
-		console.log(user);
-	}
 
-	let users;
-	async function fetchSupabase() {
-		const { data, error } = await supabase.from('users').select();
-		users = data;
-		console.log(data);
-		console.log(error);
-	}
+	const logOut = async () => {
+		const { error } = await supabase.auth.signOut();
+		if (error) {
+			//console.log('sign out error: ', error);
+		}
+	};
+	supabase.auth.onAuthStateChange((event, session) => {
+		console.table('event: ',event, 'session: ',session.user.email);
+	});
+	let logout = true;
 </script>
 
-<div>
-	<form>
-		<input type="email" />
-		<input type="password" />
-		<button on:click|preventDefault={signUp} type="submit">sign up </button>
-	</form>
-</div>
-<button on:click|preventDefault={fetchSupabase}>fetch</button>
-
-
-{#if users }
-<p>data: {users[0].user_name}</p>
-{/if}
+<button on:click={logOut}>
+	{#if logout}
+		<span>logout</span>
+	{/if}
+</button>
