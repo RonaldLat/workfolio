@@ -2,6 +2,7 @@
 	import { goto } from '$app/navigation';
 	import { supabase } from '$lib/supabaseClient.js';
 	import { sineIn } from 'svelte/easing';
+	import { currentUser } from '$lib/store/authState.js';
 
 	let credentials = {
 		email: 'joylat@email.com',
@@ -10,6 +11,7 @@
 	async function signIn() {
 		const { data, error } = await supabase.auth.signInWithPassword(credentials);
         console.log('sign in data: ', data)
+        if($currentUser){goto('/')}
         if(error){console.log('sign in error: ', error)}
 	}
     const navigateTo=()=>{

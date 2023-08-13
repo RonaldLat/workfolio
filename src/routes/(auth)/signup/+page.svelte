@@ -1,5 +1,7 @@
 <script>
 	import { supabase } from '$lib/supabaseClient.js';
+	import { currentUser } from '$lib/store/authState.js';
+	import { goto } from '$app/navigation';
 
 	let credentials = {
 		username: 'Joy',
@@ -16,6 +18,7 @@
 				}
 			}
 		});
+        if($currentUser){goto('/')}
 		console.log('signup data: ', data);
 		if (error) {
 			console.log(error);

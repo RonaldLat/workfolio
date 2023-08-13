@@ -1,7 +1,7 @@
 <script>
 	import { goto } from '$app/navigation';
 	import { supabase } from '$lib/supabaseClient.js';
-    import {currentUser} from '$lib/store/authState.js'
+	import { currentUser } from '$lib/store/authState.js';
 
 	const logOut = async () => {
 		const { error } = await supabase.auth.signOut();
@@ -14,7 +14,12 @@
 	};
 	supabase.auth.onAuthStateChange((event, session) => {
 		console.log('event: ', event, 'session: ', session);
-        $currentUser= session.user.user_metadata.username
+		try {
+			$currentUser = session.user.user_metadata.username;
+		} catch {
+			console.log('No session available');
+			$currentUser = '';
+		}
 		///getCurrentUser();
 	});
 	const getCurrentUser = async () => {
@@ -22,11 +27,11 @@
 			data: { user }
 		} = await supabase.auth.getUser();
 		if (user) {
-            $currentUser =user.email
+			$currentUser = user.email;
 		}
 	};
 
-    console.log('store value user:',$currentUser)
+	console.log('store value user:', $currentUser);
 </script>
 
 {#if $currentUser}
