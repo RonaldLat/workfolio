@@ -35,8 +35,8 @@
 </script>
 
 {#if $currentUser}
-	<button on:click={logOut}>
-		<span>logout</span>
+	<button on:click={logOut} class="text-sky-300  border-2 border-sky-400 p-1 rounded-sm">
+		<span>Logout</span>
 	</button>
 {:else}
 	<button on:click={navigateTo}>Login</button>
