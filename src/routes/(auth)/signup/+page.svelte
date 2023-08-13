@@ -12,7 +12,7 @@
 			password: credentials.password,
 			options: {
 				data: {
-					username: credentials.username,
+					username: credentials.username
 				}
 			}
 		});
@@ -29,6 +29,9 @@
 		console.log(data);
 		console.log(error);
 	}
+	const navigateTo = () => {
+		goto('/login');
+	};
 </script>
 
 <form on:submit|preventDefault={signUp} class="relative space-y-3 rounded-md p-6 lg:p-10 m-10">
@@ -71,6 +74,15 @@
 			type="submit"
 			class="mt-5 w-full rounded-md bg-blue-600 p-2 text-center font-semibold text-white outline-none focus:ring"
 			>Sign Up</button
+		>
+	</div>
+
+	<div>
+		<button
+			on:click|preventDefault={navigateTo}
+			type="submit"
+			class="mt-5 w-full rounded-md border-2 border-sky-500 p-2 text-center font-semibold text-sky-600 outline-none focus:ring"
+			>Login</button
 		>
 	</div>
 </form>
