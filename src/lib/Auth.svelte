@@ -1,5 +1,7 @@
 <script>
+	import { goto } from '$app/navigation';
 	import { supabase } from '$lib/supabaseClient.js';
+    import {currentUser} from '$lib/store/authState.js'
 
 	const logOut = async () => {
 		const { error } = await supabase.auth.signOut();
@@ -7,14 +9,30 @@
 			//console.log('sign out error: ', error);
 		}
 	};
+	const navigateTo = () => {
+		goto('/signup');
+	};
 	supabase.auth.onAuthStateChange((event, session) => {
-		console.table('event: ',event, 'session: ',session.user.email);
+		console.log('event: ', event, 'session: ', session);
+        $currentUser= session.user.user_metadata.username
+		///getCurrentUser();
 	});
-	let logout = true;
+	const getCurrentUser = async () => {
+		const {
+			data: { user }
+		} = await supabase.auth.getUser();
+		if (user) {
+            $currentUser =user.email
+		}
+	};
+
+    console.log('store value user:',$currentUser)
 </script>
 
-<button on:click={logOut}>
-	{#if logout}
+{#if $currentUser}
+	<button on:click={logOut}>
 		<span>logout</span>
-	{/if}
-</button>
+	</button>
+{:else}
+	<button on:click={navigateTo}>Login</button>
+{/if}

@@ -2,6 +2,7 @@
 	import Dropdown from 'svelte-atoms/Dropdown.svelte';
 	import Button from 'svelte-atoms/Button.svelte';
 	import Auth from '$lib/Auth.svelte';
+    import {currentUser} from '$lib/store/authState.js'
 </script>
 
 <div class=" w-fit rounded-md py-2">
@@ -15,6 +16,10 @@
 		</li>
 	</ul>
 </Dropdown>
+   {#if $currentUser}
+   <p>Welcome {$currentUser}</p>
+
+   {/if}
 <Auth/>
 
 </div>

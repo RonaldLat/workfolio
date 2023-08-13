@@ -1,4 +1,5 @@
 <script>
+	import { goto } from '$app/navigation';
 	import { supabase } from '$lib/supabaseClient.js';
 	import { sineIn } from 'svelte/easing';
 
@@ -11,6 +12,9 @@
         console.log('sign in data: ', data)
         if(error){console.log('sign in error: ', error)}
 	}
+    const navigateTo=()=>{
+            goto('/signup')
+        }
 
 </script>
 
@@ -42,6 +46,15 @@
 			type="submit"
 			class="mt-5 w-full rounded-md bg-sky-600 p-2 text-center font-semibold text-white outline-none focus:ring"
 			>Login</button
+		>
+	</div>
+
+    <div>
+		<button
+            on:click|preventDefault={navigateTo}
+			type="submit"
+			class="mt-5 w-full rounded-md border-2  border-sky-500 p-2 text-center font-semibold text-sky-600 outline-none focus:ring"
+			>Register</button
 		>
 	</div>
 </form>
