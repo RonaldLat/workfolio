@@ -5,12 +5,13 @@
 	import Cart from '$lib/Cart.svelte';
 	import Sidebar from '$lib/components/Sidebar.svelte';
 	import Navbar from '$lib/components/Navbar.svelte';
+	import Footer from '$lib/components/Footer.svelte';
 
 	export let data;
 </script>
 
 <main
-	class="bg-gradient-to-r px-4 md:px-6 container mx-auto py-6 max-w-6xl min-h-screen relative from-gray-100 to-gray-300"
+	class="bg-gradient-to-r  md:px-6 container mx-auto py-4 max-w-5xl font-poppipns px-2 md:px-4 min-h-screen relative from-gray-100 to-gray-300"
 >
 	<header class="w-full z-50 fixed top-0 left-0 gap-x-2">
 		<div class="bg-gray-600">
@@ -24,3 +25,4 @@
 		</div>
 	{/key}
 </main>
+<Footer class="bg-stone-900 text-sky-200"/>

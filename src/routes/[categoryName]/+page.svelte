@@ -14,10 +14,10 @@
 	>
 		{category} Category
 	</h2>
-	<div>
-		<ul class="grid grid-cols-2 md:grid-cols-2 gap-4 md:gap-9">
+	<div class="mx-auto">
+		<ul class=" mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-2 md:gap-4 ">
 			{#each items as item}
-				<li>
+				<li class=" w-full">
 					<ProductCard {item} />
 				</li>
 			{/each}

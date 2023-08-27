@@ -18,7 +18,15 @@ export default {
           800: '#CC4522',
           900: '#A5371B'
         }
-      }
+      },
+      fontFamily: {
+        'poppins': ['Poppins', 'sans-serif'],
+        'blackops':['Black Ops One'],
+        'roboto':['Roboto','san-serif'],
+        'maven':['Maven Pro','san-serif'],
+        'caudex':['Caudex','serif'],
+        'ubuntu':['Ubuntu','serif']
+      },
     },
   },
    plugins: [require('flowbite/plugin')],

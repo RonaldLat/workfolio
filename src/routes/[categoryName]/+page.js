@@ -6,7 +6,7 @@ export async function load({params}) {
   let { data:categoryData , error } = await supabase
     .from(params.categoryName)
     .select('*')
-    .range(0,3)
+    .range(0,9)
 
   return {
     categoryData, error, cat

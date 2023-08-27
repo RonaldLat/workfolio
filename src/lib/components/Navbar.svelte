@@ -7,7 +7,7 @@
 	import Cart from '$lib/Cart.svelte';
 </script>
 
-<div class="grid grid-cols-2 justify-items-start w-full items-center px-2 bg-stone-700">
+<div class="grid grid-cols-2 justify-items-start w-full items-center px-2 bg-stone-700 max-w-5xl mx-auto">
 	<a href="/" class="h-full flex flex-row items-center text-sky-100">
 		<svg class="inline-block h-16 py-2 fill-sky-100 text-sky-100" width="" viewBox="0 0 200 200"
 			><path
@@ -15,8 +15,8 @@
 				fill-rule="nonzero"
 			/></svg
 		>
-		<span>
-			<p class="whitespace-nowrap text-xs">Rustiq Home</p>
+		<span class="font-blackops">
+			<p class="whitespace-nowrap text-xs ">Rustiq Home</p>
 			<p class="text-xs">Furniture</p>
 		</span>
 	</a>

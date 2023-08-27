@@ -3,6 +3,7 @@
 </script>
 
 <section class="grid place-items-center w-full space-y-6">
+	<h1 class="text-4xl font-caudex text-center w-full py-4">WELCOME TO RUSTIC HOME</h1>
 	<div
 		class="text-[#4E5471] bg-no-repeat rounded bg-cover w-full p-4 bg-center max-w-md flex flex-col gap-4 bg-[url('$lib/ui/sofa_grey.png')]"
 	>
@@ -12,15 +13,15 @@
 		</p>
 	</div>
 
-	<div class="grid md:grid-cols-3 gap-4 w-full bg-[#F2E8CF]">
+	<div class="grid md:grid-cols-3 gap-4 w-full ">
 		{#each $category_links as category}
 			<a class="w-full relative " href={category.link}>
-				<img src={'ui/' + category.img} class="w-full h-full brightness-50 object-fit" alt={category.title} />
-				<div class="absolute text-gray-100  top-5 left-4">
+				<img src={'ui/' + category.img} class="w-full rounded-md h-full brightness-50 object-fit" alt={category.title} />
+				<div class="absolute  text-gray-100  top-5 left-4">
 					<p class="uppercase text-xl mb-2">{category.title}</p>
-					<span class="border p-1 uppercase text-xs border-gray-100">explore now</span>
+					<span class="border font-ubuntu p-1 rounded-sm uppercase text-xs border-gray-100">explore now</span>
 				</div>
 			</a>
 		{/each}
 	</div>
-</section>
+</section>/

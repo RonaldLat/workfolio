@@ -3,7 +3,6 @@
 	export let item;
 	import { cart } from '$lib/store/products';
 
-	const imgurl = item.name.toLowerCase().replace(/ /g, '_');
 
 	let disabled = false;
 	function addToCart(item) {
@@ -19,28 +18,6 @@
 	const pathname = $page.data.pathname;
 </script>
 
-<div
-	class=" rounded p-2 space-y-2 hidden grid justify-items-center bg-slate-50 text-center place-items-end"
->
-	<img
-		class="bg-slate-200 h-auto w-auto object-contain"
-		src="{'$lib/bedroom/' + imgurl + '.jpg'}}"
-		alt={item.name}
-	/>
-	<a href="{pathname}/details/{item.id}" class="text-center text-gray-600">{item.name}</a>
-	<p class="text-sm space-x-2 font-semi-bold">
-		<span class="">{item.special_price}</span>
-		<span class="line-through">{item.old_price}</span>
-	</p>
-	<button
-		on:click={() => {
-			addToCart(item);
-		}}
-		{disabled}
-		class="text-lg block disabled:opacity-75 font-semibold py-1 px-3 text-gray-100 hover:text-white bg-gray-700 w-fit rounded-lg hover:shadow-md transition duration-300"
-		>+</button
-	>
-</div>
 
 <div
 	class="relative m-x-10 flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-2xl"
@@ -57,11 +34,11 @@
 	</a>
 	<div class="mt-4 px-5 pb-5">
 		<a href="{pathname}/details/{item.id}">
-			<h5 class="text-xl tracking-tight text-slate-900">{item.name}</h5>
+			<h5 class="text-lg tracking-tight text-slate-900">{item.name}</h5>
 		</a>
 		<div class="mt-2 mb-5 flex items-center justify-between">
 			<p>
-				<span class="text-xl font-bold whitespace-nowrap text-slate-900"
+				<span class="text-lg font-bold whitespace-nowrap text-slate-900"
 					>KES. {new Intl.NumberFormat().format(item.special_price)}</span
 				>
 				<span class="text-sm text-slate-900 line-through hidden">{item.old_price}</span>
@@ -72,7 +49,7 @@
 				addToCart(item);
 			}}
 			{disabled}
-			class="flex items-center justify-center rounded-md bg-slate-900 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-blue-300"
+			class="flex items-center justify-center rounded-md bg-slate-900 px-5 py-2 text-center text-sm font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-blue-300"
 		>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"

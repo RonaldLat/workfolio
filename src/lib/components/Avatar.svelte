@@ -19,16 +19,16 @@
 	class="cursor-pointer bg-transparent"
 	dot={{ color: 'green' }}
 />
-<p class="text-gray-200 text-xs">{$currentUser.user_metadata.username}</p>
+<p class="text-sky-200 text-xs">{$currentUser.user_metadata.username}</p>
 </div>
 <Dropdown triggeredBy="#user-drop">
 	<DropdownHeader>
-		<span class="block text-sm">{$currentUser.user_metadata.username}</span>
-		<span class="block truncate text-sm font-medium">{$currentUser.email}</span>
+		<span class="block font-bold text-sm">{$currentUser.user_metadata.username}</span>
+		<span class="block truncate italic text-sm font-medium">{$currentUser.email}</span>
 	</DropdownHeader>
 	<DropdownItem on:click={()=>goto('/cart')}>Cart</DropdownItem>
 	<DropdownItem>Settings</DropdownItem>
 	<DropdownDivider class="text-stone-900"/>
 	<DropdownDivider />
-	<DropdownItem on:click={logOut}>Sign out</DropdownItem>
+	<DropdownItem class="text-red-500" on:click={logOut}>Sign out</DropdownItem>
 </Dropdown>

@@ -43,5 +43,5 @@
 
 	</button>
 {:else}
-	<button class="bg-sky-200 text-slate-800 px-3 py-2 rounded-sm" on:click={()=>goto('/login')}>Login</button>
+	<button class="bg-sky-400 text-slate-800 px-3 py-2 rounded-sm" on:click={()=>goto('/login')}>Login</button>
 {/if}
