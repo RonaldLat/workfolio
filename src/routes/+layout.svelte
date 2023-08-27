@@ -3,7 +3,6 @@
 	import '../app.css';
 	import Categories from '$lib/category_links.svelte';
 	import Cart from '$lib/Cart.svelte';
-	import Nav from '$lib/components/Nav.svelte';
 	import Sidebar from '$lib/components/Sidebar.svelte';
 	import Navbar from '$lib/components/Navbar.svelte';
 

@@ -1,41 +1,29 @@
 <script>
 	import Icon from '@iconify/svelte';
-	import Dropdown from 'svelte-atoms/Dropdown.svelte';
-	import Button from 'svelte-atoms/Button.svelte';
 	import Auth from '$lib/Auth.svelte';
 	import { currentUser } from '$lib/store/authState.js';
 	import { goto } from '$app/navigation';
-
-	const navigateTo = () => {
-		goto(`/account/${$currentUser}`);
-	};
+	import CategDropdown from './CategDropdown.svelte';
+	import Cart from '$lib/Cart.svelte';
 </script>
 
-<div class="flex flex-row flex-wrap justify-between px-2 items-center">
-	<a href="/">
-		<Icon icon="mdi:home" class="text-white text-3xl" />
+<div class="grid grid-cols-2 justify-items-start w-full items-center px-2 bg-stone-700">
+	<a href="/" class="h-full flex flex-row items-center text-sky-100">
+		<svg class="inline-block h-16 py-2 fill-sky-100 text-sky-100" width="" viewBox="0 0 200 200"
+			><path
+				d="M63.6,26.2v-26.2h-17v26.2zM150,0v97.4c-5.2,2 -11.6,2.8 -16.8,2.6v-100zM44.6,102.4h-8.8v-59.4h92.2c1.2,0 2,0.2 3,0.2v-14.8h-111.2v149.8h16v-61h8.8zM177.2,138.2v38.6h-17.8v-28.2c0,-14.6 -1.6,-22.8 -8.2,-27.2c-3.4,-2.4 -8.6,-3.8 -17,-4.2h-68.6v-14.8l68.8,-0.4c21.4,-0.2 28.6,-6.2 28.6,-29.4c0,-13 -4,-21.2 -10.6,-25.4v-16.8c15.8,5 27.8,18 27.8,42c0,16 -4.8,29.8 -17,38.4l-1.2,0.8c-0.2,0 -0.2,0 -0.4,0.2c11.2,3.6 15.6,11.4 15.6,26.4zM63.6,45h-17v155h17zM134.2,119c7.6,0.4 12.6,1.8 15.8,4.6v76.4h-16.8v-81z"
+				fill-rule="nonzero"
+			/></svg
+		>
+		<span>
+			<p class="whitespace-nowrap text-xs">Rustiq Home</p>
+			<p class="text-xs">Furniture</p>
+		</span>
 	</a>
 
-	<div class=" w-fit rounded-md py-2">
-		<Dropdown class="w-fit bg-sky-500 rounded-md">
-			<Button class="bg-green-600">Categories</Button>
-			<ul slot="dropdown" class="flex flex-col p-4 bg-sky-400">
-				<li>
-					<a href="/living" class="href">Living</a>
-					<a href="/bedroom" class="href">Bedroom</a>
-					<a href="/dining" class="href">Dining</a>
-				</li>
-			</ul>
-		</Dropdown>
-	</div>
-	{#if $currentUser}
-		<p on:click|preventDefault={navigateTo}>Welcome {$currentUser}</p>
-	{/if}
-	<Auth />
+    <div class="flex gap-3 justify-self-end h-5/6 items-center">
+		<CategDropdown />
+	<Cart />
+	<Auth  />
+    </div>
 </div>
-
-<style>
-	.content {
-		padding: 8px;
-	}
-</style>

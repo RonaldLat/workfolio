@@ -2,7 +2,7 @@
 	import { goto } from '$app/navigation';
 	import { supabase } from '$lib/supabaseClient.js';
 	import { currentUser } from '$lib/store/authState.js';
-      import { Avatar, Dropdown, DropdownItem, Button} from 'flowbite-svelte';
+	import Avatar from './components/Avatar.svelte';
 
 
 	const logOut = async () => {
@@ -14,13 +14,13 @@
 	const navigateTo = () => {
 		goto('/login');
 	};
-	supabase.auth.onAuthStateChange((event, session) => {
+	$: supabase.auth.onAuthStateChange((event, session) => {
 		console.log('event: ', event, 'session: ', session);
 		try {
-			$currentUser = session.user.user_metadata.username;
+			$currentUser = session.user;
 		} catch {
 			console.log('No session available');
-			$currentUser = '';
+			$currentUser = null;
 		}
 		///getCurrentUser();
 	});
@@ -29,7 +29,7 @@
 			data: { user }
 		} = await supabase.auth.getUser();
 		if (user) {
-			$currentUser = user.email;
+			$currentUser = user;
 		}
 	};
 
@@ -37,10 +37,11 @@
 </script>
 
 {#if $currentUser}
-	<button  class="">
-		  <Avatar class="bg-transparent" src="static/avatar.png" />
+	<button  class="bg-transparent">
+    <Avatar />
+
 
 	</button>
 {:else}
-	<button on:click={navigateTo}>Login</button>
+	<button class="bg-sky-200 text-slate-800 px-3 py-2 rounded-sm" on:click={()=>goto('/login')}>Login</button>
 {/if}

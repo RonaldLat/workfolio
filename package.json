@@ -15,7 +15,6 @@
 		"@sveltejs/adapter-netlify": "^1.0.0-next.88",
 		"@sveltejs/kit": "^1.20.4",
 		"autoprefixer": "^10.4.14",
-		"daisyui": "^3.5.1",
 		"postcss": "^8.4.27",
 		"svelte": "^4.0.5",
 		"svelte-atoms": "^0.0.27",
@@ -28,6 +27,9 @@
 	"type": "module",
 	"dependencies": {
 		"@supabase/supabase-js": "^2.31.0",
-		"@sveltejs/adapter-vercel": "^3.0.3"
+		"@sveltejs/adapter-vercel": "^3.0.3",
+		"flowbite": "^1.8.1",
+		"flowbite-svelte": "^0.44.4",
+		"flowbite-svelte-icons": "^0.3.6"
 	}
 }
