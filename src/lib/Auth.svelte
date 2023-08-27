@@ -2,6 +2,8 @@
 	import { goto } from '$app/navigation';
 	import { supabase } from '$lib/supabaseClient.js';
 	import { currentUser } from '$lib/store/authState.js';
+      import { Avatar, Dropdown, DropdownItem, Button} from 'flowbite-svelte';
+
 
 	const logOut = async () => {
 		const { error } = await supabase.auth.signOut();
@@ -10,7 +12,7 @@
 		}
 	};
 	const navigateTo = () => {
-		goto('/signup');
+		goto('/login');
 	};
 	supabase.auth.onAuthStateChange((event, session) => {
 		console.log('event: ', event, 'session: ', session);
@@ -35,8 +37,9 @@
 </script>
 
 {#if $currentUser}
-	<button on:click={logOut} class="text-sky-300  border-2 border-sky-400 p-1 rounded-sm">
-		<span>Logout</span>
+	<button  class="">
+		  <Avatar class="bg-transparent" src="static/avatar.png" />
+
 	</button>
 {:else}
 	<button on:click={navigateTo}>Login</button>
