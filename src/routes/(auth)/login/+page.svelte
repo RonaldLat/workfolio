@@ -5,14 +5,21 @@
 	import { currentUser } from '$lib/store/authState.js';
 
 	let credentials = {
-		email: 'joylat@email.com',
-		password: 'example-password'
+		email: '',
+		password: ''
 	};
+    let loginError =false
 	async function signIn() {
 		const { data, error } = await supabase.auth.signInWithPassword(credentials);
         console.log('sign in data: ', data)
+        credentials.email =''
+        credentials.password =''
         if($currentUser){goto('/')}
-        if(error){console.log('sign in error: ', error)}
+        if(error){
+            console.log('sign in error: ', error)
+            loginError =true
+            }
+
 	}
     const navigateTo=()=>{
             goto('/signup')
@@ -23,6 +30,9 @@
 <form on:submit|preventDefault={signIn} class="relative space-y-3 rounded-md p-6 lg:p-10 m-10">
 	<h1 class="text-xl font-semibold lg:text-2xl">Login</h1>
 	<p class="pb-4 text-gray-500">Login to access your account</p>
+    {#if loginError}
+	<p class=" text-rose-500">Invalid credentials</p>
+    {/if}
 
 	<div class="">
 		<label class=""> Email Address </label>

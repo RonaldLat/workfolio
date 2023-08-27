@@ -15,9 +15,8 @@
 <div class="flex flex-col">
 <Avatar
 	id="user-drop"
-	src="avatar.png"
+	src="/avatar.png"
 	class="cursor-pointer bg-transparent"
-	dot={{ color: 'green' }}
 />
 <p class="text-sky-200 text-xs">{$currentUser.user_metadata.username}</p>
 </div>

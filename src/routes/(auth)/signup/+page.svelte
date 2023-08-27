@@ -3,10 +3,10 @@
 	import { currentUser } from '$lib/store/authState.js';
 	import { goto } from '$app/navigation';
 
-	let credentials = {
-		username: 'Joy',
-		email: 'joylat@email.com',
-		password: 'example-password'
+	$: credentials = {
+		username: '',
+		email: '',
+		password: ''
 	};
 	async function signUp() {
 		const { data, error } = await supabase.auth.signUp({
@@ -18,6 +18,9 @@
 				}
 			}
 		});
+        credentials.password=''
+        credentials.email=''
+        credentials.username=''
         if($currentUser){goto('/')}
 		console.log('signup data: ', data);
 		if (error) {
@@ -38,9 +41,6 @@
 </script>
 
 <form on:submit|preventDefault={signUp} class="relative space-y-3 rounded-md p-6 lg:p-10 m-10">
-	{#if users}
-		<p>data: {users[0].user_name}</p>
-	{/if}
 	<h1 class="text-xl font-semibold lg:text-2xl">Login</h1>
 	<p class="pb-4 text-gray-500">Sign up to create an account</p>
 

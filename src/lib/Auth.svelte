@@ -33,7 +33,6 @@
 		}
 	};
 
-	console.log('store value user:', $currentUser);
 </script>
 
 {#if $currentUser}

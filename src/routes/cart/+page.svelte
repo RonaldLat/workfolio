@@ -9,7 +9,7 @@
 	$: subtotal = sumItems($cart, 'special_price');
 </script>
 
-<section class="h-screen bg-transparent py-12 sm:py-16 lg:py-20">
+<section class="min-h-screen bg-transparent py-12 sm:py-16 lg:py-20">
 	<h1 class="text-2xl font-semibold text-gray-900">Your Cart</h1>
 	{#if $cart.length}
 		<div class="mx-auto px-4 sm:px-6 lg:px-8">
