@@ -13,7 +13,7 @@
 <main
 	class="bg-gray-100  md:px-6 container mx-auto py-4 max-w-5xl font-poppipns px-2 md:px-4 min-h-screen relative "
 >
-	<header class="w-full z-50 fixed top-0 left-0 gap-x-2 bg-gray-700">
+	<header class="w-full z-50 fixed top-0 left-0 gap-x-2 bg-stone-700">
 		<div class="">
 			<Navbar />
 		</div>
