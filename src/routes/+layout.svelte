@@ -11,7 +11,7 @@
 </script>
 
 <main
-	class="bg-gradient-stone-700  md:px-6 container mx-auto py-4 max-w-5xl font-poppipns px-2 md:px-4 min-h-screen relative from-gray-100 to-gray-300"
+	class="bg-stone-700  md:px-6 container mx-auto py-4 max-w-5xl font-poppipns px-2 md:px-4 min-h-screen relative "
 >
 	<header class="w-full z-50 fixed top-0 left-0 gap-x-2">
 		<div class="">
