@@ -14,7 +14,7 @@
 	class="bg-gradient-to-r  md:px-6 container mx-auto py-4 max-w-5xl font-poppipns px-2 md:px-4 min-h-screen relative from-gray-100 to-gray-300"
 >
 	<header class="w-full z-50 fixed top-0 left-0 gap-x-2">
-		<div class="bg-gray-600">
+		<div class="">
 			<Navbar />
 		</div>
 		<div class="fixed translate-x-100 bg-blue-400" />
