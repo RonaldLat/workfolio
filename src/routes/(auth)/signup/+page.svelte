@@ -41,7 +41,7 @@
 </script>
 
 <form on:submit|preventDefault={signUp} class="relative space-y-3 rounded-md p-6 lg:p-10 m-10">
-	<h1 class="text-xl font-semibold lg:text-2xl">Login</h1>
+	<h1 class="text-xl font-semibold lg:text-2xl">Sign Up</h1>
 	<p class="pb-4 text-gray-500">Sign up to create an account</p>
 
 	<div>
