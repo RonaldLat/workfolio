@@ -27,7 +27,7 @@
 		<div class="lg:w-4/5 mx-auto flex flex-wrap">
 			<img
 				alt="ecommerce"
-				class="lg:w-1/2 w-full object-cover object-center rounded border border-gray-200"
+				class="lg:w-1/2 w-full md:object-contain object-center rounded border border-gray-200"
 				src={product.main_image}
 			/>
 			<div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">

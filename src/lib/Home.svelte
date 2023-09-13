@@ -27,7 +27,7 @@ SHOP BY ROOM
 			<a class="w-full relative" href={category.link} data-sveltekit-preload-data="hover">
 				<img
 					src={'ui/' + category.img}
-					class="w-full rounded-md h-full brightness-50 object-fit"
+					class="w-full rounded-md h-full brightness-50 object-fit hover:brightness-75 ease-in duration-300"
 					alt={category.title}
 				/>
 				<div class="absolute text-gray-100 top-5 left-4">
