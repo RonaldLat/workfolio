@@ -1,3 +1,3 @@
 <div class="w-full">
-<img src="noisy.png" alt="">
+	<img src="noisy.png" alt="" />
 </div>

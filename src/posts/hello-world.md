@@ -3,6 +3,7 @@ title: Hello World
 author: Jeff
 date: 2022-05-27
 layout: blog
+published: true
 excerpt: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eget massa sit amet arcu varius lacinia nec quis lacus.
 ---
 
@@ -12,7 +13,12 @@ Aliquam ullamcorper est vehicula, suscipit nulla pellentesque, convallis odio. P
 
 Fusce est nulla, efficitur vitae turpis eget, pretium rutrum turpis. Fusce at lectus eros. Phasellus convallis condimentum dolor ac rutrum. Integer commodo augue et dui efficitur tincidunt. Nam scelerisque egestas quam, vitae ultrices turpis tincidunt rhoncus. Duis rutrum placerat erat. Ut ac tincidunt elit. In laoreet dictum mauris nec posuere. Curabitur tempus, dolor malesuada ultrices feugiat, ipsum eros faucibus tellus, eu ultricies nunc est sed dolor. Suspendisse nisi eros, vehicula vitae iaculis sit amet, aliquet sit amet leo. Sed euismod urna at eros posuere laoreet. Curabitur in sodales lorem. Nulla rutrum aliquam felis ac tempor.
 
+```
+function example(){
+        console.log('Hello world')
+    }
+```
+
 Ut pretium vitae elit ac facilisis. Aliquam nisi tortor, feugiat at lacus sed, condimentum egestas urna. Vestibulum hendrerit augue non urna volutpat, et fermentum tortor pellentesque. Aenean eget pharetra leo. Vestibulum ut laoreet dui. Phasellus nec nunc imperdiet, mollis urna eget, interdum lacus. Nulla ac neque pulvinar ex vestibulum venenatis at sed mi. Aliquam faucibus risus eget dolor porttitor interdum. Phasellus rutrum augue ex, vel tempus velit sollicitudin vitae. Pellentesque libero sapien, ullamcorper nec elementum nec, pharetra sed nisl. Nullam egestas arcu et ex vulputate, pretium vestibulum odio convallis. Nam auctor risus nec fermentum ultricies.
 
 Donec porttitor quis ipsum ut imperdiet. Fusce ac pretium felis, sit amet pharetra orci. Donec vitae quam ac tellus pellentesque fringilla. Curabitur placerat quam a leo imperdiet tincidunt. Nunc porta pulvinar orci sit amet varius. Suspendisse dapibus ipsum nec magna ultricies gravida. Maecenas varius justo ac sem rhoncus lobortis. Integer eget cursus diam. Vestibulum sollicitudin enim at metus scelerisque blandit. In sit amet pulvinar nunc. Sed sit amet rutrum ex, efficitur imperdiet nunc.
-

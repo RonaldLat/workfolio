@@ -4,8 +4,8 @@
 </script>
 
 <div class="h-full bg-sky-500 w-full {className}">
-	<aside class=" w-full h-full border-r-2" >
-        <a href="/" class="text-2xl">Ronald Otieno</a>
+	<aside class=" w-full h-full border-r-2">
+		<a href="/" class="text-2xl">Ronald Otieno</a>
 		<nav class="p-12 text-xl">
 			<a class="block" href="/">Home</a>
 			<a class="block" href="#contact">Contact</a>

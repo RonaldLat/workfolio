@@ -1,9 +1,8 @@
 <script>
-	import Home from "$lib/components/Home.svelte";
-
+	import Home from '$lib/components/Home.svelte';
 </script>
-<div class="min-h-screen">
-<h1 class="text-2xl">Ronald Otieno</h1>
-<Home/>
 
+<div class="min-h-screen">
+	<h1 class="text-2xl">Ronald Otieno</h1>
+	<Home />
 </div>
