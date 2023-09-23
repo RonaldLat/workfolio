@@ -11,7 +11,9 @@
 	<meta property="og:title" content="article" />
 </svelte:head>
 
-<div class="w-full bg-lime-50 min-h-screen py-8 flex flex-col items-center justify-center relative overflow-hidden lg:py-12">
+<div
+	class="w-full bg-lime-50 min-h-screen py-8 flex flex-col items-center justify-center relative overflow-hidden lg:py-12"
+>
 	<article class="prose w-full">
 		<hgroup>
 			<h1>{data.meta.title}</h1>

@@ -10,6 +10,7 @@
 			<a class="block" href="/">Home</a>
 			<a class="block" href="#contact">Contact</a>
 			<a class="block" href="/projects">Projects</a>
+			<a class="block" href="/d3">D3</a>
 			<a class="block" href="/blog">Blog</a>
 		</nav>
 	</aside>

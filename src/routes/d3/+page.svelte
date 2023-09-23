@@ -1,16 +1,11 @@
 <script>
-  import LinePlot from '$lib/components/LinePlot.svelte';
-import * as d3 from 'd3';
+	import PracticeD3 from '$lib/components/d3/PracticeD3.svelte';
+    export let data
 
-	  let data = d3.ticks(-2, 2, 200).map(Math.sin);
 
-	  function onMousemove(event) {
-			const [x, y] = d3.pointer(event);
-	    data = data.slice(-200).concat(Math.atan2(x, y));
-	  }
 </script>
 
-<div on:mousemove={onMousemove}>
-  <LinePlot data={data} />
+<div class="min-h-screen w-full">
+	<h1 class="text-2xl bold">D3 Playground</h1>
+	<PracticeD3 salaries={data.salaries} />
 </div>
-

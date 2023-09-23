@@ -1,9 +1,9 @@
 <script>
 	import Sidebar from '$lib/components/Sidebar.svelte';
 	import '../app.css';
-    import { fade, fly } from 'svelte/transition';
+	import { fade, fly } from 'svelte/transition';
 
-    export let data
+	export let data;
 
 	import { Menu, Linkedin, Github, Newspaper } from 'lucide-svelte';
 	let showSideNav = false;
@@ -27,15 +27,18 @@
 </div>
 
 {#key data.currentRoute}
-<main
-        in:fly={{ y: -30, duration: 200, delay: 150 }}
-    out:fly={{ y: -30, duration: 150 }}
-class="mb-36 mx-auto w-full">
-    <slot />
-</main>
+	<main
+		in:fly={{ y: -30, duration: 200, delay: 150 }}
+		out:fly={{ y: -30, duration: 150 }}
+		class="mb-36 mx-auto w-full"
+	>
+		<slot />
+	</main>
 {/key}
 
-<nav class="fixed bottom-0 left-0 p-2 bg-blue-500 text-white flex flex-row items-center w-full justify-evenly">
+<nav
+	class="fixed bottom-0 left-0 p-2 bg-blue-500 text-white flex flex-row items-center w-full justify-evenly"
+>
 	<button class="" on:click={toggleSideNav}><Menu /></button>
 	<Linkedin />
 	<Github />

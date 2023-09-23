@@ -3,8 +3,6 @@ import { vitePreprocess } from '@sveltejs/kit/vite';
 
 import { escapeSvelte, mdsvex } from 'mdsvex';
 
-
-
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	extensions: ['.svelte', '.md'],
@@ -12,8 +10,7 @@ const config = {
 		vitePreprocess(),
 		mdsvex({
 			extensions: ['.md'],
-      highlight: {
-      }
+			highlight: {}
 		}) // 👈 add mdsvex with mdsvex configuration options
 	],
 
