@@ -38,7 +38,7 @@ LocalStorage is prefered because it has several advantages over the other storag
 
 We will need a website to add the dark mode to. So let's get started with it.
 
-```
+```html
 <html lang="en">
    <head>
      <meta charset="UTF-8">
@@ -61,7 +61,7 @@ There is nothing special here. Just a simple site with button and heading elemen
 
 We will use css for styling and javascript for adding functionality.
 
-```
+```css
 body {
   max-width: 100%;
   width: 100%;
@@ -92,7 +92,7 @@ button {
 Most of the styling rules are self-explanatory. The most import rules are in the `.darkMode` class.
 In this class you will define how you want the dark mode version of your website to look. You will definetly make things more darker and in this case our background color is set to black and text is set to white. You can use any colors you prefer.
 
-```
+```css
  .darkMode {
     background-color: black;
     color: white;
@@ -105,13 +105,13 @@ In javascript is where all the magic happens. On a click of a button the entire 
 The chosen preference will also be saved on the users browser on a database called localStorage.
 We will begin by defining a few variables.
 
-```
+```js
 let darkMode = localStorage.getItem('darkMode')
 ```
 
 Instantiate the name of the variable will use to save user's selection in the localStorage.
 
-```
+```js
 let darkModeButton = document.querySelector('button')
 ```
 
@@ -120,7 +120,7 @@ I am using the `button` tag to grab it because it is the only button in the page
 
 The page will initially load on a light theme. But if the user had visited before and changed to dark mode we need to make it load on that setting. This 'if' statement will help us achieve that.
 
-```
+```js
 if (darkMode == 'enabled'){
   enableDarkMode();
 }
@@ -128,7 +128,7 @@ if (darkMode == 'enabled'){
 
 This statement will check the localStorage and read `darkMode`'s variable value. If it reads `'enabled'` it will call the function `enableDarkMode()` which will enable dark mode. Don't worry about the function as we will define it in the next line.
 
-```
+```js
 function enableDarkMode() {
   document.querySelector("main").classList.add("darkMode");
   localStorage.setItem("darkMode", "enabled");
@@ -139,7 +139,7 @@ The first line of this function will grab the body element and add the css class
 
 The second line will update the value of `darkMode` to `'enabled'` in the localStorage. So that the chosen mode stays in memory in page reload or in case of internet loss.
 
-```
+```js
 function disableDarkMode() {
   document.querySelector("main").classList.remove("darkMode");
   localStorage.setItem("darkMode", null);
@@ -154,7 +154,7 @@ The second line updates the localStorage and changes the value of `darkMode` to 
 All the variables and functions been defined. But how do will apply them?
 That is where the button comes in. A user will click a button to toggle between the modes. On every click a function will be called which will implement the requested changes. An event listenter which will be listening for the 'click' event will be added to the button.
 
-```
+```js
 toggleButton.addEventListener("click", () => {
   darkMode = localStorage.getItem("darkMode");
 
@@ -177,7 +177,7 @@ Here are all the codes used in this project.
 
 #### HTML
 
-```
+```html
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -199,7 +199,7 @@ Here are all the codes used in this project.
 
 #### CSS
 
-```
+```css
 body {
   max-width: 100%;
   width: 100%;
@@ -230,7 +230,7 @@ button {
 
 #### Javascript
 
-```
+```js
 let darkMode = localStorage.getItem("darkMode");
 let toggleButton = document.querySelector("button");
 
