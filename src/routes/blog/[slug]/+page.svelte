@@ -12,7 +12,7 @@
 </svelte:head>
 
 <div
-	class="w-full bg-lime-50 min-h-screen py-8 flex flex-col items-center justify-center relative overflow-hidden lg:py-12"
+	class="w-full bg-lime-50 min-h-screen py-8 flex flex-col items-center justify-center relative overflow-hidden -z-10 lg:py-12"
 >
 	<article class="prose w-full">
 		<hgroup>
