@@ -49,7 +49,6 @@ const yAccessor = d => eplData.map((d)=>d.points)
         data-p={d.points}
         data-g={d.goal_difference}
       />
-
     {/each}
   </g>
 </svg>
