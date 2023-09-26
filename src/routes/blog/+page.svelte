@@ -3,7 +3,6 @@
 	import { formatDate } from '$lib/utils.js';
 
 	export let data;
-	console.log(data);
 </script>
 
 <h1 class="text-gray-800">Blog home page</h1>

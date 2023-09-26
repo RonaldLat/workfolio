@@ -1,25 +1,15 @@
 <script>
 import * as d3 from 'd3';
+import epl from '$lib/data/epl.js'
 
-export let salaries
-salaries = salaries['gd_salary_data_cleaned'].slice(0,20)
+let eplData = epl[0].table
+const eplSeason = epl[0].season
+console.table(eplData)
 
 
 
-const population = [
-	 { country: "China", population: 1439324 },
-    { country: "India", population: 1380004 },
-    { country: "United States of America", population: 331003 },
-    { country: "Indonesia", population: 273524 },
-    { country: "Pakistan", population: 220892 },
-    { country: "Brazil", population: 212559 },
-    { country: "Nigeria", population: 206140 },
-    { country: "Bangladesh", population: 164689 },
-    { country: "Russian Federation", population: 145934 },
-    { country: "Mexico", population: 128933 },
-];
 
-console.table(salaries[0])
+
 
 const width = 800
 const height = 600
@@ -27,8 +17,11 @@ const margin = { top: 20, right: 20, bottom: 20, left: 180 };
 const innerHeight = height - margin.top - margin.bottom;
 const innerWidth = width - margin.left - margin.right;
 
- $: xDomain = salaries.map((d) => d.Location);
-  $: yDomain = salaries.map((d) => +d.founded);
+ $: xDomain = eplData.map((d) => d.team);
+ $: yDomain = eplData.map((d) => +d.points);
+
+  const yAccessor = d => eplData.map((d)=>d.points)
+
 
   $: yScale = d3.scaleBand().domain(xDomain).range([0, innerHeight]).padding(0.1);
   $: xScale = d3.scaleLinear()
@@ -36,7 +29,10 @@ const innerWidth = width - margin.left - margin.right;
     .range([0, innerWidth]);
 </script>
 
-<svg {width} {height}>
+<h2 class="text-3xl text-emerald-600 text-bold text-center">{eplSeason} Season</h2>
+
+<div>
+<svg {width} {height} class="border-pink-300 border p-3">
   <g transform={`translate(${margin.left},${margin.top})`}>
     {#each xScale.ticks() as tickValue}
       <g transform={`translate(${xScale(tickValue)},0)`}>
@@ -46,25 +42,26 @@ const innerWidth = width - margin.left - margin.right;
         </text>
       </g>
     {/each}
-    {#each salaries as d}
+    {#each eplData as d}
       <text
         text-anchor="end"
-        x="-3"
+        x="-8"
         dy=".32em"
-        y={yScale(d.founded) + yScale.bandwidth() / 2}
-        fill='red'
+        y={yScale(d.team) + yScale.bandwidth() / 2}
+        fill='black'
       >
-        {d.Location}
+        {d.team}
       </text>
       <rect
+        class="fill-stone-600"
         x="0"
-        y={yScale(d.Location)}
-        width={xScale(d.founded)}
+        y={yScale(d.team)}
+        width={xScale(d.points)}
         height={yScale.bandwidth()}
       />
     {/each}
   </g>
 </svg>
+</div>
 
 
-<div class="wrap" id="wrap"> d3333</div>
