@@ -21,8 +21,7 @@
     >
       <div class="mb-16 lg:my-40 lg:max-w-lg lg:pr-5">
         <p
-          class="inline-block w-full py-px mb-4 text-xs font-[Belleza] font-semibold tracking-wider uppercase"
-
+          class="inline-block w-full py-px mb-4 text-xs font-[Belleza] font-semibold tracking-wider uppercase">
           who am i?
         </p>
         <h2
