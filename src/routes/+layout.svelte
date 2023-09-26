@@ -2,10 +2,16 @@
 	import Sidebar from '$lib/components/Sidebar.svelte';
 	import '../app.css';
 	import { fade, fly } from 'svelte/transition';
+    import { onNavigate } from '$app/navigation';
+	import { Menu, Linkedin, Github, Newspaper, ChevronFirst, } from 'lucide-svelte';
 
 	export let data;
 
-	import { Menu, Linkedin, Github, Newspaper, ChevronFirst, } from 'lucide-svelte';
+    onNavigate((navigation)=>{
+                console.log(navigation)
+                showSideNav = false
+
+            })
 	let showSideNav = false;
 
     const toggleSideNav =()=> showSideNav = !showSideNav;
