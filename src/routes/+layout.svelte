@@ -7,11 +7,7 @@
 
 	export let data;
 
-    onNavigate((navigation)=>{
-                console.log(navigation)
-                showSideNav = false
-
-            })
+    onNavigate(()=>{showSideNav = false})
 	let showSideNav = false;
 
     const toggleSideNav =()=> showSideNav = !showSideNav;
@@ -33,8 +29,7 @@
 
 {#key data.currentRoute}
 	<main
-		in:fly={{ y: -30, duration: 200, delay: 150 }}
-		out:fly={{ y: -30, duration: 150 }}
+         in:fade={{ duration: 200, delay: 200 }} out:fade={{ duration: 200 }}
 		class="mb-36 mx-auto w-full"
 	>
 		<slot />
