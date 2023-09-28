@@ -3,10 +3,13 @@ import * as d3 from 'd3';
 import epl from '$lib/data/epl.js'
 import AxisX from '$lib/components/d3/AxisX.svelte';
 import AxisY from '$lib/components/d3/AxisY.svelte';
+	import { flip } from 'svelte/animate';
+	import { fade } from 'svelte/transition';
 
-const year =11
-let eplData = epl[year].table
-const eplSeason = epl[year].season
+let year = 0
+let eplData = []
+$: eplData = epl[year].table
+let eplSeason = epl[year].season
 console.table(eplData)
 
 
@@ -33,12 +36,12 @@ const yAccessor = d => eplData.map((d)=>d.points)
 </script>
 
 <h2 class="text-3xl text-emerald-600 text-bold text-center">{eplSeason} Season</h2>
-
-<div class="my-auto w-full h-screen  border border-sky-800">
-<svg {width} {height} class="bg-sky-50 border-pink-300 border p-3 m-auto">
+<span>{year}</span>
+<div class="my-auto w-full h-screen  border border-sky-800" >
+<svg {width} {height} class="bg-sky-50 border-pink-300 border p-3 m-auto" in:fade="{{delay: 2000, duration: 2000}}">
   <AxisX {height} {xScale} {margin}/>
   <AxisY {height} {width} {yScale} {margin}/>
-  <g transform="translate({margin.left} {margin.top})">
+  <g transform="translate({margin.left} {margin.top})"  >
     {#each eplData as d}
 
       <circle
@@ -56,3 +59,7 @@ const yAccessor = d => eplData.map((d)=>d.points)
 
 
 
+
+<label for="large-range" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Large range</label>
+<span>{year}</span>
+<input bind:value={year} min="0" max="{eplData.length}" on:change={year=year} id="large-range" type="range"  class="w-1/2 h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer range-lg dark:bg-gray-700">

@@ -4,6 +4,7 @@
 	import { fade, fly } from 'svelte/transition';
     import { onNavigate } from '$app/navigation';
 	import { Menu, Linkedin, Github, Newspaper, ChevronFirst, } from 'lucide-svelte';
+	import TheFooter from '$lib/components/TheFooter.svelte';
 
 	export let data;
 
@@ -14,7 +15,7 @@
 </script>
 
 <div
-	class="fixed z-20 top-0 left-0 h-full w-64 bg-sky-600 shadow-lg transition-transform transform -translate-x-full ease-in-out duration-300 "
+	class="fixed z-20 top-0 left-0 h-full w-64 bg-myColor-500 shadow-lg transition-transform transform -translate-x-full ease-in-out duration-300 "
 	class:translate-x-0={showSideNav}
 	class:-translate-x-full={!showSideNav}
 >
@@ -30,14 +31,14 @@
 {#key data.currentRoute}
 	<main
          in:fade={{ duration: 200, delay: 200 }} out:fade={{ duration: 200 }}
-		class="mb-36 mx-auto w-full"
+		class="mb-36 mx-auto w-full min-h-screen"
 	>
 		<slot />
 	</main>
 {/key}
 
 <nav
-	class="fixed bottom-0 left-0 p-2 bg-blue-500 text-white flex flex-row items-center w-full justify-evenly transition  ease-in "
+	class="fixed bottom-0 left-0 p-2 bg-myColor-500 h-13 text-white flex flex-row items-center w-full justify-evenly transition  ease-in "
     class:bg-gray-900={showSideNav}
 >
 	<button class="" on:click={toggleSideNav}><Menu /></button>
@@ -45,3 +46,4 @@
 	<Github />
 	<a href="/blog" class=""><Newspaper />Blog</a>
 </nav>
+<TheFooter/>

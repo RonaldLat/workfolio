@@ -2,8 +2,9 @@
 import * as d3 from 'd3';
 import epl from '$lib/data/epl.js'
 
-let eplData = epl[0].table
-const eplSeason = epl[0].season
+let year =10
+let eplData = epl[year].table
+const eplSeason = epl[year].season
 console.table(eplData)
 
 
@@ -20,7 +21,7 @@ const innerWidth = width - margin.left - margin.right;
  $: xDomain = eplData.map((d) => d.team);
  $: yDomain = eplData.map((d) => +d.points);
 
-  const yAccessor = d => eplData.map((d)=>d.points)
+ // const yAccessor = d => eplData.map((d)=>d.points)
 
 
   $: yScale = d3.scaleBand().domain(xDomain).range([0, innerHeight]).padding(0.1);
@@ -63,5 +64,4 @@ const innerWidth = width - margin.left - margin.right;
   </g>
 </svg>
 </div>
-
 

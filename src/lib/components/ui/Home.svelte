@@ -25,7 +25,7 @@
           who am i?
         </p>
         <h2
-          class="mb-5 font-[Belleza] text-4xl font-bold first-letter:text-6xl first-letter:text-violet-600 tracking-widest  text-gray-900 sm:text-4xl sm:leading-none"
+          class="mb-5 font-[Belleza] text-4xl font-bold first-letter:text-6xl first-letter:text-myColor-600 tracking-widest  text-gray-900 sm:text-4xl sm:leading-none"
         >
           The Tech Enchanter,<br class="hidden md:block" />
           <span class="inline-block text-deep-violet-accent-400">enchanting with the art of code.</span>
