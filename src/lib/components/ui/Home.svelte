@@ -14,6 +14,7 @@
         class="object-cover w-full bg-myColor-100 rounded shadow-sm h-96 lg:rounded-none lg:shadow-none md:h-auto lg:h-full"
         src="/lat2-smaller.webp"
         alt=""
+
       />
     </div>
     <div

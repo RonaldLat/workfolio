@@ -12,7 +12,7 @@
 
 <g transform="translate({margin.left} {margin.top})">
 {#each yTicks as tick}
-    <text class="fill-black text-black" x={0} y={yScale(tick)} dy="6" > {tick}</text>
+    <text class="fill-black text-black" x={0} y={yScale(tick)} dy="6" > {tick} {tick == 100 ? 'Points' : ''}</text>
     <line x1="0" y1={yScale(tick)} x2={width} y2={yScale(tick)} stroke="#cecece" />
 {/each}
 </g>
