@@ -31,7 +31,7 @@
 {#key data.currentRoute}
 	<main
          in:fade={{ duration: 200, delay: 200 }} out:fade={{ duration: 200 }}
-		class="mb-36 mx-auto w-full min-h-screen"
+		class="mb-36 mx-auto w-full min-h-screen font-[Poppins]"
 	>
 		<slot />
 	</main>
