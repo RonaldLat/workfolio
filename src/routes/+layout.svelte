@@ -29,12 +29,12 @@ const route =$page.route
 	<Sidebar {route} />
 	<!-- Toggle button within the side navigation menu -->
 </div>
-		<a href="/" class="animate-spin cursor-pointer hover:bg-mycolor-600 transition ease-in duration-150 delay-150 text-2xl fixed top-1 left-1 text-myColor-400">Ronald </a>
+		<a href="/" class="cursor-pointer hover:bg-mycolor-600 z-20 transition ease-in duration-150 delay-150 text-2xl fixed top-1 left-1 text-myColor-400">Ronald </a>
 
 {#key data.currentRoute}
 	<main
          in:fade={{ duration: 200, delay: 200 }} out:fade={{ duration: 200 }}
-		class="  mx-auto w-full min-h-screen font-[Poppins]"
+		class="  mx-auto w-full min-h-screen font-[Poppins] "
 	>
 		<slot />
 	</main>

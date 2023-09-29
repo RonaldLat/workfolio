@@ -1,2 +1,4 @@
 const title = "Ronald Otieno's blog";
-export { title as t };
+export {
+  title as t
+};

@@ -1,9 +1,7 @@
 <script>
-import BinarySearch from "$lib/components/BinarySearch.svelte";
-import Dijkstras from "$lib/components/Dijkstras.svelte";
+	import QuickSort from "$lib/components/dsa/QuickSort.svelte";
 
 
 </script>
 <h2>Data Structures and Algorithms</h2>
-<BinarySearch/>
-<Dijkstras/>
+<QuickSort/>

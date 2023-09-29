@@ -1,8 +1,10 @@
 const load = ({ url }) => {
-	const currentRoute = url.pathname;
-	console.log(currentRoute);
-	return {
-		currentRoute
-	};
+  const currentRoute = url.pathname;
+  console.log(currentRoute);
+  return {
+    currentRoute
+  };
 };
-export { load };
+export {
+  load
+};

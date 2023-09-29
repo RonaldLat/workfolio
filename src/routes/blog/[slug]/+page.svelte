@@ -11,7 +11,7 @@
 </svelte:head>
 
 <div
-	class=" w-full bg-gray-200 pb-28 min-h-screen py-8 flex flex-col items-center justify-center relative overflow-hidden  lg:py-12"
+	class="px-3 md:px-5 w-full bg-gray-200 pb-28 min-h-screen py-8 flex flex-col items-center justify-center relative overflow-hidden  lg:py-12"
 >
 	<article class="prose text-gray-800 prose-h1:font-[Maven] prose-h2:font-[Caudex] w-full">
 		<hgroup>
