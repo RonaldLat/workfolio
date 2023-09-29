@@ -1,11 +1,12 @@
 ---
-title: Demisifying Binary Search 
+title: Demisifying Binary Search
 author: Ronald
 date: 2023-09-28
 layout: blog
 published: true
 excerpt: Binary Search's brilliance lies in its ability to efficiently reduce the search space by half in each iteration, resulting in a remarkably fast search process for large datasets.
 ---
+
 # Demystifying Binary Search: A Fundamental Algorithm for Efficient Searching
 
 In the world of computer science, efficient searching is a critical task. Whether you're searching for a name in a phone book, a word in a dictionary, or an item in a sorted list, the speed of your search can make a world of difference. Enter the Binary Search algorithm, a powerful tool for quickly finding items in a sorted dataset.
@@ -60,10 +61,12 @@ Binary Search finds its applications in various domains. For instance, it's used
 ## Advantages and Limitations
 
 **Advantages:**
+
 - Exceptional speed and efficiency for large sorted datasets.
 - Consistent time complexity regardless of dataset size.
 
 **Limitations:**
+
 - Requires the dataset to be sorted beforehand.
 - May not be the best choice for small or unsorted datasets.
 
@@ -94,7 +97,7 @@ Binary Search is a powerful algorithm that exemplifies the beauty of efficiency 
 
 ## References
 
-1. Cormen, T. H., Leiserson, C. E., Rivest, R. L., & Stein, C. (2009). *Introduction to Algorithms*. MIT Press.
+1. Cormen, T. H., Leiserson, C. E., Rivest, R. L., & Stein, C. (2009). _Introduction to Algorithms_. MIT Press.
 2. GeeksforGeeks. "Binary Search." [https://www.geeksforgeeks.org/binary-search/](https://www.geeksforgeeks.org/binary-search/)
 
 ## Further Reading

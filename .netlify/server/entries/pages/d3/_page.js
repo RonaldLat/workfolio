@@ -1,8 +1,6 @@
 const load = async ({ fetch }) => {
-  return {
-    //salaries
-  };
+	return {
+		//salaries
+	};
 };
-export {
-  load
-};
+export { load };

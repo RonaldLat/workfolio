@@ -6,6 +6,7 @@ layout: blog
 published: true
 excerpt: Quick Sort is a popular and efficient divide-and-conquer sorting algorithm. It works by selecting a 'pivot' element from the array and partitioning the other elements into two sub-arrays, according to whether they are less than or greater than the pivot. The sub-arrays are then sorted recursively.
 ---
+
 <script>
     import QuickSort from '$lib/components/dsa/QuickSort.svelte'
 </script>
@@ -22,25 +23,26 @@ Here's a JavaScript implementation of Quick Sort:
 
 ```javascript
 function quickSort(arr) {
-  if (arr.length <= 1) {
-    return arr;
-  }
+	if (arr.length <= 1) {
+		return arr;
+	}
 
-  const pivot = arr[0];
-  const left = [];
-  const right = [];
+	const pivot = arr[0];
+	const left = [];
+	const right = [];
 
-  for (let i = 1; i < arr.length; i++) {
-    if (arr[i] < pivot) {
-      left.push(arr[i]);
-    } else {
-      right.push(arr[i]);
-    }
-  }
+	for (let i = 1; i < arr.length; i++) {
+		if (arr[i] < pivot) {
+			left.push(arr[i]);
+		} else {
+			right.push(arr[i]);
+		}
+	}
 
-  return [...quickSort(left), pivot, ...quickSort(right)];
+	return [...quickSort(left), pivot, ...quickSort(right)];
 }
 ```
+
 <QuickSort/>
 
 ## Comparing Quick Sort with Other Sorting Algorithms
@@ -68,4 +70,3 @@ Merge Sort is another divide-and-conquer algorithm. It divides the array into tw
 - **Ease of Implementation**: Bubble Sort and Insertion Sort are simpler to implement than Quick Sort, which involves partitioning.
 
 In conclusion, Quick Sort is a versatile and efficient sorting algorithm in JavaScript, especially for large datasets. However, it's essential to consider the specific requirements of your task and the characteristics of your data when choosing a sorting algorithm. Other algorithms like Bubble Sort, Insertion Sort, and Merge Sort have their advantages and may be more suitable in different situations.
-

@@ -1,6 +1,5 @@
 <script>
 	import Scatter from '$lib/components/d3/Scatter.svelte';
-
 </script>
 
 <div class="min-h-screen w-full">
