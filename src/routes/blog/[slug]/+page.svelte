@@ -11,11 +11,11 @@
 </svelte:head>
 
 <div
-	class=" w-full bg-lime-50 min-h-screen py-8 flex flex-col items-center justify-center relative overflow-hidden  lg:py-12"
+	class=" w-full bg-gray-200 pb-28 min-h-screen py-8 flex flex-col items-center justify-center relative overflow-hidden  lg:py-12"
 >
-	<article class="prose w-full">
+	<article class="prose text-gray-800 prose-h1:font-[Maven] prose-h2:font-[Caudex] w-full">
 		<hgroup>
-			<h1>{data.meta.title}</h1>
+			<h1 class="">{data.meta.title}</h1>
 			<p>Published at {formatDate(data.meta.date)}</p>
 		</hgroup>
 		<!-- render the post -->

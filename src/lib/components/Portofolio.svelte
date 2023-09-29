@@ -37,7 +37,7 @@
       ]
 </script>
   <div
-    class="px-4 py-16 mx-auto overflow-x-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
+    class="px-4 py-16 mx-auto overflow-x-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 font-[Ubuntu]"
   >
     <div>
       <p
@@ -89,12 +89,12 @@
               class="flex text-gray-200 underline decoration-2 underline-offset-2 gap-6"
             >
               <li class="text-sm">
-                <a :href="project.url" class="decoration-gray-300 hover:text-violet-300">
+                <a href="{project.url}" class="decoration-gray-300 hover:text-myColor-300">
                   <p  size="1.5em"><ExternalLink/></p>
                 </a>
               </li>
               <li class="text-sm">
-                <a :href="project.git" class="decoration-gray-300 hover:text-violet-300">
+                <a href="{project.git}" class="decoration-gray-300 hover:text-myColor-300">
                   <p  size="1.5em"><Code/></p>
                 </a>
               </li>

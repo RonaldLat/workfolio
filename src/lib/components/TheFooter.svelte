@@ -1,4 +1,4 @@
-  <footer class="flex flex-col w-full px-4 py-16 text-gray-200 bg-myColor-950  md:px-24 lg:px-8 lg:py-20 gap-2 ">
+  <footer class="flex flex-col w-full px-4 py-16 text-gray-200 bg-black  md:px-24 lg:px-8 lg:py-20 gap-2 ">
     <p class="text-sm font-bold tracking-wide text-gray-200 uppercase">
       subscribe
     </p>

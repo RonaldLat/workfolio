@@ -1,4 +1,4 @@
-  <div class="relative flex flex-col-reverse w-full py-16 lg:pt-0 lg:flex-col lg:pb-0">
+  <div class="relative flex flex-col-reverse font-[Ubuntu] w-full py-16 lg:pt-0 lg:flex-col lg:pb-0">
     <div
       class="inset-y-0 top-0 right-0 z-0 w-full max-w-xl px-4 mx-auto md:px-0 lg:pr-0 lg:mb-0 lg:mx-0 lg:w-7/12 lg:max-w-full lg:absolute xl:px-0"
     >
@@ -22,11 +22,11 @@
     >
       <div class="mb-16 lg:my-40 lg:max-w-lg lg:pr-5">
         <p
-          class="inline-block w-full py-px mb-4 text-xs font-[Belleza] font-semibold tracking-wider uppercase">
+          class="inline-block w-full py-px mb-4 text-xs font-[Play] font-semibold tracking-wider uppercase">
           who am i?
         </p>
         <h2
-          class="mb-5 font-[Belleza] text-4xl font-bold first-letter:text-6xl first-letter:text-myColor-600 tracking-widest  text-gray-900 sm:text-4xl sm:leading-none"
+          class="mb-5 font-[Caudex] text-4xl font-bold first-letter:text-6xl first-letter:text-myColor-600 tracking-widest  text-gray-900 sm:text-4xl sm:leading-none"
         >
           The Tech Enchanter,<br class="hidden md:block" />
           <span class="inline-block text-deep-violet-accent-400">enchanting with the art of code.</span>

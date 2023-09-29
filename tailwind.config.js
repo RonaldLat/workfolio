@@ -19,7 +19,10 @@ export default {
     '950': '#0e3043',
 },
 
-      }
+      },
+  fontFamily: {
+      black: ["Black Ops One" ]
+    }
     },
 	},
 	plugins: [require('@tailwindcss/typography')]

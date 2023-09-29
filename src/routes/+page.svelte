@@ -4,8 +4,7 @@
 	import Tools from "$lib/components/Tools.svelte";
 </script>
 
-<div class="min-h-screen">
-	<h1 class="text-2xl">Ronald Otieno</h1>
+<div class="min-h-screen font-[Ubuntu] bg-myColor-50">
     <Home/>
     <Portofolio/>
     <Tools/>

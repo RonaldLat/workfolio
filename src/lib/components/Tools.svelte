@@ -39,7 +39,7 @@
             </div>
 
           <div class="flex gap-4">
-            <div class="flex flex-col bg-gradient-to-br from-gray-500 to-gray-200">
+            <div class="flex flex-col ">
             <img
               class="object-contain w-20 h-20 rounded shadow-sm sm:h-32 xl:h-40 sm:w-32 xl:w-40"
               src="python.svg"
@@ -47,7 +47,7 @@
             />
             <span class="text-xs">Python</span>
             </div>
-            <div class="flex flex-col bg-gradient-to-br from-gray-500 to-gray-200">
+            <div class="flex flex-col ">
             <img
               class="object-contain w-20 h-20 rounded shadow-sm row-start-3 sm:h-32 xl:h-40 sm:w-32 xl:w-40"
               src="vue.svg"
@@ -58,7 +58,7 @@
           </div>
 
           <div class="flex gap-4">
-            <div class="flex flex-col bg-gradient-to-br from-gray-500 to-gray-200">
+            <div class="flex flex-col ">
             <img
               class="object-contain  w-20 h-20 rounded shadow-sm row-start-3 sm:h-32 xl:h-40 sm:w-32 xl:w-40"
               src="ubuntu-4.svg"
@@ -67,7 +67,7 @@
             <span class="text-xs">Linux</span>
             </div>
 
-            <div class="flex flex-col bg-gradient-to-br from-gray-500 to-gray-200">
+            <div class="flex flex-col ">
             <img
               class="object-contain w-20 h-20 rounded shadow-sm row-start-2 sm:h-32 xl:h-40 sm:w-32 xl:w-40"
               src="d3.svg"
@@ -76,7 +76,7 @@
             <span class="text-xs">D3.js</span>
             </div>
 
-            <div class="flex flex-col bg-gradient-to-br from-gray-500 to-gray-200">
+            <div class="flex flex-col ">
             <img
               class="object-contain w-20 h-20 rounded shadow-sm row-start-3 col-start-3 sm:h-32 xl:h-40 sm:w-32 xl:w-40"
               src="firebase-logo.svg"
@@ -84,7 +84,7 @@
             />
             <span class="text-xs">Firebase</span>
             </div>
-            <div class="flex flex-col bg-gradient-to-br from-gray-500 to-gray-200">
+            <div class="flex flex-col ">
             <img
               class="object-contain w-20 h-20 text-black rounded shadow-sm row-start-3 col-start-3 sm:h-32 xl:h-40 sm:w-32 xl:w-40"
               src="git-black.svg"
