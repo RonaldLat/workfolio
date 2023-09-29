@@ -17,7 +17,7 @@ const route =$page.route
 </script>
 
 <div
-	class="fixed z-20 top-0 left-0 h-full w-1/2 bg-myColor-500 shadow-lg transition-transform transform -translate-x-full ease-in-out duration-300 "
+	class="fixed z-20 top-0 left-0 h-full w-full md:w-1/2 bg-myColor-500 shadow-lg transition-transform transform -translate-x-full ease-in-out duration-300 "
 	class:translate-x-0={showSideNav}
 	class:-translate-x-full={!showSideNav}
 >
@@ -29,7 +29,7 @@ const route =$page.route
 	<Sidebar {route} />
 	<!-- Toggle button within the side navigation menu -->
 </div>
-		<a href="/" class="cursor-pointer hover:bg-mycolor-600 transition ease-in duration-150 delay-150 text-2xl fixed top-1 left-1 text-myColor-400">Ronald </a>
+		<a href="/" class="animate-bounce cursor-pointer hover:bg-mycolor-600 transition ease-in duration-150 delay-150 text-2xl fixed top-1 left-1 text-myColor-400">Ronald </a>
 
 {#key data.currentRoute}
 	<main
