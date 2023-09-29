@@ -15,6 +15,7 @@
 			<a class="block" href="/projects">Projects</a>
 			<a class="block" href="/d3">D3</a>
 			<a class="block" href="/blog">Blog</a>
+			<a class="block" href="/dsa">DSA</a>
 		</nav>
 	</aside>
 </div>
