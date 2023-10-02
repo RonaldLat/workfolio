@@ -19,7 +19,7 @@
 </script>
 
 <div
-	class="fixed z-20 top-0 left-0 h-full w-full md:w-1/2 bg-myColor-500 shadow-lg transition-transform transform -translate-x-full ease-in-out duration-300"
+	class="fixed z-20 top-0 left-0 h-full w-full md:w-1/2 bg-myColor-800 shadow-lg transition-transform transform -translate-x-full ease-in-out duration-300"
 	class:translate-x-0={showSideNav}
 	class:-translate-x-full={!showSideNav}
 >
@@ -98,7 +98,7 @@
 {/key}
 
 <nav
-	class="fixed bottom-0 left-0 px-5 py-2 bg-myColor-700 h-13 text-gray-50 flex flex-row items-center w-full justify-between transition ease-in"
+	class="fixed bottom-0 left-0 px-5 py-2.5 bg-gradient-to-b from-myColor-500 to-black h-13 text-gray-100 flex flex-row items-center w-full justify-between transition ease-in"
 	class:bg-gray-900={showSideNav}
 >
 	<button class="" on:click={toggleSideNav}><Menu /></button>

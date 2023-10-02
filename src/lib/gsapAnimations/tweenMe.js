@@ -52,12 +52,46 @@ export function scrowlly(node){
 export function example(node){
 
   let tl = gsap.timeline({
-    scrollTrigger: node,
+    scrollTrigger: {
+      trigger: node,
+      start: "bottom 80%",
+      end: `+=${node.offsetHeight}`,
+      scrub: 2,
+    },
     onComplete: tweenComplete
   })
-  tl.to(node, {x: 600, duration: 2}, 1)
-  tl.to(node, {x: 600, duration: 1}, "<")
-  tl.to(node, {x: 600, duration: 1}, "+=1")
+  tl.from(node, {x: 600, duration: 1}, "<")
+  tl.from(node, {opacity: 0, duration: 2}, "<")
+
+
+
+	function tweenComplete () {
+      console.log(node.offsetHeight)
+		node.dispatchEvent(
+			new CustomEvent('tweenComplete')
+		);
+	}
+
+	return {
+		destroy() {
+			tl = null;
+		}
+	}
+}
+// fade
+export function gFade(node){
+
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: node,
+      start: 10,
+      end: `+=${node.offsetHeight}`,
+      scrub: 2,
+      //markers: true
+    },
+    onComplete: tweenComplete
+  })
+  tl.from(node, {opacity: 0, duration: 2}, "<")
 
 
 

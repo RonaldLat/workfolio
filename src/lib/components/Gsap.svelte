@@ -42,3 +42,5 @@
 <div use:example bind:this={second} class="bg-violet-400 w-16 h-16 rounded-md"></div>
 <div use:example bind:this={third} class="bg-orange-400 w-16 h-16 rounded-md"></div>
 </div>
+<div class="h-screen"></div>
+<div class="h-screen"></div>
