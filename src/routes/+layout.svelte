@@ -5,14 +5,6 @@
 	import { onNavigate } from '$app/navigation';
 	import { Menu, Linkedin, Github, Newspaper, ChevronFirst } from 'lucide-svelte';
 	import TheFooter from '$lib/components/TheFooter.svelte';
-    import {gsap} from 'gsap'
-    import {ScrollTrigger} from 'gsap/ScrollTrigger'
-
-    gsap.registerPlugin(ScrollTrigger)
-
-
-    console.log('gsap', gsap)
-    console.log('trigger',{ScrollTrigger})
 
 	import { page } from '$app/stores';
 	const route = $page.route;
