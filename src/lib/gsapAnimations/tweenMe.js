@@ -60,8 +60,8 @@ export function example(node){
     },
     onComplete: tweenComplete
   })
-  tl.from(node, {x: 600, duration: 1}, "<")
-  tl.from(node, {opacity: 0, duration: 2}, "<")
+  tl.from(node, {x: 600, duration: 3}, "<")
+  tl.from(node, {opacity: 0, duration: 3}, "<")
 
 
 
