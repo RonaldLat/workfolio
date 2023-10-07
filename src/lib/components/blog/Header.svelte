@@ -1,12 +1,12 @@
 <script>
-	import * as config from '$lib/config';
+  import * as config from '$lib/config';
 </script>
 
 <nav>
-	<a href="/">
-		<b>{config.title}</b>
-	</a>
+  <a href="/">
+    <b>{config.title}</b>
+  </a>
 </nav>
 <ul>
-	<li>about</li>
+  <li>about</li>
 </ul>

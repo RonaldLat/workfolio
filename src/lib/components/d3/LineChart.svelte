@@ -1,9 +1,9 @@
 <script>
-  import * as d3 from "d3";
+  import * as d3 from 'd3';
 
   // Receive plot data as prop.
-  import data from  '$lib/data/stock'
-	import { onMount } from "svelte";
+  import data from '$lib/data/stock';
+  import { onMount } from 'svelte';
 
   // The chart dimensions and margins as optional props.
   export let width = 928;
@@ -13,13 +13,14 @@
   export let marginBottom = 30;
   export let marginLeft = 40;
 
-
-let epl =[]
-onMount(async function(){
-        epl = await d3.json(`https://www.thesportsdb.com/api/v1/json/3/lookuptable.php?l=4328&s=2022-2023`);
-        epl = epl.table.slice(0,6)
-    })
-        $:console.log('line',epl)
+  let epl = [];
+  onMount(async function () {
+    epl = await d3.json(
+      `https://www.thesportsdb.com/api/v1/json/3/lookuptable.php?l=4328&s=2022-2023`
+    );
+    epl = epl.table.slice(0, 6);
+  });
+  $: console.log('line', epl);
 
   // Create the x (horizontal position) scale.
   const xScale = d3.scaleUtc(
@@ -40,12 +41,7 @@ onMount(async function(){
     .y((d) => yScale(d.close));
 </script>
 
-<svg
-  {width}
-  {height}
-  viewBox="0 0 {width} {height}"
-  class="w-full h-auto"
->
+<svg {width} {height} viewBox="0 0 {width} {height}" class="w-full h-auto">
   <!-- X-Axis -->
   <g transform="translate(0,{height - marginBottom})">
     <line stroke="currentColor" x1={marginLeft - 6} x2={width} />
@@ -115,5 +111,10 @@ onMount(async function(){
     </text>
   </g>
 
-  <path fill="none" class="stroke-violet-800" stroke-width="1.5" d={line(data)} />
+  <path
+    fill="none"
+    class="stroke-violet-800"
+    stroke-width="1.5"
+    d={line(data)}
+  />
 </svg>

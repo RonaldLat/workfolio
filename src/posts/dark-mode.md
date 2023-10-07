@@ -40,18 +40,18 @@ We will need a website to add the dark mode to. So let's get started with it.
 
 ```html
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
-		<link rel="stylesheet" href="style.css" />
-	</head>
-	<body>
-		<main>
-			<button>darkMode Toggle</button>
-			<h1 class="heading">welcome to dark mode</h1>
-		</main>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <button>darkMode Toggle</button>
+      <h1 class="heading">welcome to dark mode</h1>
+    </main>
+  </body>
 </html>
 ```
 
@@ -63,29 +63,29 @@ We will use css for styling and javascript for adding functionality.
 
 ```css
 body {
-	max-width: 100%;
-	width: 100%;
-	height: 100vh;
+  max-width: 100%;
+  width: 100%;
+  height: 100vh;
 }
 main {
-	width: 100%;
-	height: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 h1 {
-	text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 button {
-	position: absolute;
-	top: 10px;
-	right: 10px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
 .darkMode {
-	background-color: black;
-	color: white;
+  background-color: black;
+  color: white;
 }
 ```
 
@@ -94,8 +94,8 @@ In this class you will define how you want the dark mode version of your website
 
 ```css
 .darkMode {
-	background-color: black;
-	color: white;
+  background-color: black;
+  color: white;
 }
 ```
 
@@ -122,7 +122,7 @@ The page will initially load on a light theme. But if the user had visited befor
 
 ```js
 if (darkMode == 'enabled') {
-	enableDarkMode();
+  enableDarkMode();
 }
 ```
 
@@ -130,8 +130,8 @@ This statement will check the localStorage and read `darkMode`'s variable value.
 
 ```js
 function enableDarkMode() {
-	document.querySelector('main').classList.add('darkMode');
-	localStorage.setItem('darkMode', 'enabled');
+  document.querySelector('main').classList.add('darkMode');
+  localStorage.setItem('darkMode', 'enabled');
 }
 ```
 
@@ -141,8 +141,8 @@ The second line will update the value of `darkMode` to `'enabled'` in the localS
 
 ```js
 function disableDarkMode() {
-	document.querySelector('main').classList.remove('darkMode');
-	localStorage.setItem('darkMode', null);
+  document.querySelector('main').classList.remove('darkMode');
+  localStorage.setItem('darkMode', null);
 }
 ```
 
@@ -156,13 +156,13 @@ That is where the button comes in. A user will click a button to toggle between 
 
 ```js
 toggleButton.addEventListener('click', () => {
-	darkMode = localStorage.getItem('darkMode');
+  darkMode = localStorage.getItem('darkMode');
 
-	if (darkMode !== 'enabled') {
-		enableDarkMode();
-	} else {
-		disableDarkMode();
-	}
+  if (darkMode !== 'enabled') {
+    enableDarkMode();
+  } else {
+    disableDarkMode();
+  }
 });
 ```
 
@@ -179,20 +179,20 @@ Here are all the codes used in this project.
 
 ```html
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
-		<link rel="stylesheet" href="style.css" />
-	</head>
-	<body>
-		<main>
-			<button>darkMode Toggle</button>
-			<h1 class="heading">welcome to dark mode</h1>
-		</main>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <button>darkMode Toggle</button>
+      <h1 class="heading">welcome to dark mode</h1>
+    </main>
 
-		<script src="app.js"></script>
-	</body>
+    <script src="app.js"></script>
+  </body>
 </html>
 ```
 
@@ -200,29 +200,29 @@ Here are all the codes used in this project.
 
 ```css
 body {
-	max-width: 100%;
-	width: 100%;
-	height: 100vh;
+  max-width: 100%;
+  width: 100%;
+  height: 100vh;
 }
 main {
-	width: 100%;
-	height: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 h1 {
-	text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 button {
-	position: absolute;
-	top: 10px;
-	right: 10px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
 .darkMode {
-	background-color: black;
-	color: white;
+  background-color: black;
+  color: white;
 }
 ```
 
@@ -233,26 +233,26 @@ let darkMode = localStorage.getItem('darkMode');
 let toggleButton = document.querySelector('button');
 
 if (darkMode == 'enabled') {
-	enableDarkMode();
+  enableDarkMode();
 }
 
 function enableDarkMode() {
-	document.querySelector('main').classList.add('darkMode');
-	localStorage.setItem('darkMode', 'enabled');
+  document.querySelector('main').classList.add('darkMode');
+  localStorage.setItem('darkMode', 'enabled');
 }
 
 function disableDarkMode() {
-	document.querySelector('main').classList.remove('darkMode');
-	localStorage.setItem('darkMode', null);
+  document.querySelector('main').classList.remove('darkMode');
+  localStorage.setItem('darkMode', null);
 }
 
 toggleButton.addEventListener('click', () => {
-	darkMode = localStorage.getItem('darkMode');
+  darkMode = localStorage.getItem('darkMode');
 
-	if (darkMode !== 'enabled') {
-		enableDarkMode();
-	} else {
-		disableDarkMode();
-	}
+  if (darkMode !== 'enabled') {
+    enableDarkMode();
+  } else {
+    disableDarkMode();
+  }
 });
 ```
