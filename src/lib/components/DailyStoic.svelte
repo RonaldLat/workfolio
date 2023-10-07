@@ -1,5 +1,5 @@
 <script>
-	import { example } from "$lib/gsapAnimations/tweenMe";
+	import { example } from '$lib/gsapAnimations/tweenMe';
 
 	export let quote;
 </script>

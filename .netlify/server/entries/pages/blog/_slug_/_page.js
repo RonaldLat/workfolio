@@ -13,6 +13,8 @@ async function load({ params }) {
 	try {
 		const post = await __variableDynamicImportRuntimeHelper(
 			/* @__PURE__ */ Object.assign({
+				'../../../posts/concatenation of array.md': () =>
+					import('../../../../chunks/concatenation of array.js').then((n) => n._),
 				'../../../posts/dark-mode.md': () =>
 					import('../../../../chunks/dark-mode.js').then((n) => n._),
 				'../../../posts/demystifying-binary--search.md': () =>
@@ -20,7 +22,14 @@ async function load({ params }) {
 				'../../../posts/hello-world.md': () =>
 					import('../../../../chunks/hello-world.js').then((n) => n._),
 				'../../../posts/post1.md': () => import('../../../../chunks/post1.js').then((n) => n._),
-				'../../../posts/post2.md': () => import('../../../../chunks/post2.js').then((n) => n._)
+				'../../../posts/python tricks for writing better code.md': () =>
+					import('../../../../chunks/python tricks for writing better code.js').then((n) => n._),
+				'../../../posts/template.md': () =>
+					import('../../../../chunks/template.js').then((n) => n._),
+				'../../../posts/understanding-sorting-algorithms-quick-sort.md': () =>
+					import('../../../../chunks/understanding-sorting-algorithms-quick-sort.js').then(
+						(n) => n._
+					)
 			}),
 			`../../../posts/${params.slug}.md`
 		);

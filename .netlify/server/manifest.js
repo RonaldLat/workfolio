@@ -17,6 +17,7 @@ export const manifest = (() => {
 			'3dcarousel/img7.jpg',
 			'3dcarousel/img8.jpg',
 			'3dcarousel/img9.jpg',
+			'color-logo-bg.svg',
 			'css.svg',
 			'd3.svg',
 			'dark-portofolio.webp',
@@ -38,6 +39,7 @@ export const manifest = (() => {
 			'ideal-sofas.jpeg',
 			'js.svg',
 			'lat2-smaller.webp',
+			'logo-no-bg.svg',
 			'map.webp',
 			'mc-portofolio.webp',
 			'noisy.png',
@@ -67,16 +69,16 @@ export const manifest = (() => {
 		},
 		_: {
 			client: {
-				start: '_app/immutable/entry/start.a482ec7c.js',
-				app: '_app/immutable/entry/app.78793477.js',
+				start: '_app/immutable/entry/start.9cb3d8a2.js',
+				app: '_app/immutable/entry/app.d06aa2cf.js',
 				imports: [
-					'_app/immutable/entry/start.a482ec7c.js',
-					'_app/immutable/chunks/scheduler.65fbc1b2.js',
-					'_app/immutable/chunks/singletons.9bdd93a8.js',
-					'_app/immutable/entry/app.78793477.js',
+					'_app/immutable/entry/start.9cb3d8a2.js',
+					'_app/immutable/chunks/scheduler.ef4e60ca.js',
+					'_app/immutable/chunks/singletons.bf6e1906.js',
+					'_app/immutable/entry/app.d06aa2cf.js',
 					'_app/immutable/chunks/preload-helper.a4192956.js',
-					'_app/immutable/chunks/scheduler.65fbc1b2.js',
-					'_app/immutable/chunks/index.bbb9e424.js'
+					'_app/immutable/chunks/scheduler.ef4e60ca.js',
+					'_app/immutable/chunks/index.0af481dd.js'
 				],
 				stylesheets: [],
 				fonts: []

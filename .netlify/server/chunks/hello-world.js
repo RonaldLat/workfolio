@@ -13,7 +13,7 @@ const Hello_world = create_ssr_component(($$result, $$props, $$bindings, slots) 
 <span class="line"><span style="color: #F8F8F2">        console.log(&#39;Hello world&#39;)</span></span>
 <span class="line"><span style="color: #F8F8F2">    &#125;</span></span></code></pre>`}<!-- HTML_TAG_END --> <p data-svelte-h="svelte-ljn7m9">Ut pretium vitae elit ac facilisis. Aliquam nisi tortor, feugiat at lacus sed, condimentum egestas urna. Vestibulum hendrerit augue non urna volutpat, et fermentum tortor pellentesque. Aenean eget pharetra leo. Vestibulum ut laoreet dui. Phasellus nec nunc imperdiet, mollis urna eget, interdum lacus. Nulla ac neque pulvinar ex vestibulum venenatis at sed mi. Aliquam faucibus risus eget dolor porttitor interdum. Phasellus rutrum augue ex, vel tempus velit sollicitudin vitae. Pellentesque libero sapien, ullamcorper nec elementum nec, pharetra sed nisl. Nullam egestas arcu et ex vulputate, pretium vestibulum odio convallis. Nam auctor risus nec fermentum ultricies.</p> <p data-svelte-h="svelte-so2np0">Donec porttitor quis ipsum ut imperdiet. Fusce ac pretium felis, sit amet pharetra orci. Donec vitae quam ac tellus pellentesque fringilla. Curabitur placerat quam a leo imperdiet tincidunt. Nunc porta pulvinar orci sit amet varius. Suspendisse dapibus ipsum nec magna ultricies gravida. Maecenas varius justo ac sem rhoncus lobortis. Integer eget cursus diam. Vestibulum sollicitudin enim at metus scelerisque blandit. In sit amet pulvinar nunc. Sed sit amet rutrum ex, efficitur imperdiet nunc.</p>`;
 });
-const __vite_glob_0_2 = /* @__PURE__ */ Object.freeze(
+const __vite_glob_0_3 = /* @__PURE__ */ Object.freeze(
 	/* @__PURE__ */ Object.defineProperty(
 		{
 			__proto__: null,
@@ -24,4 +24,4 @@ const __vite_glob_0_2 = /* @__PURE__ */ Object.freeze(
 		{ value: 'Module' }
 	)
 );
-export { __vite_glob_0_2 as _ };
+export { __vite_glob_0_3 as _ };

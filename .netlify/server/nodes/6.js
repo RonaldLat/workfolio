@@ -7,10 +7,10 @@ export const component = async () =>
 export { universal };
 export const universal_id = 'src/routes/blog/[slug]/+page.js';
 export const imports = [
-	'_app/immutable/nodes/6.6d138ef8.js',
+	'_app/immutable/nodes/6.7b30eb4c.js',
 	'_app/immutable/chunks/preload-helper.a4192956.js',
-	'_app/immutable/chunks/scheduler.65fbc1b2.js',
-	'_app/immutable/chunks/index.bbb9e424.js',
+	'_app/immutable/chunks/scheduler.ef4e60ca.js',
+	'_app/immutable/chunks/index.0af481dd.js',
 	'_app/immutable/chunks/utils.9a66bb98.js'
 ];
 export const stylesheets = [];

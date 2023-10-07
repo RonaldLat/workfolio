@@ -19,7 +19,7 @@ const Post1 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 	).$$render($$result, {}, {}, {})}
 Nunc convallis odio justo, non interdum dolor ultricies interdum. Curabitur accumsan sem a iaculis placerat. Donec eu facilisis sem, vel bibendum risus. Aliquam non tincidunt est, a auctor magna. Ut erat libero, commodo non malesuada quis, porttitor sit amet libero. Curabitur pulvinar ornare leo id efficitur. Donec sollicitudin arcu venenatis odio elementum, at venenatis erat efficitur. In porta mi et sollicitudin faucibus. Vivamus vel metus interdum, facilisis nisl at, ullamcorper mauris. Sed ac nisl at dolor varius aliquam. In facilisis pretium interdum. Sed tempus purus at pulvinar scelerisque. Etiam eu purus eleifend, commodo turpis eget, aliquet turpis. Mauris fermentum magna dictum lorem bibendum tempor.`;
 });
-const __vite_glob_0_3 = /* @__PURE__ */ Object.freeze(
+const __vite_glob_0_4 = /* @__PURE__ */ Object.freeze(
 	/* @__PURE__ */ Object.defineProperty(
 		{
 			__proto__: null,
@@ -30,4 +30,4 @@ const __vite_glob_0_3 = /* @__PURE__ */ Object.freeze(
 		{ value: 'Module' }
 	)
 );
-export { __vite_glob_0_3 as _ };
+export { __vite_glob_0_4 as _ };

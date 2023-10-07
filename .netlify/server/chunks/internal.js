@@ -123,14 +123,13 @@ const options = {
 			`
 
 		<style>
-      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
-      @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
-      @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-      @import url('https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap');
-      @import url('https://fonts.googleapis.com/css2?family=Caudex:wght@700&display=swap');
-      @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
-      @import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
-
+			@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+			@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+			@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+			@import url('https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap');
+			@import url('https://fonts.googleapis.com/css2?family=Caudex:wght@700&display=swap');
+			@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+			@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
 		</style>
 	</head>
 	<body>
@@ -205,7 +204,7 @@ const options = {
 			message +
 			'</h1>\n			</div>\n		</div>\n	</body>\n</html>\n'
 	},
-	version_hash: 'ctzfv8'
+	version_hash: 'ky7ttg'
 };
 function get_hooks() {
 	return {};
