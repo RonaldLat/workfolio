@@ -4,6 +4,8 @@
   import { fade, fly } from 'svelte/transition';
   import { onNavigate } from '$app/navigation';
   import { page } from '$app/stores';
+  import { Bounce } from 'gsap/gsap-core';
+
   import {
     Menu,
     Linkedin,
@@ -26,7 +28,9 @@
     let tl = gsap
       .from(topBar, {
         yPercent: -100,
+        opacity: 0,
         paused: true,
+        ease: "elastic",
         duration: 0.2
       })
       .progress(1);
@@ -70,10 +74,10 @@
 <a
   href="/"
   bind:this={topBar}
-  class="fill-myColor-500 h-12 w-full cursor-pointer hover:bg-mycolor-600 z-20 transition ease-in duration-150 delay-150 text-2xl fixed top-0 left-0 text-myColor-400"
+  class="bg-black bg-blend-hard-light opacity-85 h-12 w-full justify-between  cursor-pointer flex flex-row  hover:bg-mycolor-600 z-20 transition ease-in duration-150 delay-150 text-2xl fixed top-0 left-0 text-myColor-400"
 >
   <svg
-    class="w-full h-full bg-black opacity-85 rounded-md rounded-t-none rounded-bl-none fill-myColor-300"
+    class=" w-auto block h-full bg-black opacity-85 rounded-md rounded-t-none rounded-bl-none fill-myColor-300"
     xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink"
     version="1.1"

@@ -1,39 +1,11 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import  Bounce  from 'gsap/EasePack';
+import { SlowMo } from 'gsap/EasePack';
 
 gsap.registerPlugin(ScrollTrigger);
 
-export function tweenMe(node) {
-  let tl = gsap.timeline({
-    onComplete: tweenComplete
-  });
-  const duration = 1;
-
-  tl.from(node, {
-    duration,
-    opacity: 0
-  }).from(
-    node,
-    {
-      duration,
-      xPercent: 100,
-      rotation: -90,
-      yPercent: 100,
-      ease: 'bounce.out'
-    },
-    `-=${duration * 0.75}`
-  );
-
-  function tweenComplete() {
-    node.dispatchEvent(new CustomEvent('tweenComplete'));
-  }
-
-  return {
-    destroy() {
-      tl = null;
-    }
-  };
-}
+Bounce
 
 export function scrowlly(node) {
   let tl;
@@ -54,12 +26,47 @@ export function example(node) {
       trigger: node,
       start: 'bottom 80%',
       end: `+=${node.offsetHeight}`,
-      scrub: 2
+      scrub: 2,
+
     },
     onComplete: tweenComplete
   });
   tl.from(node, { x: 600, duration: 1 }, '<');
   tl.from(node, { opacity: 0, duration: 2 }, '<');
+
+  function tweenComplete() {
+    node.dispatchEvent(new CustomEvent('tweenComplete'));
+  }
+
+  return {
+    destroy() {
+      tl = null;
+    }
+  };
+}
+//from down
+export function gFromDown(node) {
+  let tl = gsap.timeline({
+    onComplete: tweenComplete
+  });
+  const duration = 1;
+
+  tl.from(node, {
+    duration,
+    opacity: 0,
+    ease: SlowMo,
+    scrub: 2
+
+  }).from(
+    node,
+    {
+      duration,
+      yPercent: 50,
+      //rotation: -90,
+      ease: "stepped",
+    },
+    `-=${duration * 0.75}`
+  );
 
   function tweenComplete() {
     node.dispatchEvent(new CustomEvent('tweenComplete'));
