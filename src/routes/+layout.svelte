@@ -12,30 +12,34 @@
     ChevronFirst
   } from 'lucide-svelte';
   import TheFooter from '$lib/components/TheFooter.svelte';
+  import { gsap } from 'gsap';
   import { ScrollTrigger } from 'gsap/ScrollTrigger';
-  import {gsap} from 'gsap';
+    import { onMount } from 'svelte';
   export let data;
-  gsap.registerPlugin(ScrollTrigger);
+
 
   let topBar;
-  $: {
 
-      let tl = gsap.from(topBar, {
+  $:onMount(()=>{
+  gsap.registerPlugin(ScrollTrigger);
+
+    let tl = gsap
+      .from(topBar, {
         yPercent: -100,
         paused: true,
-        duration: 0.2,
-      }).progress(1);
+        duration: 0.2
+      })
+      .progress(1);
 
-      ScrollTrigger.create({
-  trigger: topBar,
-  start: "top top",
-  end: 99999,
-  onUpdate: (self) => {
-    self.direction === -1 ? tl.play() : tl.reverse()
-  }
-});
-
-  }
+    ScrollTrigger.create({
+      trigger: topBar,
+      start: 'top top',
+      end: 99999,
+      onUpdate: (self) => {
+        self.direction === -1 ? tl.play() : tl.reverse();
+      }
+    });
+      })
 
   const route = $page.route;
 
