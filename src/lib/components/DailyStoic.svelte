@@ -1,16 +1,23 @@
 <script>
+<<<<<<< HEAD
 	import { example } from '$lib/gsapAnimations/tweenMe';
+=======
+  import { example } from '$lib/gsapAnimations/tweenMe';
+>>>>>>> gsap
 
-	export let quote;
+  export let quote;
 </script>
 
-<div use:example class="bg-gray-900 space-y-2 border border-myColo-600 mx-2 p-2 rounded-md">
-	<p class="text-myColor-400 font-[Play]">Daily Stoic</p>
-	<img
-		class="h-20 w-auto rounded-md"
-		src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUV854JIL0_j2RTDqxwS1E_RHToQQYProgsw&usqp=CAU"
-		alt="Marcus Aurelius"
-	/>
-	<p class="italic font-[Maven] text-myColo-100">{quote.text}</p>
-	<p class="text-myColo-50 text-xs">{quote.author}</p>
+<div
+  use:example
+  class="bg-gray-900 max-w-2xl mx-auto space-y-2 border border-myColor-600 mx-2 p-2 rounded-md"
+>
+  <p class="text-myColor-400 font-[Play]">Daily Stoic</p>
+  <img
+    class="h-20 w-auto rounded-md"
+    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUV854JIL0_j2RTDqxwS1E_RHToQQYProgsw&usqp=CAU"
+    alt="Marcus Aurelius"
+  />
+  <p class="italic font-[Maven] text-myColo-100">{quote.text}</p>
+  <p class="text-myColo-50 text-xs">{quote.author}</p>
 </div>

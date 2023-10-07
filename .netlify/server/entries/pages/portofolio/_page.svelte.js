@@ -34,9 +34,13 @@ const Gsap = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 	)}></div></div> <div class="h-screen"></div> <div class="h-screen"></div>`;
 });
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+<<<<<<< HEAD
 	return `<div class="mt-24" data-svelte-h="svelte-1raec8o">Portofolio</div> <div class="min-h-screen">${validate_component(
 		Gsap,
 		'Gsap'
 	).$$render($$result, {}, {}, {})}</div>`;
+=======
+  return `<div data-svelte-h="svelte-1u0d6fv">Portofolio</div>`;
+>>>>>>> gsap
 });
 export { Page as default };

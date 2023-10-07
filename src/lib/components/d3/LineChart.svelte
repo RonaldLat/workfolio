@@ -1,9 +1,17 @@
 <script>
+<<<<<<< HEAD
 	import * as d3 from 'd3';
 
 	// Receive plot data as prop.
 	import data from '$lib/data/stock';
 	import { onMount } from 'svelte';
+=======
+  import * as d3 from 'd3';
+
+  // Receive plot data as prop.
+  import data from '$lib/data/stock';
+  import { onMount } from 'svelte';
+>>>>>>> gsap
 
 	// The chart dimensions and margins as optional props.
 	export let width = 928;
@@ -13,6 +21,7 @@
 	export let marginBottom = 30;
 	export let marginLeft = 40;
 
+<<<<<<< HEAD
 	let epl = [];
 	onMount(async function () {
 		epl = await d3.json(
@@ -27,6 +36,16 @@
 		d3.extent(data, (d) => new Date(d.date)),
 		[marginLeft, width - marginRight]
 	);
+=======
+  let epl = [];
+  onMount(async function () {
+    epl = await d3.json(
+      `https://www.thesportsdb.com/api/v1/json/3/lookuptable.php?l=4328&s=2022-2023`
+    );
+    epl = epl.table.slice(0, 6);
+  });
+  $: console.log('line', epl);
+>>>>>>> gsap
 
 	// Create the y (vertical position) scale.
 	const yScale = d3.scaleLinear(
@@ -42,9 +61,15 @@
 </script>
 
 <svg {width} {height} viewBox="0 0 {width} {height}" class="w-full h-auto">
+<<<<<<< HEAD
 	<!-- X-Axis -->
 	<g transform="translate(0,{height - marginBottom})">
 		<line stroke="currentColor" x1={marginLeft - 6} x2={width} />
+=======
+  <!-- X-Axis -->
+  <g transform="translate(0,{height - marginBottom})">
+    <line stroke="currentColor" x1={marginLeft - 6} x2={width} />
+>>>>>>> gsap
 
 		{#each xScale.ticks() as tick}
 			<!-- X-Axis Ticks -->
@@ -97,5 +122,14 @@
 		<text fill="currentColor" text-anchor="start" x={-marginLeft} y={15}> ↑ Daily close ($) </text>
 	</g>
 
+<<<<<<< HEAD
 	<path fill="none" class="stroke-violet-800" stroke-width="1.5" d={line(data)} />
+=======
+  <path
+    fill="none"
+    class="stroke-violet-800"
+    stroke-width="1.5"
+    d={line(data)}
+  />
+>>>>>>> gsap
 </svg>
