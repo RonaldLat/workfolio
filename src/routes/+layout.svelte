@@ -27,6 +27,7 @@
       }).progress(1);
 
       ScrollTrigger.create({
+  trigger: topBar,
   start: "top top",
   end: 99999,
   onUpdate: (self) => {
