@@ -1,9 +1,5 @@
 <script>
-<<<<<<< HEAD
-	import { example } from '$lib/gsapAnimations/tweenMe';
-=======
   import { example } from '$lib/gsapAnimations/tweenMe';
->>>>>>> gsap
 
   export let quote;
 </script>

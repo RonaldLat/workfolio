@@ -9,15 +9,8 @@
 </script>
 
 <div class="min-h-screen font-[Ubuntu] bg-myColor-50">
-<<<<<<< HEAD
-	<Home />
-	<DailyStoic {quote} />
-	<Portofolio />
-	<Tools />
-=======
   <Home />
   <DailyStoic {quote} />
   <Portofolio />
   <Tools />
->>>>>>> gsap
 </div>
