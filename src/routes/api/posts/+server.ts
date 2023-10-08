@@ -1,4 +1,4 @@
-import { json } from '@sveltejs/kit';
+import { json, text } from '@sveltejs/kit';
 
 async function getPosts() {
   let posts = [];
@@ -23,5 +23,5 @@ async function getPosts() {
 
 export async function GET() {
   const posts = await getPosts();
-  return json(posts);
+  return text(posts);
 }

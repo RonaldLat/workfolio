@@ -16,21 +16,20 @@
   import TheFooter from '$lib/components/TheFooter.svelte';
   import { gsap } from 'gsap';
   import { ScrollTrigger } from 'gsap/ScrollTrigger';
-    import { onMount } from 'svelte';
+  import { onMount } from 'svelte';
   export let data;
-
 
   let topBar;
 
-  $:onMount(()=>{
-  gsap.registerPlugin(ScrollTrigger);
+  $: onMount(() => {
+    gsap.registerPlugin(ScrollTrigger);
 
     let tl = gsap
       .from(topBar, {
         yPercent: -100,
         opacity: 0,
         paused: true,
-        ease: "elastic",
+        ease: 'elastic',
         duration: 0.2
       })
       .progress(1);
@@ -43,7 +42,7 @@
         self.direction === -1 ? tl.play() : tl.reverse();
       }
     });
-      })
+  });
 
   const route = $page.route;
 
@@ -74,7 +73,7 @@
 <a
   href="/"
   bind:this={topBar}
-  class="bg-black bg-blend-hard-light opacity-85 h-12 w-full justify-between  cursor-pointer flex flex-row  hover:bg-mycolor-600 z-20 transition ease-in duration-150 delay-150 text-2xl fixed top-0 left-0 text-myColor-400"
+  class="bg-black bg-blend-hard-light opacity-85 h-12 w-full justify-between cursor-pointer flex flex-row hover:bg-mycolor-600 z-20 transition ease-in duration-150 delay-150 text-2xl fixed top-0 left-0 text-myColor-400"
 >
   <svg
     class=" w-auto block h-full bg-black opacity-85 rounded-md rounded-t-none rounded-bl-none fill-myColor-300"

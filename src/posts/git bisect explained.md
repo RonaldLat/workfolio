@@ -7,34 +7,36 @@ published: true
 excerpt: Discover the power of Git Bisect, a valuable tool for debugging and finding bugs in your codebase. Learn how to efficiently track down the commit that introduced a bug using a binary search algorithm.
 ---
 
-Introduction
+## Introduction
 
 Git is a powerful version control system widely used by developers to track changes in their codebase. One of the lesser-known but incredibly useful features of Git is git bisect. In this blog post, we will explore what git bisect is and how it can be used to efficiently debug and find bugs in your code.
 
-What is Git Bisect?
+## What is Git Bisect?
 
 Git bisect is a command that helps you find the commit that introduced a bug or a regression in your codebase. It uses a binary search algorithm to automatically traverse through the commit history and narrow down the problematic commit.
 
 With git bisect, you can mark a known good commit and a known bad commit, and Git will automatically check out a middle commit between them. Based on your feedback (good or bad), Git will continue to bisect the commit range until it finds the exact commit that introduced the bug.
 
-Example: Using Git Bisect to Find a Bug
+## Example: Using Git Bisect to Find a Bug
 
 Let’s dive into an example to how git bisect works in practice.
 
-1: Git Bisect
+## 1: Git Bisect
 
 Assume you are working on a project and have encountered a bug that was not present in an earlier commit. Start by initializing git bisect by running the following command:
 
 $ git bisect start
 
-Step 2: Marking Known Good and Known Bad Commits
+## Step 2: Marking Known Good and Known Bad Commits
 
 Next, you need to mark a known good commit (a commit where the bug was not present) and a known bad commit (a commit where the bug was introduced). You can use the commit hash, branch names, or tags to identify these commits. For example:
 
+```
 $ git bisect good v1.0 # Marking v1.0 as a known good commit
 $ git bisect bad HEAD # Marking the current commit as a known bad commit
+```
 
-Step 3: Testing Each Commit
+## Step 3: Testing Each Commit
 
 Now that you have marked the known good and known bad commits, Git will automatically check out a middle commit between them. At this point, you need to test your code to determine if the bug is present or not.
 
@@ -45,11 +47,13 @@ $ git bisect bad - If the bug is present in the middle commit.
 
 Based on your feedback, Git will narrow down the commit range and check out the next middle commit for testing. Repeat this process until Git identifies the exact commit that introduced the bug.
 
-Step 4: Finishing Git Bisect
+## Step 4: Finishing Git Bisect
 
 After Git has successfully found the problematic commit, you can finish git bisect by running:
 
+```
 $ git bisect reset
+```
 
 This command will reset your repository to its original state, discarding any changes made during the bisect process.
 

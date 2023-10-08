@@ -1,11 +1,11 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import  Bounce  from 'gsap/EasePack';
+import Bounce from 'gsap/EasePack';
 import { SlowMo } from 'gsap/EasePack';
 
 gsap.registerPlugin(ScrollTrigger);
 
-Bounce
+Bounce;
 
 export function scrowlly(node) {
   let tl;
@@ -26,8 +26,7 @@ export function example(node) {
       trigger: node,
       start: 'bottom 80%',
       end: `+=${node.offsetHeight}`,
-      scrub: 2,
-
+      scrub: 2
     },
     onComplete: tweenComplete
   });
@@ -56,14 +55,13 @@ export function gFromDown(node) {
     opacity: 0,
     ease: SlowMo,
     scrub: 2
-
   }).from(
     node,
     {
       duration,
       yPercent: 50,
       //rotation: -90,
-      ease: "stepped",
+      ease: 'stepped'
     },
     `-=${duration * 0.75}`
   );
