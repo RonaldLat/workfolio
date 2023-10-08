@@ -1,7 +1,7 @@
 <script>
   import { gsap } from 'gsap';
   import { ScrollTrigger } from 'gsap/ScrollTrigger';
-  import { tweenMe, scrowlly, example } from '$lib/gsapAnimations/tweenMe';
+  import { tweenMe, scrowlly, example } from '$lib/gsapAnimations/tweenMe.j';
 
   gsap.registerPlugin(ScrollTrigger);
   let first;
