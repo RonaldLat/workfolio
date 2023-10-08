@@ -1,7 +1,7 @@
 <script>
   import { gsap } from 'gsap';
   import { ScrollTrigger } from 'gsap/ScrollTrigger';
-  import { tweenMe, scrowlly, example } from '$lib/gsapAnimations/tweenMe.j';
+  import { scrowlly, example } from '$lib/gsapAnimations/tweenMe.js';
 
   gsap.registerPlugin(ScrollTrigger);
   let first;
@@ -28,7 +28,7 @@
 <div
   class="flex bg-sky-100 w-full h-full items-center flex-col justify-start min-h-screen overflow-hidden"
 >
-  <div use:tweenMe class="box h-60 w-1/4 bg-lime-500" />
+  <div use:example class="box h-60 w-1/4 bg-lime-500" />
   <div bind:this={box} class="box h-60 green w-1/4 bg-emerald-500" />
   <div class="box green h-80 w-1/4 bg-sky-500" />
   <div class="box yell green h-80 w-1/4 bg-yellow-500" />
