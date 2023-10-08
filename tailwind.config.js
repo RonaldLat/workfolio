@@ -1,6 +1,17 @@
+import { skeleton } from '@skeletonlabs/tw-plugin';
+import { join } from 'path';
+
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./src/**/*.{html,js,svelte,ts}'],
+  darkMode: 'class',
+  content: [
+    './src/**/*.{html,js,svelte,ts}',
+    // 3. Append the path to the Skeleton package
+    join(
+      require.resolve('@skeletonlabs/skeleton'),
+      '../**/*.{html,js,svelte,ts}'
+    )
+  ],
 
   theme: {
     extend: {
@@ -50,5 +61,10 @@ export default {
       }
     }
   },
-  plugins: [require('@tailwindcss/typography')]
+  plugins: [
+    require('@tailwindcss/typography'),
+    skeleton({
+      themes: { preset: ['wintry'] }
+    })
+  ]
 };
