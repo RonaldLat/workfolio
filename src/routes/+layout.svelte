@@ -11,7 +11,8 @@
     Linkedin,
     Github,
     Newspaper,
-    ChevronFirst
+    ChevronFirst,
+    Mail
   } from 'lucide-svelte';
   import TheFooter from '$lib/components/TheFooter.svelte';
   import { gsap } from 'gsap';
@@ -144,14 +145,21 @@
 {/key}
 
 <nav
-  class="fixed bottom-0 left-0 px-5 py-2.5 bg-gradient-to-b from-myColor-500 to-black h-13 text-gray-100 flex flex-row items-center w-full justify-between transition ease-in"
+  class="fixed bottom-0 left-0 px-3 py-0.5 bg-gray-300 text-myColor-500  h-13 border-t border-gray-400 drop-shadow-md font-extrabold flex flex-row items-center w-full justify-between transition ease-in"
   class:bg-gray-900={showSideNav}
 >
-  <button class="" on:click={toggleSideNav}><Menu /></button>
-  <Linkedin />
-  <a href="https://github.com/RonaldLat" class=""><Github /></a>
-  <a href="/blog" class="flex items-center"
-    ><Newspaper /><span class="text-xs">Blog</span></a
-  >
+  <div class="flex w-full gap-3">
+    <button class="hover:text-myColor-700 transition duration-100 delay-75  " on:click={toggleSideNav}><Menu /></button>
+    <a href="/blog" class="flex items-center hover:text-myColor-700 transition duration-100 delay-75  ">
+      <span class="text-sm hover:text-myColor-700 hover:scale-90 transition duration-100 delay-75 ease-in  ">Blog</span>
+    </a>
+</div>
+
+    <div class="flex gap-3">
+      <Linkedin class="" />
+      <Mail />
+      <a href="https://github.com/RonaldLat" class=""><Github /></a>
+    </div>
+
 </nav>
 <TheFooter />
