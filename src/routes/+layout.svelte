@@ -1,6 +1,6 @@
 <script>
   import Sidebar from '$lib/components/Sidebar.svelte';
-  import '../app.css';
+  import '../app.postcss';
   import { fade, fly } from 'svelte/transition';
   import { onNavigate } from '$app/navigation';
   import { page } from '$app/stores';
@@ -88,7 +88,7 @@
     <g transform="scale(8.426966292134832) translate(10, 10)">
       <defs id="SvgjsDefs3489" /><g
         id="SvgjsG3490"
-        featureKey="aMgJeN-0"
+        featurekey="aMgJeN-0"
         transform="matrix(1.2705087783188422,0,0,1.2705087783188422,-13.5255176732955,-29.957180717447017)"
         class="fill-mycolor-300"
         ><path
@@ -97,7 +97,7 @@
         /></g
       ><g
         id="SvgjsG3491"
-        featureKey="textGroupContainer"
+        featurekey="textGroupContainer"
         transform="matrix(1,0,0,1,355,0)"
         fill="#fff"
         ><rect
@@ -115,7 +115,7 @@
         /></g
       ><g
         id="SvgjsG3492"
-        featureKey="8L6ael-0"
+        featurekey="8L6ael-0"
         transform="matrix(1.0232690820923773,0,0,1.0232690820923773,136.34230274031603,11.883658005067161)"
         fill="#fff"
         ><path
@@ -123,7 +123,7 @@
         /></g
       ><g
         id="SvgjsG3493"
-        featureKey="sloganFeature-0"
+        featurekey="sloganFeature-0"
         transform="matrix(0.540423700641916,0,0,0.540423700641916,137.47038450536905,39.157371468624454)"
         fill="#fff"
         ><path
@@ -138,7 +138,7 @@
   <main
     in:fade={{ duration: 200, delay: 200 }}
     out:fade={{ duration: 200 }}
-    class="  mx-auto w-full min-h-screen font-[Poppins] overflow-hidden"
+    class="  mx-auto w-full min-h-screen font-[Poppins] px-2 lg:px-5 py-16 overflow-hidden"
   >
     <slot />
   </main>
