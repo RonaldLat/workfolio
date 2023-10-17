@@ -2,6 +2,7 @@
   import { formatDate } from '$lib/utils.js';
 
   export let data;
+console.log(data)
 </script>
 
 <svelte:head>
