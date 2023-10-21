@@ -55,6 +55,8 @@
   const toggleSideNav = () => (showSideNav = !showSideNav);
 </script>
 
+<div class="min-h-screen font-[Poppins] overflow-hidden bg-myColor-50">
+
 <div
   class="fixed z-20 top-0 left-0 h-full w-full md:w-1/2 bg-myColor-800 shadow-lg transition-transform transform -translate-x-full ease-in-out duration-300"
   class:translate-x-0={showSideNav}
@@ -138,28 +140,37 @@
   <main
     in:fade={{ duration: 200, delay: 200 }}
     out:fade={{ duration: 200 }}
-    class="  mx-auto w-full  min-h-screen font-[Poppins] px-2 lg:px-5 py-16 overflow-hidden"
+    class="   max-w-5xl mx-auto w-full min-h-screen font-[Poppins] px-2 lg:px-5 py-16 overflow-hidden"
   >
     <slot />
   </main>
 {/key}
 
 <nav
-  class="fixed bottom-0 left-0 px-3 py-0.5 bg-gray-300 text-myColor-500  h-13 border-t border-gray-400 drop-shadow-md font-extrabold flex flex-row items-center w-full justify-between transition ease-in"
+  class="fixed bottom-0 left-0 px-3 py-0.5 bg-gray-300 text-myColor-500 h-13 border-t border-gray-400 drop-shadow-md font-extrabold flex flex-row items-center w-full justify-between transition ease-in"
   class:bg-gray-900={showSideNav}
 >
   <div class="flex w-full gap-3">
-    <button class="hover:text-myColor-700 transition duration-100 delay-75  " on:click={toggleSideNav}><Menu /></button>
-    <a href="/blog" class="flex items-center hover:text-myColor-700 transition duration-100 delay-75  ">
-      <span class="text-sm hover:text-myColor-700 hover:scale-90 transition duration-100 delay-75 ease-in  ">Blog</span>
+    <button
+      class="hover:text-myColor-700 transition duration-100 delay-75"
+      on:click={toggleSideNav}><Menu /></button
+    >
+    <a
+      href="/blog"
+      class="flex items-center hover:text-myColor-700 transition duration-100 delay-75"
+    >
+      <span
+        class="text-sm hover:text-myColor-700 hover:scale-90 transition duration-100 delay-75 ease-in"
+        >Blog</span
+      >
     </a>
-</div>
+  </div>
 
-    <div class="flex gap-3">
-      <Linkedin class="" />
-      <Mail />
-      <a href="https://github.com/RonaldLat" class=""><Github /></a>
-    </div>
-
+  <div class="flex gap-3">
+    <Linkedin class="" />
+    <Mail />
+    <a href="https://github.com/RonaldLat" class=""><Github /></a>
+  </div>
 </nav>
 <TheFooter />
+</div>

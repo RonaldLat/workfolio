@@ -1,5 +1,35 @@
 <script>
   import { gFromDown, example } from '$lib/gsapAnimations/tweenMe';
+  const tools = [
+    {
+      name: 'javascript',
+      img: 'js.svg'
+    },
+    {
+      name: 'python',
+      img: 'python.svg'
+    },
+    {
+      name: 'vue',
+      img: 'vue.svg'
+    },
+    {
+      name: 'linux',
+      img: 'ubuntu-4.svg'
+    },
+    {
+      name: 'd3',
+      img: 'd3.svg'
+    },
+    {
+      name: 'firebase',
+      img: 'firebase-logo.svg'
+    },
+    {
+      name: 'git',
+      img: 'git-black.svg'
+    }
+  ];
 </script>
 
 <div
@@ -29,73 +59,19 @@
         </p>
       </div>
     </div>
-    <div class=" lg:pl-8">
-      <div class="px-0 grid grid-cols-1 grid-rows-3 gap-2 place-items-start">
-        <div class="flex flex-col gap-4">
+    <div class="p-5 sm:p-8">
+      <div class="columns-1 gap-5 sm:columns-2 sm:gap-8 md:columns-3 lg:columns-4 [&>img:not(:first-child)]:mt-8">
+
+      {#each tools as tool }
+
           <img
-            class="object-cover w-20 h-20 rounded shadow-sm sm:h-32 xl:h-40 sm:w-32 xl:w-40"
-            src="js.svg"
-            alt="javascript logo"
+            class="drop-shadow-md"
+            src="{tool.img}"
+            alt="{tool.name}"
           />
-          <span class="text-xs">Javascript</span>
-        </div>
-
-        <div class="flex gap-4">
-          <div class="flex flex-col">
-            <img
-              class="object-contain w-20 h-20 rounded shadow-sm sm:h-32 xl:h-40 sm:w-32 xl:w-40"
-              src="python.svg"
-              alt="nuxtjs logo"
-            />
-            <span class="text-xs">Python</span>
-          </div>
-          <div class="flex flex-col">
-            <img
-              class="object-contain w-20 h-20 rounded shadow-sm row-start-3 sm:h-32 xl:h-40 sm:w-32 xl:w-40"
-              src="vue.svg"
-              alt="vue logo"
-            />
-            <span class="text-xs">Vue</span>
-          </div>
-        </div>
-
-        <div class="flex gap-4">
-          <div class="flex flex-col">
-            <img
-              class="object-contain w-20 h-20 rounded shadow-sm row-start-3 sm:h-32 xl:h-40 sm:w-32 xl:w-40"
-              src="ubuntu-4.svg"
-              alt="ubuntu OS logo"
-            />
-            <span class="text-xs">Linux</span>
-          </div>
-
-          <div class="flex flex-col">
-            <img
-              class="object-contain w-20 h-20 rounded shadow-sm row-start-2 sm:h-32 xl:h-40 sm:w-32 xl:w-40"
-              src="d3.svg"
-              alt="tailwind logo"
-            />
-            <span class="text-xs">D3.js</span>
-          </div>
-
-          <div class="flex flex-col">
-            <img
-              class="object-contain w-20 h-20 rounded shadow-sm row-start-3 col-start-3 sm:h-32 xl:h-40 sm:w-32 xl:w-40"
-              src="firebase-logo.svg"
-              alt="firebase logo"
-            />
-            <span class="text-xs">Firebase</span>
-          </div>
-          <div class="flex flex-col">
-            <img
-              class="object-contain w-20 h-20 text-black rounded shadow-sm row-start-3 col-start-3 sm:h-32 xl:h-40 sm:w-32 xl:w-40"
-              src="git-black.svg"
-              alt="git logo"
-            />
-            <span class="text-xs">Git</span>
-          </div>
-        </div>
+      {/each}
       </div>
     </div>
   </div>
 </div>
+

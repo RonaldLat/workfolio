@@ -6,7 +6,7 @@
 
 <div
   use:example
-  class="bg-gray-900 max-w-2xl space-y-2 border border-myColor-600 mx-auto p-2 rounded-md"
+  class="bg-gray-900 my-7 md:mt-20 max-w-2xl space-y-2 border border-myColor-600 mx-auto p-2 rounded-md"
 >
   <p class="text-myColor-400 font-[Play]">Daily Stoic</p>
   <img

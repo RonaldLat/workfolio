@@ -7,8 +7,8 @@
   let yAxis;
   let yearPlus = 2024;
   let yearMinus = 2023;
-  let width
-  $:console.log(width)
+  let width;
+  $: console.log(width);
   let height = 400;
   // let screenSize;
   let margin = {
@@ -20,30 +20,29 @@
 
   let data = [];
   onMount(async function () {
-    data = await d3.json(
-      `/api/epl`
-    );
+    data = await d3.json(`/api/epl`);
   });
   $: console.log('data', data);
   $: xScale = d3
     .scaleBand()
-    .domain(data.map((d) => d.team.slice(0,3)))
+    .domain(data.map((d) => d.team.slice(0, 3)))
     .range([margin.left, width - margin.right]);
 
   $: yScale = d3
     .scaleLinear()
-    .domain([0, d3.max(data, (d)=>d.points)])
+    .domain([0, d3.max(data, (d) => d.points)])
     .range([height - margin.bottom, margin.top]);
 
   $: {
     d3.select(xAxis).call(d3.axisBottom(xScale));
     d3.select(yAxis).call(d3.axisLeft(yScale));
   }
-  const colorScale = d3.interpolateSpectral()
-  $: console.log('sc',colorScale);
+  const colorScale = d3.interpolateSpectral();
+  $: console.log('sc', colorScale);
 </script>
-<svelte:window bind:innerWidth={width}/>
-<div class="h-full w-full max-w-3xl  mx-4 overflow-auto">
+
+<svelte:window bind:innerWidth={width} />
+<div class="h-full w-full max-w-3xl mx-4 overflow-auto">
   <h2>First Chart</h2>
   <svg {height} {width} class="w-full bg-emerald-300 px-5 mx-auto">
     {#each data as d}
@@ -54,7 +53,6 @@
         width={xScale.bandwidth()}
         height={yScale(0) - yScale(d.points)}
         stroke="black"
-
       />
     {/each}
     <g transform="translate(0, {height - margin.bottom})" bind:this={xAxis} />

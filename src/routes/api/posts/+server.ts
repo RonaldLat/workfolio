@@ -18,7 +18,7 @@ async function getPosts() {
       new Date(second.date).getTime() - new Date(first.date).getTime()
   );
 
-  console.log(posts)
+  console.log(posts);
   return posts;
 }
 

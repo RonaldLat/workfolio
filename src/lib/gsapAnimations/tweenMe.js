@@ -26,7 +26,7 @@ export function example(node) {
       trigger: node,
       start: 'bottom 80%',
       end: `+=${node.offsetHeight}`,
-      scrub: 2
+      // scrub: 2
     },
     onComplete: tweenComplete
   });

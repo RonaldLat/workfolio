@@ -1,5 +1,11 @@
 <script>
   import { ChevronRight, Code, ExternalLink } from 'lucide-svelte';
+    import { onMount } from 'svelte';
+  import { gsap } from 'gsap';
+  import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+
+
 
   const projects = [
     {
@@ -34,88 +40,123 @@
       git: ''
     }
   ];
+  onMount(()=>{
+    gsap.registerPlugin(ScrollTrigger);
+      let scroll_tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: '.factsContainer',
+            start: "top center",
+            // pin: true,
+            scrub: true,
+            end: "+=300",
+            // markers: true,
+        }
+    }),
+        facts = [...document.querySelectorAll('.fact')]
+    scroll_tl.to('.factsContainer h2', {
+        scale: 1.5,
+        duration: 1,
+        ease: "slow"
+    })
+    scroll_tl.to(facts, {
+        xPercent: -85 * (facts.length - 1),
+        scrollTrigger: {
+            trigger: ".factsContainer_sm",
+            start: "center center",
+            pin: true,
+            // horizontal: true,
+            // pinSpacing:false,
+            // markers: true,
+            scrub: 1,
+            snap: 1 / (facts.length - 1),
+            // base vertical scrolling on how wide the container is so it feels more natural.
+            // end: () => `+=${smallFactsContainer.offsetWidth}`
+            end: () => `+=4320`
+        }
+    });
+      })
 </script>
 
-<div
-  class="px-4 py-16 mx-auto overflow-x-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 font-[Ubuntu]"
->
-  <div>
-    <p
-      class="inline-block w-full px-3 py-px pl-0 mb-4 text-xs font-semibold tracking-wider text-left uppercase font-[Play] rounded-full text-gray-700"
-    >
-      work
-    </p>
-  </div>
-
-  <div class="flex flex-col mb-6 lg:justify-between lg:flex-row md:mb-8">
-    <h2
-      class="max-w-lg font-[Play] mb-5 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none md:mb-6 group"
-    >
-      <span class="inline-block mb-1 sm:mb-4">
-        Things I have <span class="text-myColor-500">built </span></span
-      >
-      <div
-        class="h-1 ml-auto duration-300 origin-left transform scale-x-30 group-hover:scale-x-100"
-      />
-    </h2>
-    <p class="text-gray-700 md:text-lg">
-      Some of personal and professional projects I have worked on.
-    </p>
-  </div>
-
-  <ul
-    class="flex mb-8 overflow-x-auto snap-x lg:grid lg:gap-6 gap-8 lg:row-gap-5 lg:grid-cols-3 lg:row-gap-6 lg:grid-cols-2"
-  >
-    {#each projects as project}
-      <li class="flex-shrink-0 w-[85%] scroll-ml-6 py-4 px-2 snap-center">
-        <div
-          class="relative overflow-hidden rounded bg-slate-200 drop-shadow-sm drop-shadow-myColor-800 hover:drop-shadow-myColor-400 hover:drop-shadow-sm transition duration-200 transform hover:translate-y-2 hover:shadow-lg"
-        >
-          <img
-            class="object-contain w-full h-56 md:h-64 xl:h-80"
-            src="/{project.img}"
-            alt={project.alt}
-          />
-          <div
-            class="absolute inset-x-0 bottom-0 px-6 py-4 bg-black bg-opacity-75"
-          >
-            <p class="text-lg tracking-wide text-gray-200">
-              {project.name}
-            </p>
-
-            <ul
-              class="flex text-gray-200 underline decoration-2 underline-offset-2 gap-6"
-            >
-              <li class="text-sm">
-                <a
-                  href={project.url}
-                  class="decoration-gray-300 hover:text-myColor-300"
-                >
-                  <p size="1.5em"><ExternalLink /></p>
-                </a>
-              </li>
-              <li class="text-sm">
-                <a
-                  href={project.git}
-                  class="decoration-gray-300 hover:text-myColor-300"
-                >
-                  <p size="1.5em"><Code /></p>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </li>
-    {/each}
-  </ul>
-  <div class="text-center">
-    <a
-      href="/portofolio"
-      aria-label=""
-      class="inline-flex items-center font-semibold underline text-myColor-600 decoration-2 transition-colors duration-200 hover:text-myColor-800"
-    >
-      See more
-      <ChevronRight />
-    </a>
-  </div>
+ <div class="wrapper">
+   <div class="factsContainer">
+   <h2>Few Facts about me</h2>
+   <div class="factsContainer_sm">
+     <div class="fact">
+       <h3>3 words to describe me: </h3>
+       <img src="https://source.unsplash.com/random" alt="">
+       <h3>Creative , Adventourous , Hardworking</h3>
+     </div>
+     <div class="fact">
+       <h3>Where are you most likely to be found</h3>
+       <img src="https://source.unsplash.com/random" alt="">
+       <h3>With my head in the fridge</h3>
+     </div>
+     <div class="fact">
+       <h3>Favourite Music Artist</h3>
+       <img src="https://source.unsplash.com/random" alt="">
+       <h3>Kygo</h3>
+     </div>
+     <div class="fact">
+       <h3>Favourite Sport</h3>
+       <img src="https://source.unsplash.com/random" alt="">
+       <h3>Swimming</h3>
+     </div>
+   </div>
 </div>
+   <div class="socialContainer">
+     <h3>Well</h3>
+   </div>
+</div>
+
+<style>
+* {
+  margin : 0;
+  padding : 0;
+}
+
+.wrapper {
+	min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.factsContainer {
+    padding: 0em 2em;
+    text-align: center;
+    line-height: 10vh;
+}
+
+.factsContainer h2 {
+    font-size: 1.8em;
+    transform: scale(0);
+    padding: 2em 0em;
+    margin-bottom: 15vh;
+    color: #F0C368;
+}
+
+.factsContainer_sm {
+    display: flex;
+    width: 300vw;
+}
+
+.fact {
+    display: flex;
+    flex-direction: column;
+    height: 40vh;
+    flex: 1;
+    justify-content: space-between;
+    padding: 1em;
+    align-items: center;
+    color: #F0C368;
+}
+
+.fact img {
+    width: 25vw;
+    height: 25vh;
+    margin: 1em;
+}
+
+.socialContainer{
+  width: 100vw;
+  height: 100vh;
+}
+</style>
