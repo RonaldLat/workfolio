@@ -138,7 +138,7 @@
   <main
     in:fade={{ duration: 200, delay: 200 }}
     out:fade={{ duration: 200 }}
-    class="  mx-auto w-full min-h-screen font-[Poppins] px-2 lg:px-5 py-16 overflow-hidden"
+    class="  mx-auto w-full  min-h-screen font-[Poppins] px-2 lg:px-5 py-16 overflow-hidden"
   >
     <slot />
   </main>
