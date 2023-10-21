@@ -18,10 +18,11 @@ async function getPosts() {
       new Date(second.date).getTime() - new Date(first.date).getTime()
   );
 
+  console.log(posts)
   return posts;
 }
 
 export async function GET() {
   const posts = await getPosts();
-  return text(posts);
+  return json(posts);
 }

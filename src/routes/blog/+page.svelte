@@ -13,10 +13,10 @@
   <h1>Ronald's Blog</h1>
 
   <ul
-    class=" grid grid-cols-1 md:grid-cols-2 w-full mx-auto justify-center place-items-center items-center gap-2 text-center"
+    class=" grid grid-cols-1 md:grid-cols-2 auto-rows-fr w-full mx-auto  gap-2 text-center"
   >
     {#each data.posts as post}
-      <li class="h-full w-fit px-2 p-1 rounded-sm">
+      <li class=" h-full w-fit px-2 p-1 rounded-sm">
         <a href={`blog/${post.slug}`}>
           <BlogCard {post} />
         </a>

@@ -14,14 +14,5 @@
     <p class="text-md font-[Roboto]">{post.excerpt}</p>
     <h1 class="text-gray-700 text-sm font-[Play]">{formatDate(post.date)}</h1>
 
-    <div class="mt-8 flex gap-4 items-center hidden">
-      <img class="h-12 w-12 rounded-full" src="" alt="" />
-      <div>
-        <h3 class="text-lg font-medium">Oketa Fred</h3>
-        <span class="text-sm tracking-wide text-gray-600 dark:text-gray-400"
-          >Fullstack Developer</span
-        >
-      </div>
-    </div>
   </div>
 </div>
