@@ -70,7 +70,7 @@
   <div class="horizontal-sliders w-[500%] ">
     {#each projects as project}
       <!-- component -->
-      <div class="slide w-full max-w-md py-4 px-8 bg-white shadow-lg rounded-lg my-20 flex flex-col justify-center">
+      <div class="slide w-full max-w-lg py-4 px-8  shadow-lg rounded-lg my-20 flex flex-col justify-center">
         <div class=" w-full justify-center md:justify-end -mt-16">
           <img
             class="w-5/6 h-auto object-cover rounded-md border-2 border-indigo-500"
@@ -87,7 +87,7 @@
       </div>
     {/each}
   </div>
-  <div class="next-block bg-myColor-300">this is next block</div>
+  <div class="next-block bg-myColor-50 hidden">this is next block</div>
 </div>
 
 <style>
@@ -105,7 +105,7 @@
   }
   .slide {
     height: 80vh;
-    width: 100%;
+    /* width: 100%; */
   }
   .slide:nth-child(2n) {
     /* background-color: aqua; */
