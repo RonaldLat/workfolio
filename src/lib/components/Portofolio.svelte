@@ -1,11 +1,8 @@
 <script>
   import { ChevronRight, Code, ExternalLink } from 'lucide-svelte';
-    import { onMount } from 'svelte';
+  import { onMount } from 'svelte';
   import { gsap } from 'gsap';
   import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-
-
 
   const projects = [
     {
@@ -40,123 +37,80 @@
       git: ''
     }
   ];
-  onMount(()=>{
+  onMount(() => {
     gsap.registerPlugin(ScrollTrigger);
-      let scroll_tl = gsap.timeline({
-        scrollTrigger: {
-            trigger: '.factsContainer',
-            start: "top center",
-            // pin: true,
-            scrub: true,
-            end: "+=300",
-            // markers: true,
-        }
-    }),
-        facts = [...document.querySelectorAll('.fact')]
-    scroll_tl.to('.factsContainer h2', {
-        scale: 1.5,
-        duration: 1,
-        ease: "slow"
-    })
-    scroll_tl.to(facts, {
-        xPercent: -85 * (facts.length - 1),
-        scrollTrigger: {
-            trigger: ".factsContainer_sm",
-            start: "center center",
-            pin: true,
-            // horizontal: true,
-            // pinSpacing:false,
-            // markers: true,
-            scrub: 1,
-            snap: 1 / (facts.length - 1),
-            // base vertical scrolling on how wide the container is so it feels more natural.
-            // end: () => `+=${smallFactsContainer.offsetWidth}`
-            end: () => `+=4320`
-        }
+    gsap.registerPlugin(ScrollTrigger);
+    let sections = gsap.utils.toArray('.slide');
+
+    gsap.to(sections, {
+      xPercent: -100 * (sections.length - 1),
+      ease: 'none',
+      scrollTrigger: {
+        trigger: '.horizontal-sliders',
+        pin: '.main',
+        pinSpacing: true,
+        scrub: 1,
+        end: '+=3000'
+      }
     });
-      })
+
+    gsap.to('.next-block', {
+      // backgroundColor: 'tomato',
+      scrollTrigger: {
+        trigger: '.next-block',
+        pinnedContainer: '.main',
+        start: 'top 50%',
+        toggleActions: 'play none reset none'
+      }
+    });
+  });
 </script>
 
- <div class="wrapper">
-   <div class="factsContainer">
-   <h2>Few Facts about me</h2>
-   <div class="factsContainer_sm">
-     <div class="fact">
-       <h3>3 words to describe me: </h3>
-       <img src="https://source.unsplash.com/random" alt="">
-       <h3>Creative , Adventourous , Hardworking</h3>
-     </div>
-     <div class="fact">
-       <h3>Where are you most likely to be found</h3>
-       <img src="https://source.unsplash.com/random" alt="">
-       <h3>With my head in the fridge</h3>
-     </div>
-     <div class="fact">
-       <h3>Favourite Music Artist</h3>
-       <img src="https://source.unsplash.com/random" alt="">
-       <h3>Kygo</h3>
-     </div>
-     <div class="fact">
-       <h3>Favourite Sport</h3>
-       <img src="https://source.unsplash.com/random" alt="">
-       <h3>Swimming</h3>
-     </div>
-   </div>
-</div>
-   <div class="socialContainer">
-     <h3>Well</h3>
-   </div>
+<div class="main">
+  <div class="horizontal-sliders w-[500%] ">
+    {#each projects as project}
+      <!-- component -->
+      <div class="slide w-full max-w-md py-4 px-8 bg-white shadow-lg rounded-lg my-20 flex flex-col justify-center">
+        <div class=" w-full justify-center md:justify-end -mt-16">
+          <img
+            class="w-5/6 h-auto object-cover rounded-md border-2 border-indigo-500"
+            src="{project.img}"
+          />
+        </div>
+        <div>
+          <h2 class="text-gray-800 text-3xl font-semibold">Design Tools</h2>
+          <p class="mt-2 text-gray-600">{project.name}</p>
+        </div>
+        <div class="flex justify-end mt-4">
+          <a href="#" class="text-xl font-medium text-indigo-500">{project.git}</a>
+        </div>
+      </div>
+    {/each}
+  </div>
+  <div class="next-block bg-myColor-300">this is next block</div>
 </div>
 
 <style>
-* {
-  margin : 0;
-  padding : 0;
-}
-
-.wrapper {
-	min-height: 100vh;
+  * {
+    margin: 0;
+  }
+  .main {
     overflow-x: hidden;
-}
-
-.factsContainer {
-    padding: 0em 2em;
-    text-align: center;
-    line-height: 10vh;
-}
-
-.factsContainer h2 {
-    font-size: 1.8em;
-    transform: scale(0);
-    padding: 2em 0em;
-    margin-bottom: 15vh;
-    color: #F0C368;
-}
-
-.factsContainer_sm {
+  }
+  .horizontal-sliders {
     display: flex;
-    width: 300vw;
-}
-
-.fact {
-    display: flex;
-    flex-direction: column;
-    height: 40vh;
-    flex: 1;
-    justify-content: space-between;
-    padding: 1em;
-    align-items: center;
-    color: #F0C368;
-}
-
-.fact img {
-    width: 25vw;
-    height: 25vh;
-    margin: 1em;
-}
-
-.socialContainer{
-  width: 100vw;
-  height: 100vh;
-}
+    flex-wrap: no-wrap;
+    /* width: 500%; */
+    overflow-x: hidden;
+  }
+  .slide {
+    height: 80vh;
+    width: 100%;
+  }
+  .slide:nth-child(2n) {
+    /* background-color: aqua; */
+  }
+  .next-block {
+    height: 100vh;
+  }
 </style>

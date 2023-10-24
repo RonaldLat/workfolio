@@ -28,6 +28,10 @@
     {
       name: 'git',
       img: 'git-black.svg'
+    },
+    {
+      name: 'nodejs',
+      img: 'nodejs2.png'
     }
   ];
 </script>
@@ -60,18 +64,17 @@
       </div>
     </div>
     <div class="p-5 sm:p-8">
-      <div class="columns-1 gap-5 sm:columns-2 sm:gap-8 md:columns-3 lg:columns-4 [&>img:not(:first-child)]:mt-8">
-
-      {#each tools as tool }
-
+      <div
+        class="columns-3 gap-5 sm:columns-2 sm:gap-8 md:columns-3 lg:columns-4 [&>img:not(:first-child)]:mt-8 justify-items-center place-items-center"
+      >
+        {#each tools as tool}
           <img
-            class="drop-shadow-md"
-            src="{tool.img}"
-            alt="{tool.name}"
+            class="drop-shadow-md max-w-[100px] h-auto"
+            src={tool.img}
+            alt={tool.name}
           />
-      {/each}
+        {/each}
       </div>
     </div>
   </div>
 </div>
-
