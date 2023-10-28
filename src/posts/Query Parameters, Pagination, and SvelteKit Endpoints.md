@@ -1,7 +1,7 @@
 ---
 title: Query Parameters, Pagination, and SvelteKit Endpoints
 author: Ronald Otieno
-date: 2023-28-10
+date: 2023-10-28
 layout: blog
 published: true
 excerpt: SvelteKit's endpoints enable seamless use of query parameters and pagination, improving content retrieval for a smoother user experience.
