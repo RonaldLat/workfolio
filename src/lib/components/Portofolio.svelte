@@ -19,7 +19,7 @@
       url: 'https://happy-liskov-d56336.netlify.app/',
       img: 'ideal-sofas-pc.webp',
       alt: 'screenshot of Ideal Sofas Website',
-      git: ''
+      git: '',
       description: '',
     },
 
@@ -36,7 +36,7 @@
       url: '',
       img: 'mc-portofolio.webp',
       alt: 'screenshot of Dudi Resort Website',
-      git: ''
+      git: '',
       description: '',
     }
   ];
