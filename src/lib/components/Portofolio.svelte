@@ -10,7 +10,8 @@
       url: 'https://frosty-hopper-d52530.netlify.app/',
       img: 'furniture-palace-clone-pc.webp',
       alt: 'screenshot of Furniture Palace clone Website',
-      git: ''
+      git: '',
+      description: '',
     },
 
     {
@@ -19,6 +20,7 @@
       img: 'ideal-sofas-pc.webp',
       alt: 'screenshot of Ideal Sofas Website',
       git: ''
+      description: '',
     },
 
     {
@@ -35,6 +37,7 @@
       img: 'mc-portofolio.webp',
       alt: 'screenshot of Dudi Resort Website',
       git: ''
+      description: '',
     }
   ];
   onMount(() => {

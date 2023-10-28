@@ -15,7 +15,7 @@
   class="px-3 md:px-5 w-full bg-transparent pb-28 min-h-screen py-8 flex flex-col items-center justify-center relative overflow-hidden lg:py-12"
 >
   <article
-    class="prose text-gray-800 prose-h1:font-[Maven] prose-h2:font-[Caudex] w-full"
+    class="prose text-gray-800 prose-h1:font-[Maven] prose-h2:font-[Caudex] w-full bg-transparent"
   >
     <hgroup>
       <h1 class="">{data.meta.title}</h1>
