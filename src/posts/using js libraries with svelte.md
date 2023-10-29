@@ -5,7 +5,7 @@ author: Ronald Otieno
 date: 2023-10-29
 layout: blog
 published: true
-exerpt: Learn the techniques of using any JavaScript library in a Svelte app and most importantly discover the super powers hidden inside Svelte Actions.
+excerpt: Learn the techniques of using any JavaScript library in a Svelte app and most importantly discover the super powers hidden inside Svelte Actions.
 excerpt:
 ---
 ## Introduction
