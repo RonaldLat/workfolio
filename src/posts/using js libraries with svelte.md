@@ -1,4 +1,3 @@
-
 ---
 title: Using JavaScript Libraries with Svelte
 author: Ronald Otieno
@@ -6,7 +5,6 @@ date: 2023-10-29
 layout: blog
 published: true
 excerpt: Learn the techniques of using any JavaScript library in a Svelte app and most importantly discover the super powers hidden inside Svelte Actions.
-excerpt:
 ---
 ## Introduction
 When using JavaScript libraries, the most important thing to do is usually to get a DOM reference that the library can interact with.
@@ -51,7 +49,7 @@ In this example we be using an animation library called (Motion One)[https:///mo
 
 This method works but there is a catch. As your app grows the complexity becomes difficult to manage.
 And also this is not the svelte way of doing things.
-The svelte way of handling the DOM is by using the `bind` directive to gain reference to an element instead of querying the DOM yourself.
+The Svelte way of handling the DOM is by using the `bind` directive to gain reference to an element instead of querying the DOM yourself.
 
 
 ## Dynamic Import
