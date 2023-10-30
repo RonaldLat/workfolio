@@ -10,7 +10,9 @@
 
 <div class="min-h-screen font-[Ubuntu] bg-myColor-50 px-2 lg:px-4">
   <Home />
-  <DailyStoic {quote} />
+  {#if quote}
+    <DailyStoic {quote} />
+  {/if}
   <Portofolio />
   <Tools />
 </div>
