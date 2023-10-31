@@ -21,6 +21,7 @@
   export let data;
 
   let topBar;
+  let topBarx;
 
   $: onMount(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -74,8 +75,8 @@
   </div>
   <a
     href="/"
-    bind:this={topBar}
-    class="bg-black bg-blend-hard-light opacity-85 h-12 w-full justify-between cursor-pointer flex flex-row hover:bg-mycolor-600 z-20 transition ease-in duration-150 delay-150 text-2xl fixed top-0 left-0 text-myColor-400"
+    bind:this={topBarx}
+    class="bg-black bg-blend-hard-light opacity-85 h-12 w-full justify-between cursor-pointer flex flex-row hover:bg-mycolor-600 z-20 transition ease-in duration-150 delay-150 text-2xl fixed top-0 left-0 text-myColor-400 hidden"
   >
     <svg
       class=" w-auto block h-full bg-black opacity-85 rounded-md rounded-t-none rounded-bl-none fill-myColor-300"

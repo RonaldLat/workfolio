@@ -11,7 +11,7 @@
       img: 'furniture-palace-clone-pc.webp',
       alt: 'screenshot of Furniture Palace clone Website',
       git: '',
-      description: '',
+      description: ''
     },
 
     {
@@ -20,7 +20,7 @@
       img: 'ideal-sofas-pc.webp',
       alt: 'screenshot of Ideal Sofas Website',
       git: '',
-      description: '',
+      description: ''
     },
 
     {
@@ -37,7 +37,7 @@
       img: 'mc-portofolio.webp',
       alt: 'screenshot of Dudi Resort Website',
       git: '',
-      description: '',
+      description: ''
     }
   ];
   onMount(() => {
@@ -70,14 +70,16 @@
 </script>
 
 <div class="main">
-  <div class="horizontal-sliders w-[500%] ">
+  <div class="horizontal-sliders w-[500%]">
     {#each projects as project}
       <!-- component -->
-      <div class="slide w-full max-w-lg py-4 px-8  shadow-lg rounded-lg my-20 flex flex-col justify-center">
+      <div
+        class="slide w-full max-w-lg py-4 px-8 shadow-lg rounded-lg my-20 flex flex-col justify-center"
+      >
         <div class=" w-full justify-center md:justify-end -mt-16">
           <img
             class="w-5/6 h-auto object-cover rounded-md border-2 border-indigo-500"
-            src="{project.img}"
+            src={project.img}
           />
         </div>
         <div>
@@ -85,7 +87,9 @@
           <p class="mt-2 text-gray-600">{project.name}</p>
         </div>
         <div class="flex justify-end mt-4">
-          <a href="#" class="text-xl font-medium text-indigo-500">{project.git}</a>
+          <a href="#" class="text-xl font-medium text-indigo-500"
+            >{project.git}</a
+          >
         </div>
       </div>
     {/each}

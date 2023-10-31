@@ -16,5 +16,5 @@
   {/if}
   <Portofolio />
   <Tools />
-  <FeaturedPosts/>
+  <FeaturedPosts />
 </div>

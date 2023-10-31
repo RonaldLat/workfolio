@@ -58,7 +58,7 @@ export async function get({ query }) {
     body: {
       products,
       page,
-      limit,
+      limit
     }
   };
 }

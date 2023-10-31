@@ -1,7 +1,7 @@
 /** @type {import('./$types').RequestHandler}*/
 import { json, text } from '@sveltejs/kit';
 
-async function getPosts(limit=10) {
+async function getPosts(limit = 10) {
   let posts = [];
 
   const paths = import.meta.glob('/src/posts/*.md', { eager: true });
@@ -19,10 +19,10 @@ async function getPosts(limit=10) {
       new Date(second.date).getTime() - new Date(first.date).getTime()
   );
 
-  return posts.slice(0,limit);
+  return posts.slice(0, limit);
 }
 
-export async function GET({url}) {
+export async function GET({ url }) {
   const limit = url.searchParams.get('limit');
   const posts = await getPosts(limit);
   return json(posts);
