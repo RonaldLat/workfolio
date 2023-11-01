@@ -53,7 +53,7 @@
 
 <div
   bind:this={header}
-  class="fixed z-10 py-8 px-3 top-0 left-0 w-screen h-[calc(100vh-29px)] grid grid-rows-2 place-items-center text-4xl text-left bg-gray-800 bg-[url('../lat2-smaller.webp')] bg-blend-overlay bg-cover bg-center"
+  class="fixed z-10 py-8 px-3 top-0 left-0 w-screen h-[calc(100vh-29px)] grid grid-rows-2 place-items-center text-4xl text-left bg-gray-800 bg-[url('/lat2-smaller.webp')] bg-blend-overlay bg-cover bg-center"
   id="sticky-parallax-header"
 >
   <p
