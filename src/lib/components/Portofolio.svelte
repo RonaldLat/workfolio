@@ -70,7 +70,7 @@ scroll(
   });
 </script>
 
-<div class="body relative">
+<div class="body mt-14 ">
 <div class="container">
   <section data-bgcolor="#bcb8ad" data-textcolor="#032f35">
     <div>
@@ -108,7 +108,7 @@ scroll(
   color: var(--text-color);
   background: var(--bg-color);
   transition: 0.3s ease-out;
-  overflow-x: hidden;
+  overflow-x: clip;
   max-width: 100vw;
   width: 100%;
   overscroll-behavior: none;
@@ -165,10 +165,6 @@ h2 {
 
 .credit {
   font-family: Termina, sans-serif;
-}
-
-* {
-  box-sizing: border-box;
 }
 
 #sectionPin {

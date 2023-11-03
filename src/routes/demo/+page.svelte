@@ -71,14 +71,14 @@ scroll(
   });
 </script>
 
-<body>
+<div class="body">
 <div class="container overflow-visible">
+
   <section data-bgcolor="#bcb8ad" data-textcolor="#032f35">
     <div>
       <h1 data-scroll data-scroll-speed="1"><span>Horizontal</span> <span>scroll</span> <span>section</span></h1>
       <p data-scroll data-scroll-speed="2" data-scroll-delay="0.2">With Motion One</p>
     </div>
-
   </section>
 
   <section bind:this={sectionPin} id="sectionPin">
@@ -95,7 +95,7 @@ scroll(
 		Created by <a href="https://twitter.com/bramus" target="_top" rel="noreferrer noopener">Bramus</a>.<br /><br />Design and content by <a href="https://codepen.io/cameronknight/pen/qBNvrRQ" target="_top">Cameron Knight</a>.</h2>
   </section>
 </div>
-</body>
+</div>
 
 
 <style>
@@ -104,15 +104,13 @@ scroll(
   --bg-color: #b9b3a9;
 }
 
-body {
+.body {
   font-family: termina, sans-serif;
   color: var(--text-color);
   background: var(--bg-color);
   transition: 0.3s ease-out;
-  overflow-x: hidden;
-  max-width: 100vw;
+  overflow-x: clip;
   width: 100%;
-  overscroll-behavior: none;
 }
 
 section {

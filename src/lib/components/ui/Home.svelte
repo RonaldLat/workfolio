@@ -47,24 +47,24 @@
         offset: ['0vh', '90vh'] // As we shrink the header to 10vh, we only need to run the animation over a distance of 90vh
       }
     ),
-      { target: image, offset: ScrollOffset.Enter };
+      { target: image, offset: ScrollOffset.enter };
   });
 </script>
 
 <div
   bind:this={header}
-  class="fixed z-10 py-8 px-3 top-0 left-0 w-screen h-[calc(100vh-29px)] grid grid-rows-2 place-items-center text-4xl text-left bg-gray-800 bg-[url('/lat2-smaller.webp')] bg-blend-overlay bg-cover bg-center"
+  class="fixed z-10 py-8 px-3 top-0 left-0 w-screen h-[calc(100vh-29px)] grid grid-rows-2 place-items-center  text-left bg-gray-800 bg-[url('/lat2-smaller.webp')] bg-blend-overlay bg-cover bg-center"
   id="sticky-parallax-header"
 >
   <p
     bind:this={title1}
-    class="h-full w-full font-bold font[Play] text-5xl text-gray-50 flex items-center"
+    class="h-full w-full font-bold font[Play] text-5xl text-gray-50 flex items-start"
   >
     Ronald Otieno
   </p>
   <p
     bind:this={title2}
-    class=" self-end w-full h-full text-gray-300 pr-5 pb-14 italic flex text-center items-end justify-end"
+    class=" self-end w-full h-full text-gray-300 pr-5 pb-4 italic flex text-center items-end justify-end"
   >
     Software Developer
   </p>
@@ -97,8 +97,8 @@
       </p>
     </div>
 
-    <p class="w-full h-auto">
-      <img class="-z-10 w-full h-auto" bind:this={image} src="js.svg" alt="" />
+    <p class="w-full  mb-14">
+      <img class="-z-10 w-full h-[80vh] " bind:this={image} src="js.svg" alt="" />
     </p>
   </div>
 </div>
