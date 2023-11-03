@@ -56,7 +56,7 @@
   const toggleSideNav = () => (showSideNav = !showSideNav);
 </script>
 
-<div class="min-h-screen font-[Poppins] overflow-hidden bg-myColor-50">
+<div class="min-h-screen font-[Poppins] overflow-visible bg-myColor-50">
   <div
     class="fixed z-20 top-0 left-0 h-full w-full md:w-1/2 bg-myColor-800 shadow-lg transition-transform transform -translate-x-full ease-in-out duration-300"
     class:translate-x-0={showSideNav}

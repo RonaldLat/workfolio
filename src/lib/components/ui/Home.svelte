@@ -70,41 +70,37 @@
   </p>
 </div>
 
-
-<div
-  class="  mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl   "
->
-<div
-  bind:this={content}
-  class="h-screen relative  flex flex-col items-start w-full max-w-xl px-4 mx-auto  lg:px-8 lg:max-w-screen-xl"
-  id="content"
->
-  <h2
-    class="mb-5 font-[Maven] text-4xl font-extrabold first-letter:text-6xl first-letter:text-myColor-600 tracking-widest text-gray-900 sm:text-4xl sm:leading-none"
+<div class="  mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl">
+  <div
+    bind:this={content}
+    class="h-screen relative flex flex-col items-start w-full max-w-xl px-4 mx-auto lg:px-8 lg:max-w-screen-xl"
+    id="content"
   >
-    I build intelligent sytems,<br class="hidden md:block" />
-    <span class="inline-block text-deep-violet-accent-400"
-      >one line at a time.</span
+    <h2
+      class="mb-5 font-[Maven] text-4xl font-extrabold first-letter:text-6xl first-letter:text-myColor-600 tracking-widest text-gray-900 sm:text-4xl sm:leading-none"
     >
-  </h2>
+      I build intelligent sytems,<br class="hidden md:block" />
+      <span class="inline-block text-deep-violet-accent-400"
+        >one line at a time.</span
+      >
+    </h2>
 
-  <div class="flex flex-col gap-y-4 mb-5 text-base text-gray-700 md:text-lg">
-    <p>
-      Hello! I'm Ronald Otieno, a software developer specializing in web
-      development, data visualization, and machine learning.
-    </p>
-    <p>
-      With expertise in dynamic web applications and a focus on D3.js for
-      captivating visualizations, I'm excited to collaborate on impactful
-      projects. Let's make a difference together!
+    <div class="flex flex-col gap-y-4 mb-5 text-base text-gray-700 md:text-lg">
+      <p>
+        Hello! I'm Ronald Otieno, a software developer specializing in web
+        development, data visualization, and machine learning.
+      </p>
+      <p>
+        With expertise in dynamic web applications and a focus on D3.js for
+        captivating visualizations, I'm excited to collaborate on impactful
+        projects. Let's make a difference together!
+      </p>
+    </div>
+
+    <p class="w-full h-auto">
+      <img class="-z-10 w-full h-auto" bind:this={image} src="js.svg" alt="" />
     </p>
   </div>
-
-  <p class="w-full h-auto">
-    <img class="-z-10 w-full h-auto" bind:this={image} src="js.svg" alt="" />
-  </p>
-</div>
-
 </div>
 
 <style>

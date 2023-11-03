@@ -1,359 +1,206 @@
 <script>
-  import { scroll, animate, ScrollOffset } from 'motion';
+  //import { ChevronRight, Code, ExternalLink } from 'lucide-svelte';
+  import { scroll, animate, ScrollOffset} from 'motion'
   import { onMount } from 'svelte';
 
-  let header, content, title1, title2, image;
+  const projects = [
+    {
+      name: 'Furniture Place Clone',
+      url: 'https://frosty-hopper-d52530.netlify.app/',
+      img: 'furniture-palace-clone-pc.webp',
+      alt: 'screenshot of Furniture Palace clone Website',
+      git: '',
+      description: ''
+    },
+
+    {
+      name: 'Ideal Sofas Website',
+      url: 'https://happy-liskov-d56336.netlify.app/',
+      img: 'ideal-sofas-pc.webp',
+      alt: 'screenshot of Ideal Sofas Website',
+      git: '',
+      description: ''
+    },
+
+    {
+      name: 'Dudi Resort website',
+      url: '',
+      img: 'dr-portofolio.webp',
+      alt: 'screenshot of Dudi Resort Website',
+      git: ''
+    },
+
+    {
+      name: 'Milly Cakes website',
+      url: '',
+      img: 'mc-portofolio.webp',
+      alt: 'screenshot of Dudi Resort Website',
+      git: '',
+      description: ''
+    }
+  ];
+
+    let sectionPin ;
+    let slidingContent;
+    let image1, image2, image3
+
 
   onMount(() => {
-    scroll(
-      animate(header, {
-        backgroundPosition: ['50% 0', '50% 100%'],
-        backgroundColor: [null, 'black'],
-        height: [null, `1.0rem`],
-        fontSize: ['calc(4vw + 1em)', 'calc(1vw + 1em)']
-      }),
-      {
-        offset: ['0vh', '90vh'] // As we shrink the header to 10vh, we only need to run the animation over a distance of 90vh
-      }
-    );
+      const sectionHeightInVh = 500; // 👈 The scrolling distance over which the horizontal section should slide across
 
-    scroll(
-      animate(title1, {
-        paddingTop: [null, 0],
-        paddingLeft: '1.5rem',
-        paddingBottom: '0.5rem',
-        alignItems: 'center'
-      }),
-      {
-        offset: ['0vh', '90vh'] // As we shrink the header to 10vh, we only need to run the animation over a distance of 90vh
-      }
-    );
+// Adjust wrapper
+// - Change height so that we have room to scroll in
+// - Add fix to make position: sticky work
+sectionPin.style.height = `${sectionHeightInVh}vh`;
+sectionPin.style.overflow = `visible`;
+console.log(slidingContent)
 
-    scroll(
-      animate(title2, {
-        opacity: 0
-      }),
-      {
-        offset: ['0vh', '90vh'] // As we shrink the header to 10vh, we only need to run the animation over a distance of 90vh
-      }
-    );
+// Adjust content
+// - Make it stick to the top
+slidingContent.style.position = "sticky";
+slidingContent.style.top = 0;
 
-    scroll(
-      animate(image, {
-        clipPath: ['inset(0% 60% 0% 50%)', 'inset(0% 0% 0% 0%)']
-      }),
+scroll(
+	animate(slidingContent, {transform: ["translateX(0)", `translateX(calc(-100% + 100vw))`]}),
+	{
+		target: sectionPin,
+		offset: ScrollOffset.Enter,
+	}
+);
 
-      {
-        offset: ['0vh', '90vh'] // As we shrink the header to 10vh, we only need to run the animation over a distance of 90vh
-      }
-    ),
-      { target: image, offset: ScrollOffset.Enter };
   });
 </script>
 
-<div>
-  <!-- @TODO: Have https://github.com/flackr/scroll-timeline/pull/52 merged and from then on load the “official” build -->
-  <div
-    bind:this={header}
-    class="fixed py-8 px-3 top-0 left-0 w-screen h-[calc(100vh-29px)] grid grid-rows-2 place-items-center text-4xl text-left bg-gray-800 bg-[url(lat2-smaller.webp)] bg-blend-overlay bg-cover bg-center"
-    id="sticky-parallax-header"
-  >
-    <p
-      bind:this={title1}
-      class="h-full w-full font-bold font[Play] text-5xl text-gray-50 flex items-center"
-    >
-      Ronald Otieno
-    </p>
-    <p
-      bind:this={title2}
-      class=" self-end w-full h-full text-gray-300 pr-5 pb-14 italic flex text-center items-end justify-end"
-    >
-      Software Developer
-    </p>
-  </div>
+<body>
+<div class="container overflow-visible">
+  <section data-bgcolor="#bcb8ad" data-textcolor="#032f35">
+    <div>
+      <h1 data-scroll data-scroll-speed="1"><span>Horizontal</span> <span>scroll</span> <span>section</span></h1>
+      <p data-scroll data-scroll-speed="2" data-scroll-delay="0.2">With Motion One</p>
+    </div>
 
-  <div bind:this={content} id="content">
-    <p>
-      Duis nec nisi a eros dictum euismod nec non enim. Donec augue neque,
-      aliquam id finibus a, volutpat ut ligula. Nam feugiat odio elit, ut
-      molestie mi tempus vel. Etiam vitae velit eget massa scelerisque hendrerit
-      cursus vel justo. Sed eget euismod lectus. Morbi tincidunt diam ac diam
-      tempor molestie. Mauris eget lectus leo. Etiam id porta turpis.
-    </p>
+  </section>
 
-    <p class="">
-      <img bind:this={image} src="js.svg" alt="" />
-    </p>
+  <section bind:this={sectionPin} id="sectionPin">
+    <div bind:this={slidingContent} class="pin-wrap">
+      <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h2>
+      <img bind:this={image1} class="sticky top-0" src="https://images.pexels.com/photos/5207262/pexels-photo-5207262.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900" alt="">
+      <img bind:this={image2} class="sticky top-0" src="https://images.pexels.com/photos/3371358/pexels-photo-3371358.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900" alt="">
+      <img bind:this={image3} class="sticky top-0" src="https://images.pexels.com/photos/3618545/pexels-photo-3618545.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900" alt="">
 
-    <p>
-      Nam pulvinar congue condimentum. Pellentesque fringilla ante sed massa
-      tincidunt feugiat. Nulla bibendum est eros, non malesuada dolor vehicula
-      in. Morbi eu cursus arcu. Phasellus ultricies ornare lorem, non interdum
-      orci condimentum eu. Donec condimentum condimentum ligula ut placerat.
-      Vestibulum id neque condimentum, molestie nunc vel, suscipit turpis.
-      Quisque orci velit, mattis et nibh non, tempor finibus erat. Nullam
-      tristique, tortor non commodo cursus, magna turpis rhoncus leo, quis porta
-      quam ante sed orci. Nunc vehicula imperdiet leo in vulputate. Quisque quis
-      dolor orci.
-    </p>
-
-    <p>
-      Curabitur ultrices fringilla libero sit amet porta. Nulla rhoncus
-      venenatis euismod. Praesent non interdum sem. Nunc in nibh tincidunt,
-      faucibus sem at, finibus turpis. Nullam vel odio blandit, tincidunt urna
-      et, luctus lectus. Vivamus porta sem vitae turpis interdum porta eu id
-      ligula. Fusce non nisi fringilla, malesuada metus ut, imperdiet ligula.
-      Nunc quis lorem nibh. Duis pharetra magna vestibulum metus convallis, id
-      mollis ligula vulputate. Sed purus est, consectetur non suscipit sit amet,
-      hendrerit at dolor. Maecenas feugiat, quam vel ullamcorper feugiat, sapien
-      ipsum viverra justo, id cursus metus nisi quis enim.
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mattis
-      turpis eu neque tincidunt lacinia. Pellentesque habitant morbi tristique
-      senectus et netus et malesuada fames ac turpis egestas. Aliquam auctor
-      ultrices tortor et volutpat. Donec eu semper orci, eu fermentum orci.
-      Vivamus aliquam lobortis egestas. Proin vel mauris vitae sem auctor
-      cursus. Aenean sit amet odio at magna pharetra luctus nec eget urna.
-      Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
-      cubilia curae; Praesent in leo at tellus ultricies laoreet.
-    </p>
-
-    <p>
-      Duis nec nisi a eros dictum euismod nec non enim. Donec augue neque,
-      aliquam id finibus a, volutpat ut ligula. Nam feugiat odio elit, ut
-      molestie mi tempus vel. Etiam vitae velit eget massa scelerisque hendrerit
-      cursus vel justo. Sed eget euismod lectus. Morbi tincidunt diam ac diam
-      tempor molestie. Mauris eget lectus leo. Etiam id porta turpis.
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mattis
-      turpis eu neque tincidunt lacinia. Pellentesque habitant morbi tristique
-      senectus et netus et malesuada fames ac turpis egestas. Aliquam auctor
-      ultrices tortor et volutpat. Donec eu semper orci, eu fermentum orci.
-      Vivamus aliquam lobortis egestas. Proin vel mauris vitae sem auctor
-      cursus. Aenean sit amet odio at magna pharetra luctus nec eget urna.
-      Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
-      cubilia curae; Praesent in leo at tellus ultricies laoreet.
-    </p>
-
-    <p>
-      Duis nec nisi a eros dictum euismod nec non enim. Donec augue neque,
-      aliquam id finibus a, volutpat ut ligula. Nam feugiat odio elit, ut
-      molestie mi tempus vel. Etiam vitae velit eget massa scelerisque hendrerit
-      cursus vel justo. Sed eget euismod lectus. Morbi tincidunt diam ac diam
-      tempor molestie. Mauris eget lectus leo. Etiam id porta turpis.
-    </p>
-
-    <p>
-      Aenean ac pellentesque ante. In hac habitasse platea dictumst. Nullam
-      efficitur, dolor ac pharetra iaculis, sem elit maximus ex, et malesuada
-      est ipsum tempor nisi. Phasellus auctor et turpis ultrices fermentum.
-      Mauris ac orci sapien. Quisque auctor, mi eu vestibulum dictum, nisl felis
-      pulvinar dui, non dictum justo tellus a urna. Morbi suscipit et odio a
-      feugiat. Sed dui nisi, iaculis a lacus posuere, dictum laoreet felis.
-      Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-      inceptos himenaeos.
-    </p>
-
-    <p>
-      Nam pulvinar congue condimentum. Pellentesque fringilla ante sed massa
-      tincidunt feugiat. Nulla bibendum est eros, non malesuada dolor vehicula
-      in. Morbi eu cursus arcu. Phasellus ultricies ornare lorem, non interdum
-      orci condimentum eu. Donec condimentum condimentum ligula ut placerat.
-      Vestibulum id neque condimentum, molestie nunc vel, suscipit turpis.
-      Quisque orci velit, mattis et nibh non, tempor finibus erat. Nullam
-      tristique, tortor non commodo cursus, magna turpis rhoncus leo, quis porta
-      quam ante sed orci. Nunc vehicula imperdiet leo in vulputate. Quisque quis
-      dolor orci.
-    </p>
-
-    <p>
-      Curabitur ultrices fringilla libero sit amet porta. Nulla rhoncus
-      venenatis euismod. Praesent non interdum sem. Nunc in nibh tincidunt,
-      faucibus sem at, finibus turpis. Nullam vel odio blandit, tincidunt urna
-      et, luctus lectus. Vivamus porta sem vitae turpis interdum porta eu id
-      ligula. Fusce non nisi fringilla, malesuada metus ut, imperdiet ligula.
-      Nunc quis lorem nibh. Duis pharetra magna vestibulum metus convallis, id
-      mollis ligula vulputate. Sed purus est, consectetur non suscipit sit amet,
-      hendrerit at dolor. Maecenas feugiat, quam vel ullamcorper feugiat, sapien
-      ipsum viverra justo, id cursus metus nisi quis enim.
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mattis
-      turpis eu neque tincidunt lacinia. Pellentesque habitant morbi tristique
-      senectus et netus et malesuada fames ac turpis egestas. Aliquam auctor
-      ultrices tortor et volutpat. Donec eu semper orci, eu fermentum orci.
-      Vivamus aliquam lobortis egestas. Proin vel mauris vitae sem auctor
-      cursus. Aenean sit amet odio at magna pharetra luctus nec eget urna.
-      Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
-      cubilia curae; Praesent in leo at tellus ultricies laoreet.
-    </p>
-
-    <p>
-      Duis nec nisi a eros dictum euismod nec non enim. Donec augue neque,
-      aliquam id finibus a, volutpat ut ligula. Nam feugiat odio elit, ut
-      molestie mi tempus vel. Etiam vitae velit eget massa scelerisque hendrerit
-      cursus vel justo. Sed eget euismod lectus. Morbi tincidunt diam ac diam
-      tempor molestie. Mauris eget lectus leo. Etiam id porta turpis.
-    </p>
-
-    <p>
-      Aenean ac pellentesque ante. In hac habitasse platea dictumst. Nullam
-      efficitur, dolor ac pharetra iaculis, sem elit maximus ex, et malesuada
-      est ipsum tempor nisi. Phasellus auctor et turpis ultrices fermentum.
-      Mauris ac orci sapien. Quisque auctor, mi eu vestibulum dictum, nisl felis
-      pulvinar dui, non dictum justo tellus a urna. Morbi suscipit et odio a
-      feugiat. Sed dui nisi, iaculis a lacus posuere, dictum laoreet felis.
-      Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-      inceptos himenaeos.
-    </p>
-
-    <p>
-      Nam pulvinar congue condimentum. Pellentesque fringilla ante sed massa
-      tincidunt feugiat. Nulla bibendum est eros, non malesuada dolor vehicula
-      in. Morbi eu cursus arcu. Phasellus ultricies ornare lorem, non interdum
-      orci condimentum eu. Donec condimentum condimentum ligula ut placerat.
-      Vestibulum id neque condimentum, molestie nunc vel, suscipit turpis.
-      Quisque orci velit, mattis et nibh non, tempor finibus erat. Nullam
-      tristique, tortor non commodo cursus, magna turpis rhoncus leo, quis porta
-      quam ante sed orci. Nunc vehicula imperdiet leo in vulputate. Quisque quis
-      dolor orci.
-    </p>
-
-    <p>
-      Curabitur ultrices fringilla libero sit amet porta. Nulla rhoncus
-      venenatis euismod. Praesent non interdum sem. Nunc in nibh tincidunt,
-      faucibus sem at, finibus turpis. Nullam vel odio blandit, tincidunt urna
-      et, luctus lectus. Vivamus porta sem vitae turpis interdum porta eu id
-      ligula. Fusce non nisi fringilla, malesuada metus ut, imperdiet ligula.
-      Nunc quis lorem nibh. Duis pharetra magna vestibulum metus convallis, id
-      mollis ligula vulputate. Sed purus est, consectetur non suscipit sit amet,
-      hendrerit at dolor. Maecenas feugiat, quam vel ullamcorper feugiat, sapien
-      ipsum viverra justo, id cursus metus nisi quis enim.
-    </p>
-  </div>
-  <!-- @TODO: Have https://github.com/flackr/scroll-timeline/pull/52 merged and from then on load the “official” build -->
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mattis
-    turpis eu neque tincidunt lacinia. Pellentesque habitant morbi tristique
-    senectus et netus et malesuada fames ac turpis egestas. Aliquam auctor
-    ultrices tortor et volutpat. Donec eu semper orci, eu fermentum orci.
-    Vivamus aliquam lobortis egestas. Proin vel mauris vitae sem auctor cursus.
-    Aenean sit amet odio at magna pharetra luctus nec eget urna. Vestibulum ante
-    ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
-    Praesent in leo at tellus ultricies laoreet.
-  </p>
-
-  <p>
-    Duis nec nisi a eros dictum euismod nec non enim. Donec augue neque, aliquam
-    id finibus a, volutpat ut ligula. Nam feugiat odio elit, ut molestie mi
-    tempus vel. Etiam vitae velit eget massa scelerisque hendrerit cursus vel
-    justo. Sed eget euismod lectus. Morbi tincidunt diam ac diam tempor
-    molestie. Mauris eget lectus leo. Etiam id porta turpis.
-  </p>
-
-  <p>
-    Aenean ac pellentesque ante. In hac habitasse platea dictumst. Nullam
-    efficitur, dolor ac pharetra iaculis, sem elit maximus ex, et malesuada est
-    ipsum tempor nisi. Phasellus auctor et turpis ultrices fermentum. Mauris ac
-    orci sapien. Quisque auctor, mi eu vestibulum dictum, nisl felis pulvinar
-    dui, non dictum justo tellus a urna. Morbi suscipit et odio a feugiat. Sed
-    dui nisi, iaculis a lacus posuere, dictum laoreet felis. Class aptent taciti
-    sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-  </p>
-
-  <p>
-    Nam pulvinar congue condimentum. Pellentesque fringilla ante sed massa
-    tincidunt feugiat. Nulla bibendum est eros, non malesuada dolor vehicula in.
-    Morbi eu cursus arcu. Phasellus ultricies ornare lorem, non interdum orci
-    condimentum eu. Donec condimentum condimentum ligula ut placerat. Vestibulum
-    id neque condimentum, molestie nunc vel, suscipit turpis. Quisque orci
-    velit, mattis et nibh non, tempor finibus erat. Nullam tristique, tortor non
-    commodo cursus, magna turpis rhoncus leo, quis porta quam ante sed orci.
-    Nunc vehicula imperdiet leo in vulputate. Quisque quis dolor orci.
-  </p>
-
-  <p>
-    Curabitur ultrices fringilla libero sit amet porta. Nulla rhoncus venenatis
-    euismod. Praesent non interdum sem. Nunc in nibh tincidunt, faucibus sem at,
-    finibus turpis. Nullam vel odio blandit, tincidunt urna et, luctus lectus.
-    Vivamus porta sem vitae turpis interdum porta eu id ligula. Fusce non nisi
-    fringilla, malesuada metus ut, imperdiet ligula. Nunc quis lorem nibh. Duis
-    pharetra magna vestibulum metus convallis, id mollis ligula vulputate. Sed
-    purus est, consectetur non suscipit sit amet, hendrerit at dolor. Maecenas
-    feugiat, quam vel ullamcorper feugiat, sapien ipsum viverra justo, id cursus
-    metus nisi quis enim.
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mattis
-    turpis eu neque tincidunt lacinia. Pellentesque habitant morbi tristique
-    senectus et netus et malesuada fames ac turpis egestas. Aliquam auctor
-    ultrices tortor et volutpat. Donec eu semper orci, eu fermentum orci.
-    Vivamus aliquam lobortis egestas. Proin vel mauris vitae sem auctor cursus.
-    Aenean sit amet odio at magna pharetra luctus nec eget urna. Vestibulum ante
-    ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
-    Praesent in leo at tellus ultricies laoreet.
-  </p>
-
-  <p>
-    Duis nec nisi a eros dictum euismod nec non enim. Donec augue neque, aliquam
-    id finibus a, volutpat ut ligula. Nam feugiat odio elit, ut molestie mi
-    tempus vel. Etiam vitae velit eget massa scelerisque hendrerit cursus vel
-    justo. Sed eget euismod lectus. Morbi tincidunt diam ac diam tempor
-    molestie. Mauris eget lectus leo. Etiam id porta turpis.
-  </p>
-
-  <p>
-    Aenean ac pellentesque ante. In hac habitasse platea dictumst. Nullam
-    efficitur, dolor ac pharetra iaculis, sem elit maximus ex, et malesuada est
-    ipsum tempor nisi. Phasellus auctor et turpis ultrices fermentum. Mauris ac
-    orci sapien. Quisque auctor, mi eu vestibulum dictum, nisl felis pulvinar
-    dui, non dictum justo tellus a urna. Morbi suscipit et odio a feugiat. Sed
-    dui nisi, iaculis a lacus posuere, dictum laoreet felis. Class aptent taciti
-    sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-  </p>
-
-  <p>
-    Nam pulvinar congue condimentum. Pellentesque fringilla ante sed massa
-    tincidunt feugiat. Nulla bibendum est eros, non malesuada dolor vehicula in.
-    Morbi eu cursus arcu. Phasellus ultricies ornare lorem, non interdum orci
-    condimentum eu. Donec condimentum condimentum ligula ut placerat. Vestibulum
-    id neque condimentum, molestie nunc vel, suscipit turpis. Quisque orci
-    velit, mattis et nibh non, tempor finibus erat. Nullam tristique, tortor non
-    commodo cursus, magna turpis rhoncus leo, quis porta quam ante sed orci.
-    Nunc vehicula imperdiet leo in vulputate. Quisque quis dolor orci.
-  </p>
-
-  <p>
-    Curabitur ultrices fringilla libero sit amet porta. Nulla rhoncus venenatis
-    euismod. Praesent non interdum sem. Nunc in nibh tincidunt, faucibus sem at,
-    finibus turpis. Nullam vel odio blandit, tincidunt urna et, luctus lectus.
-    Vivamus porta sem vitae turpis interdum porta eu id ligula. Fusce non nisi
-    fringilla, malesuada metus ut, imperdiet ligula. Nunc quis lorem nibh. Duis
-    pharetra magna vestibulum metus convallis, id mollis ligula vulputate. Sed
-    purus est, consectetur non suscipit sit amet, hendrerit at dolor. Maecenas
-    feugiat, quam vel ullamcorper feugiat, sapien ipsum viverra justo, id cursus
-    metus nisi quis enim.
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mattis
-    turpis eu neque tincidunt lacinia. Pellentesque habitant morbi tristique
-    senectus et netus et malesuada fames ac turpis egestas. Aliquam auctor
-    ultrices tortor et volutpat. Donec eu semper orci, eu fermentum orci.
-    Vivamus aliquam lobortis egestas. Proin vel mauris vitae sem auctor cursus.
-    Aenean sit amet odio at magna pharetra luctus nec eget urna. Vestibulum ante
-    ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
-    Praesent in leo at tellus ultricies laoreet.
-  </p>
+    </div>
+  </section>
+  <section data-bgcolor="#e3857a" data-textcolor="#f1dba7"><img src="https://images.pexels.com/photos/4791474/pexels-photo-4791474.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+    <h2 data-scroll data-scroll-speed="1" class="credit">
+		Created by <a href="https://twitter.com/bramus" target="_top" rel="noreferrer noopener">Bramus</a>.<br /><br />Design and content by <a href="https://codepen.io/cameronknight/pen/qBNvrRQ" target="_top">Cameron Knight</a>.</h2>
+  </section>
 </div>
+</body>
+
 
 <style>
-  #content {
-    padding-top: 1em;
-    margin: 0 auto 0;
-    width: 80vw;
-    max-width: 60em;
-    margin-top: 100vh;
+:root {
+  --text-color: #111;
+  --bg-color: #b9b3a9;
+}
+
+body {
+  font-family: termina, sans-serif;
+  color: var(--text-color);
+  background: var(--bg-color);
+  transition: 0.3s ease-out;
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
+  overscroll-behavior: none;
+}
+
+section {
+  min-height: 100vh;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: visible;
+  position: relative;
+}
+
+section:not(#sectionPin) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 2rem;
+  padding: 50px 10vw;
+  margin: auto;
+  place-items: center;
+}
+
+img {
+  height: 80vh;
+  width: auto;
+  object-fit: cover;
+}
+
+h1 {
+  font-size: clamp(1.5rem, 16vw + 0.5rem, 5rem);
+  line-height: 1;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  position: absolute;
+  top: 10vw;
+  left: 10vw;
+  z-index: 4;
+  overflow-wrap: break-word;
+  hyphens: auto;
+
+  @media (max-width: 768px) {
+    font-size: clamp(1.5rem, 5vw + 0.5rem, 5rem);
   }
+}
+
+h1>span {
+    display: block;
+  }
+
+h2 {
+  font-size: 2rem;
+  max-width: 400px;
+}
+
+.credit {
+  font-family: Termina, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#sectionPin {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  left: 0;
+  background: var(--text-color);
+  color: var(--bg-color);
+}
+
+
+.pin-wrap {
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 50px 10vw;
+
+  & > * {
+    min-width: 60vw;
+    padding: 0 5vw;
+  }
+}
+
+p {
+  position: absolute;
+  bottom: 10vw;
+  right: 10vw;
+  width: 200px;
+  line-height: 1.5;
+}
+
 </style>

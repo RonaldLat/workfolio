@@ -1,8 +1,7 @@
 <script>
   import { ChevronRight, Code, ExternalLink } from 'lucide-svelte';
+  import { scroll, animate, ScrollOffset} from 'motion'
   import { onMount } from 'svelte';
-  import { gsap } from 'gsap';
-  import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
   const projects = [
     {
@@ -40,84 +39,167 @@
       description: ''
     }
   ];
+
+    let sectionPin ;
+    let slidingContent;
+    let image1, image2, image3
+
+
   onMount(() => {
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.registerPlugin(ScrollTrigger);
-    let sections = gsap.utils.toArray('.slide');
+      const sectionHeightInVh = 500; // 👈 The scrolling distance over which the horizontal section should slide across
 
-    gsap.to(sections, {
-      xPercent: -100 * (sections.length - 1),
-      ease: 'none',
-      scrollTrigger: {
-        trigger: '.horizontal-sliders',
-        pin: '.main',
-        pinSpacing: true,
-        scrub: 1,
-        end: '+=3000'
-      }
-    });
+// Adjust wrapper
+// - Change height so that we have room to scroll in
+// - Add fix to make position: sticky work
+sectionPin.style.height = `${sectionHeightInVh}vh`;
+sectionPin.style.overflow = `visible`;
 
-    gsap.to('.next-block', {
-      // backgroundColor: 'tomato',
-      scrollTrigger: {
-        trigger: '.next-block',
-        pinnedContainer: '.main',
-        start: 'top 50%',
-        toggleActions: 'play none reset none'
-      }
-    });
+// Adjust content
+// - Make it stick to the top
+slidingContent.style.position = "sticky";
+slidingContent.style.top = 0;
+
+scroll(
+	animate(slidingContent, {transform: ["translateX(0)", `translateX(calc(-100% + 100vw))`]}),
+	{
+		target: sectionPin,
+		offset: ScrollOffset.enter,
+	}
+);
+
   });
 </script>
 
-<div class="main">
-  <div class="horizontal-sliders w-[500%]">
-    {#each projects as project}
-      <!-- component -->
-      <div
-        class="slide w-full max-w-lg py-4 px-8 shadow-lg rounded-lg my-20 flex flex-col justify-center"
-      >
-        <div class=" w-full justify-center md:justify-end -mt-16">
-          <img
-            class="w-5/6 h-auto object-cover rounded-md border-2 border-indigo-500"
-            src={project.img}
-          />
-        </div>
-        <div>
-          <h2 class="text-gray-800 text-3xl font-semibold">Design Tools</h2>
-          <p class="mt-2 text-gray-600">{project.name}</p>
-        </div>
-        <div class="flex justify-end mt-4">
-          <a href="#" class="text-xl font-medium text-indigo-500"
-            >{project.git}</a
-          >
-        </div>
-      </div>
-    {/each}
-  </div>
-  <div class="next-block bg-myColor-50 hidden">this is next block</div>
+<div class="body relative">
+<div class="container">
+  <section data-bgcolor="#bcb8ad" data-textcolor="#032f35">
+    <div>
+      <h1 data-scroll data-scroll-speed="1"><span>Horizontal</span> <span>scroll</span> <span>section</span></h1>
+      <p data-scroll data-scroll-speed="2" data-scroll-delay="0.2">With Motion One</p>
+    </div>
+
+  </section>
+
+  <section bind:this={sectionPin} id="sectionPin">
+    <div bind:this={slidingContent} class="pin-wrap">
+      <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h2>
+      <img bind:this={image1} class="sticky top-0" src="https://images.pexels.com/photos/5207262/pexels-photo-5207262.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900" alt="">
+      <img bind:this={image2} class="sticky top-0" src="https://images.pexels.com/photos/3371358/pexels-photo-3371358.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900" alt="">
+      <img bind:this={image3} class="sticky top-0" src="https://images.pexels.com/photos/3618545/pexels-photo-3618545.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900" alt="">
+
+    </div>
+  </section>
+  <section data-bgcolor="#e3857a" data-textcolor="#f1dba7"><img src="https://images.pexels.com/photos/4791474/pexels-photo-4791474.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+    <h2 data-scroll data-scroll-speed="1" class="credit">
+		Created by <a href="https://twitter.com/bramus" target="_top" rel="noreferrer noopener">Bramus</a>.<br /><br />Design and content by <a href="https://codepen.io/cameronknight/pen/qBNvrRQ" target="_top">Cameron Knight</a>.</h2>
+  </section>
+</div>
 </div>
 
+
 <style>
-  * {
-    margin: 0;
+:root {
+  --text-color: #111;
+  --bg-color: #b9b3a9;
+}
+
+.body {
+  font-family: termina, sans-serif;
+  color: var(--text-color);
+  background: var(--bg-color);
+  transition: 0.3s ease-out;
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
+  overscroll-behavior: none;
+}
+
+section {
+  min-height: 100vh;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  position: relative;
+}
+
+section:not(#sectionPin) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 2rem;
+  padding: 50px 10vw;
+  margin: auto;
+  place-items: center;
+}
+
+img {
+  height: 80vh;
+  width: auto;
+  object-fit: cover;
+}
+
+h1 {
+  font-size: clamp(1.5rem, 16vw + 0.5rem, 5rem);
+  line-height: 1;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  position: absolute;
+  top: 10vw;
+  left: 10vw;
+  z-index: 4;
+  overflow-wrap: break-word;
+  hyphens: auto;
+
+  @media (max-width: 768px) {
+    font-size: clamp(1.5rem, 5vw + 0.5rem, 5rem);
   }
-  .main {
-    overflow-x: hidden;
+}
+
+h1>span {
+    display: block;
   }
-  .horizontal-sliders {
-    display: flex;
-    flex-wrap: no-wrap;
-    /* width: 500%; */
-    overflow-x: hidden;
+
+h2 {
+  font-size: 2rem;
+  max-width: 400px;
+}
+
+.credit {
+  font-family: Termina, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#sectionPin {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  left: 0;
+  background: var(--text-color);
+  color: var(--bg-color);
+}
+
+
+.pin-wrap {
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 50px 10vw;
+
+  & > * {
+    min-width: 60vw;
+    padding: 0 5vw;
   }
-  .slide {
-    height: 80vh;
-    /* width: 100%; */
-  }
-  .slide:nth-child(2n) {
-    /* background-color: aqua; */
-  }
-  .next-block {
-    height: 100vh;
-  }
+}
+
+p {
+  position: absolute;
+  bottom: 10vw;
+  right: 10vw;
+  width: 200px;
+  line-height: 1.5;
+}
+
 </style>

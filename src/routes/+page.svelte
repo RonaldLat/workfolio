@@ -9,7 +9,7 @@
   const { quote } = data;
 </script>
 
-<div class="min-h-screen font-[Ubuntu] bg-myColor-50 px-2 lg:px-4">
+<div class="min-h-screen relative font-[Ubuntu] bg-myColor-50 px-2 lg:px-4">
   <Home />
   {#if quote}
     <DailyStoic {quote} />
