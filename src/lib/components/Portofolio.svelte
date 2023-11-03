@@ -44,57 +44,48 @@
     let slidingContent;
     let image1, image2, image3
 
+onMount(() => {
+const sectionHeightInVh = 500; // 👈 The scrolling distance over which the horizontal section should slide across
 
-  onMount(() => {
-      const sectionHeightInVh = 500; // 👈 The scrolling distance over which the horizontal section should slide across
-
-// Adjust wrapper
-// - Change height so that we have room to scroll in
-// - Add fix to make position: sticky work
 sectionPin.style.height = `${sectionHeightInVh}vh`;
 sectionPin.style.overflow = `visible`;
-
 // Adjust content
-// - Make it stick to the top
 slidingContent.style.position = "sticky";
 slidingContent.style.top = 0;
-
 scroll(
 	animate(slidingContent, {transform: ["translateX(0)", `translateX(calc(-100% + 100vw))`]}),
 	{
-		target: sectionPin,
-		offset: ScrollOffset.enter,
+	target: sectionPin,
+	offset: ScrollOffset.enter,
 	}
 );
-
   });
 </script>
 
-<div class="body relative">
 <div class="container">
   <section data-bgcolor="#bcb8ad" data-textcolor="#032f35">
     <div>
-      <h1 data-scroll data-scroll-speed="1"><span>Horizontal</span> <span>scroll</span> <span>section</span></h1>
+      <h1 data-scroll data-scroll-speed="1"><span>My</span> <span>Projects</span> <span>section</span></h1>
       <p data-scroll data-scroll-speed="2" data-scroll-delay="0.2">With Motion One</p>
     </div>
 
   </section>
 
   <section bind:this={sectionPin} id="sectionPin">
-    <div bind:this={slidingContent} class="pin-wrap">
+    <div bind:this={slidingContent} class="pin-wrap flex">
       <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h2>
-      <img bind:this={image1} class="sticky top-0" src="https://images.pexels.com/photos/5207262/pexels-photo-5207262.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900" alt="">
-      <img bind:this={image2} class="sticky top-0" src="https://images.pexels.com/photos/3371358/pexels-photo-3371358.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900" alt="">
-      <img bind:this={image3} class="sticky top-0" src="https://images.pexels.com/photos/3618545/pexels-photo-3618545.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900" alt="">
+      {#each projects as project }
+      <img class="h-auto w-auto" src={project.img} alt={project.alt}>
+      {/each}
 
     </div>
   </section>
+
   <section data-bgcolor="#e3857a" data-textcolor="#f1dba7"><img src="https://images.pexels.com/photos/4791474/pexels-photo-4791474.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
-    <h2 data-scroll data-scroll-speed="1" class="credit">
-		Created by <a href="https://twitter.com/bramus" target="_top" rel="noreferrer noopener">Bramus</a>.<br /><br />Design and content by <a href="https://codepen.io/cameronknight/pen/qBNvrRQ" target="_top">Cameron Knight</a>.</h2>
   </section>
 </div>
-</div>
+
+
 
 
 <style>
@@ -103,12 +94,12 @@ scroll(
   --bg-color: #b9b3a9;
 }
 
-.body {
+
+.container {
   font-family: termina, sans-serif;
   color: var(--text-color);
   background: var(--bg-color);
   transition: 0.3s ease-out;
-  overflow-x: hidden;
   max-width: 100vw;
   width: 100%;
   overscroll-behavior: none;
@@ -132,7 +123,6 @@ section:not(#sectionPin) {
 }
 
 img {
-  height: 80vh;
   width: auto;
   object-fit: cover;
 }
@@ -148,15 +138,15 @@ h1 {
   z-index: 4;
   overflow-wrap: break-word;
   hyphens: auto;
-
-  @media (max-width: 768px) {
+}
+@media (max-width: 768px) {
+  h1 {
     font-size: clamp(1.5rem, 5vw + 0.5rem, 5rem);
   }
 }
-
-h1>span {
-    display: block;
-  }
+h1 span {
+  display: block;
+}
 
 h2 {
   font-size: 2rem;
@@ -165,6 +155,9 @@ h2 {
 
 .credit {
   font-family: Termina, sans-serif;
+}
+.credit a {
+  color: var(--text-color);
 }
 
 * {
@@ -180,18 +173,15 @@ h2 {
   color: var(--bg-color);
 }
 
-
 .pin-wrap {
   height: 100vh;
-  display: flex;
   justify-content: flex-start;
   align-items: center;
   padding: 50px 10vw;
-
-  & > * {
-    min-width: 60vw;
-    padding: 0 5vw;
-  }
+}
+.pin-wrap > * {
+  min-width: 60vw;
+  padding: 0 5vw;
 }
 
 p {
