@@ -166,7 +166,7 @@ h2 {
 
 #sectionPin {
   height: 100vh;
-  overflow: hidden;
+  overflow: unset;
   display: flex;
   left: 0;
   background: var(--text-color);
