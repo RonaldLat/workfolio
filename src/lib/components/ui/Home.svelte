@@ -42,7 +42,6 @@
       animate(image, {
         clipPath: ['inset(0% 60% 0% 50%)', 'inset(0% 0% 0% 0%)']
       }),
-
       {
         offset: ['0vh', '90vh'] // As we shrink the header to 10vh, we only need to run the animation over a distance of 90vh
       }
@@ -53,7 +52,7 @@
 
 <div
   bind:this={header}
-  class="fixed z-10 py-8 px-3 top-0 left-0 w-screen h-[calc(100vh-29px)] grid grid-rows-2 place-items-center  text-left bg-gray-800 bg-[url('/lat2-smaller.webp')] bg-blend-overlay bg-cover bg-center"
+  class="fixed z-10 py-8 px-3 top-0 left-0 w-screen h-[calc(100vh-29px)] grid grid-rows-2 place-items-center text-left bg-gray-800 bg-[url('/lat2-smaller.webp')] bg-blend-overlay bg-cover bg-center"
   id="sticky-parallax-header"
 >
   <p
@@ -97,8 +96,13 @@
       </p>
     </div>
 
-    <p class="w-full  mb-14">
-      <img class="-z-10 w-full h-[80vh] " bind:this={image} src="js.svg" alt="" />
+    <p class="w-full mb-14">
+      <img
+        class="-z-10 w-full h-[80vh]"
+        bind:this={image}
+        src="js.svg"
+        alt=""
+      />
     </p>
   </div>
 </div>

@@ -30,14 +30,6 @@
       git: ''
     },
 
-    {
-      name: 'Milly Cakes website',
-      url: '',
-      img: 'mc-portofolio.webp',
-      alt: 'screenshot of Dudi Resort Website',
-      git: '',
-      description: ''
-    }
   ];
 
     let sectionPin ;
@@ -81,6 +73,7 @@ scroll(
       {/each}
     </div>
   </section>
+
 
   <section data-bgcolor="#e3857a" data-textcolor="#f1dba7" class="hidden"><img src="https://images.pexels.com/photos/4791474/pexels-photo-4791474.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
   </section>
