@@ -1,5 +1,5 @@
 <script>
-  import { ChevronRight, Code, ExternalLink } from 'lucide-svelte';
+ // import { ChevronRight, Code, ExternalLink } from 'lucide-svelte';
   import { scroll, animate, ScrollOffset} from 'motion'
   import { onMount } from 'svelte';
 
@@ -42,7 +42,6 @@
 
     let sectionPin ;
     let slidingContent;
-    let image1, image2, image3
 
 onMount(() => {
 const sectionHeightInVh = 500; // 👈 The scrolling distance over which the horizontal section should slide across
@@ -64,43 +63,38 @@ scroll(
 
 <div class="body mt-14 ">
 <div class="container">
-  <section data-bgcolor="#bcb8ad" data-textcolor="#032f35">
+  <section data-bgcolor="#bcb8ad" data-textcolor="#032f35" class="bg-myColor-400 h-[50vh] text-gray-900 hidden">
     <div>
       <h1 data-scroll data-scroll-speed="1"><span>My</span> <span>Projects</span> </h1>
-      <p data-scroll data-scroll-speed="2" data-scroll-delay="0.2">With Motion One</p>
     </div>
 
   </section>
 
-  <section bind:this={sectionPin} id="sectionPin">
-    <div bind:this={slidingContent} class="pin-wrap flex">
-      <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h2>
+  <section bind:this={sectionPin} id="sectionPin" class="bg-transparent min-h-screen">
+    <div bind:this={slidingContent} class="pin-wrap flex gap-x-2 text-gray-800">
+      <h2>My Projects</h2>
       {#each projects as project }
-      <img class="h-auto w-auto" src={project.img} alt={project.alt}>
+      <div class="flex flex-col text-gray-500   border-2 py-8 h-auto ">
+      <img class="h-full w-auto py-6" src={project.img} alt={project.alt}>
+      <span>{project.name}</span>
+      </div>
       {/each}
-
     </div>
   </section>
 
-  <section data-bgcolor="#e3857a" data-textcolor="#f1dba7"><img src="https://images.pexels.com/photos/4791474/pexels-photo-4791474.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+  <section data-bgcolor="#e3857a" data-textcolor="#f1dba7" class="hidden"><img src="https://images.pexels.com/photos/4791474/pexels-photo-4791474.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
   </section>
+
 </div>
 </div>
-
-
-
 
 <style>
 :root {
   --text-color: #111;
   --bg-color: #b9b3a9;
 }
-
-
 .container {
   font-family: termina, sans-serif;
-  color: var(--text-color);
-  background: var(--bg-color);
   transition: 0.3s ease-out;
   overflow-x: clip;
   max-width: 100vw;
@@ -109,7 +103,6 @@ scroll(
 }
 
 section {
-  min-height: 100vh;
   width: 100%;
   max-width: 100vw;
   overflow-x: clip;
@@ -117,7 +110,7 @@ section {
 }
 
 section:not(#sectionPin) {
-  display: grid;
+  /*display: grid;*/
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 2rem;
   padding: 50px 10vw;
@@ -162,7 +155,6 @@ h2 {
   overflow: unset;
   display: flex;
   left: 0;
-  background: var(--text-color);
   color: var(--bg-color);
 }
 
@@ -184,5 +176,4 @@ p {
   width: 200px;
   line-height: 1.5;
 }
-
 </style>
