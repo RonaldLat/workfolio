@@ -55,7 +55,7 @@ scroll(
 
 <div class="body mt-14 ">
 <div class="container">
-  <section data-bgcolor="#bcb8ad" data-textcolor="#032f35" class="bg-myColor-400 h-[50vh] text-gray-900 hidden">
+  <section data-bgcolor="#bcb8ad" data-textcolor="#032f35" class="bg-myColor-600 h-[50vh] text-gray-900 hidden">
     <div>
       <h1 data-scroll data-scroll-speed="1"><span>My</span> <span>Projects</span> </h1>
     </div>
