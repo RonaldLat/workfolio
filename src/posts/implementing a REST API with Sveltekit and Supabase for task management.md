@@ -47,5 +47,69 @@ By leveraging the features and capabilities of Supabase, developers can build po
 Next, set up a SvelteKit project and configure it to work with Supabase. Intall the required dependencies and initialize the project structure.
 SvelteKit, with its streamlined development experience and efficient server-side rendering capabilities, is an excellent choice for implementing REST APIs. Here are the reasons why:
 - **Lightweight Framework**: SvelteKit is built on top of the Svelte framework, known for its simplicity and perfomance.With minimal overhead and boilerplate code, SvelteKit allows developers to focus on building features rather than managing complex configurations.
-- **Server-side Rendering (SSR)**:
+- **Server-side Rendering (SSR)**: SvelteKit provides built-in support for server-side rendering, enabling faster page loads and improved SEO perfomance. This is particularly beneficial for applications that require dynamic content generation and server-side data fetching, such as REST APIs.
+- **Unified Project Structure**: SvelteKit offers a unified project structure that seamlessly integrates client-side and server-side code. Developers can write API endpoints alongside their client-side components, making it easier to manage and maintain codebase.
+- **Automatic Code Splitting**: SvelteKit automatically splits code into smaller chunks, resulting in faster load times and improved perfomance. This is crucial for REST APIs, as it ensures that only the necessary code is loaded when handling request, reducing latency and improving scalability.
+- **DevServer with SSR**: SvelteKit's development server comes with server-side rendering support out of the box, allowing developers to preview SSR-enabled pages and API endpoints during development. This helps identify potential issues early on and streamline the debugging process.
+- **Rich Ecosystem**: SvelteKit benefits from a rich ecosystem of plugins and community-contributed libraries, making it easy to extend functionality and integrate with other tools and services. Whether it's authentication middleware, database connectors, or testing utilities, SvelteKit offers a wide range of options to suit various project requirements.
 
+By leveraging the features and benefits of SvelteKit, developers can create robust  and scalable REST APIs with ease, ensuring optimal performance and productivity throught the development process.
+
+## 3. Creating CRUD Operations
+Now, let's implement CRUD operations for managing tasks using SvelteKit server endpoints and Supabase queries.
+
+### a. Create Task
+To create a new task, we'll handle POST requests to the `/api/tasks` endpoint. The client will send a JSON payload containing the task details, which we'll insert into the `tasks` table in Supabase.
+```js
+// Example SvelteKit server endpoint for creating a task
+import { supabase } from '$lib/supabase';
+
+export async function post(req) {
+    // Extract task description from request body
+    const { description } = req.body;
+
+    // Insert new task into Supabase database
+    const { data, error } = await supabase.from('tasks').insert({ description });
+
+    // Handle error if insertion fails
+    if (error) {
+        return {
+            status: 500,
+            body: { error: 'Failed to create task' }
+        };
+    }
+
+    // Return success response with created task data
+    return {
+        status: 201,
+        body: { data }
+    };
+}
+
+```
+
+### b. Read Task
+To retrieve task data, we'll handle GET requests to the `api/tasks` endpoint. We'll fetch all tasks from `tasks` table in Supabase and return them as JSON to the client.
+```js
+// Example SvelteKit server endpoint for retrieving tasks
+import { supabase } from '$lib/supabase';
+
+export async function get() {
+    // Fetch all tasks from Supabase database
+    const { data, error } = await supabase.from('tasks').select('*');
+
+    // Handle error if fetching tasks fails
+    if (error) {
+        return {
+            status: 500,
+            body: { error: 'Failed to fetch tasks' }
+        };
+    }
+
+    // Return success response with fetched tasks data
+    return {
+        status: 200,
+        body: { data }
+    };
+}
+```
