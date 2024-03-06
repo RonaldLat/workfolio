@@ -3,8 +3,8 @@ title: Implementing a REST API with Sveltekit and Supabase for Task Management.
 author: Ronald Otieno
 date: 2023-3-4
 layout: blog
-published: false
-excerpt:
+published: true
+excerpt: I demonstrate the significance of REST API in web development and provide a concise guide on implementing it with SvelteKit and Supabase, enabling the building of efficient task management web application.
 ---
 
 ## Introduction
@@ -113,3 +113,76 @@ export async function get() {
     };
 }
 ```
+### c. Update Task
+To update an existing task, we'll handle PUT or PATCH requests to the `api/tasks/:id` endpoint.
+The client will send a JSON payload containing the updated task details, which we'll update in the `tasks` table in Supabase based on the provided task ID.
+
+```js
+// Example SvelteKit server endpoint for updating a task
+import { supabase } from '$lib/supabase';
+
+export async function put(req) {
+    // Extract task ID and updated description from request
+    const { id } = req.params;
+    const { description } = req.body;
+
+    // Update task in Supabase database based on task ID
+    const { data, error } = await supabase.from('tasks').update({ description }).eq('id', id);
+
+    // Handle error if update fails
+    if (error) {
+        return {
+            status: 500,
+            body: { error: 'Failed to update task' }
+        };
+    }
+
+    // Return success response with updated task data
+    return {
+        status: 200,
+        body: { data }
+    };
+}
+
+```
+
+### d. Delete Task
+To delete an existing task, we'll handle DELETE requests to the `/api/tasks/:id` endpoint. We'll remove the task from the `tasks` table in Supabase based on the provided task ID.
+
+```js
+// Example SvelteKit server endpoint for deleting a task
+import { supabase } from '$lib/supabase';
+
+export async function del(req) {
+    // Extract task ID from request
+    const { id } = req.params;
+
+    // Delete task from Supabase database based on task ID
+    const { error } = await supabase.from('tasks').delete().eq('id', id);
+
+    // Handle error if deletion fails
+    if (error) {
+        return {
+            status: 500,
+            body: { error: 'Failed to delete task' }
+        };
+    }
+
+    // Return success response
+    return {
+        status: 204,
+        body: {}
+    };
+}
+
+```
+
+## Testing the API
+Once the API endpoints are implemented, it's crucial to test them thoroughly to ensure they function as expected. Use tools like Postman or curl commands to send requests to the API endpoints and verify the responses.
+
+## Conclusion
+In conclusion, implementing a REST API with SvelteKit server endpoints and Supabase for the database offers a powerful and flexible solution for building task management applications.
+By adhering to RESTful principles and leveraging modern web development tools and technologies, developers can create efficient and scalable web applications that meet the demands of today's digital landscape.
+
+## References
+[REST API Tutorial](https://restfulapi.net/)
