@@ -1,7 +1,7 @@
 ---
 title: Implementing a REST API with Sveltekit and Supabase for Task Management.
 author: Ronald Otieno
-date: 2023-3-4
+date: 2024-3-4
 layout: blog
 published: true
 excerpt: I demonstrate the significance of REST API in web development and provide a concise guide on implementing it with SvelteKit and Supabase, enabling the building of efficient task management web application.
