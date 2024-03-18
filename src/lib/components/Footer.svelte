@@ -33,7 +33,7 @@
 		</div>
 		<hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
 		<span class="block text-sm text-gray-500 text-xs sm:text-center dark:text-gray-400"
-			>© 2023 <a href="https://ronaldotieno.netlify.com" target="_blank" class="hover:underline  whitespace-nowrap">RustiqHome™ by <span class="text-sky-300 font-ubuntu hover:cursor-pointer">Ronald Otieno.</span></a>   <span
+			>© 2024 <a href="https://ronaldotieno.netlify.com" target="_blank" class="hover:underline  whitespace-nowrap">RustiqHome™ by <span class="text-sky-300 font-ubuntu hover:cursor-pointer">Ronald Otieno.</span></a>   <span
 		>
 	</div>
 </footer>
