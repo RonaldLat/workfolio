@@ -96,7 +96,7 @@
       </p>
     </div>
 
-    <p class="w-full mb-14">
+    <p class="w-full hidden mb-14">
       <img
         class="-z-10 w-full h-[80vh]"
         bind:this={image}

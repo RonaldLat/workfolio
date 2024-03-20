@@ -36,24 +36,10 @@
     let slidingContent;
 
 onMount(() => {
-const sectionHeightInVh = 500; // 👈 The scrolling distance over which the horizontal section should slide across
-
-sectionPin.style.height = `${sectionHeightInVh}vh`;
-sectionPin.style.overflow = `visible`;
-// Adjust content
-slidingContent.style.position = "sticky";
-slidingContent.style.top = 0;
-scroll(
-	animate(slidingContent, {transform: ["translateX(0)", `translateX(calc(-100% + 100vw))`]}),
-	{
-	target: sectionPin,
-	offset: ScrollOffset.enter,
-	}
-);
   });
 </script>
 
-<div class="body mt-14 ">
+<div class="body mt-14 hidden">
 <div class="container">
   <section data-bgcolor="#bcb8ad" data-textcolor="#032f35" class="bg-myColor-800 h-[50vh] text-gray-900 hidden">
     <div>
@@ -81,92 +67,3 @@ scroll(
 </div>
 </div>
 
-<style>
-:root {
-  --text-color: #111;
-  --bg-color: #b9b3a9;
-}
-.container {
-  font-family: termina, sans-serif;
-  transition: 0.3s ease-out;
-  overflow-x: clip;
-  max-width: 100vw;
-  width: 100%;
-  overscroll-behavior: none;
-}
-
-section {
-  width: 100%;
-  max-width: 100vw;
-  overflow-x: clip;
-  position: relative;
-}
-
-section:not(#sectionPin) {
-  /*display: grid;*/
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 2rem;
-  padding: 50px 10vw;
-  margin: auto;
-  place-items: center;
-}
-
-img {
-  width: auto;
-  object-fit: cover;
-}
-
-h1 {
-  font-size: clamp(1.5rem, 16vw + 0.5rem, 5rem);
-  line-height: 1;
-  font-weight: 800;
-  margin-bottom: 1rem;
-  position: absolute;
-  top: 10vw;
-  left: 10vw;
-  z-index: 4;
-  overflow-wrap: break-word;
-  hyphens: auto;
-}
-@media (max-width: 768px) {
-  h1 {
-    font-size: clamp(1.5rem, 5vw + 0.5rem, 5rem);
-  }
-}
-h1 span {
-  display: block;
-}
-
-h2 {
-  font-size: 2rem;
-  max-width: 400px;
-}
-
-
-#sectionPin {
-  height: 100vh;
-  overflow: unset;
-  display: flex;
-  left: 0;
-  color: var(--bg-color);
-}
-
-.pin-wrap {
-  height: 100vh;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 50px 10vw;
-}
-.pin-wrap > * {
-  min-width: 60vw;
-  padding: 0 5vw;
-}
-
-p {
-  position: absolute;
-  bottom: 10vw;
-  right: 10vw;
-  width: 200px;
-  line-height: 1.5;
-}
-</style>
