@@ -6,7 +6,8 @@
   import FeaturedPosts from '$lib/components/ui/FeaturedPosts.svelte';
   export let data;
 
-  const { quote } = data;
+  //const { quote } = data;
+  const { quote } = false;
 </script>
 
 <div class="min-h-screen relative font-[Ubuntu] bg-myColor-50 px-2 lg:px-4">
