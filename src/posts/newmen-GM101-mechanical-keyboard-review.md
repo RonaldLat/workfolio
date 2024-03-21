@@ -12,7 +12,7 @@ excerpt: Newmen GM101 Mechanical Gaming Keyboard with Wrist Rest, RGB LED Backli
 
 
 Are you looking to elevate your gaming setup with a keyboard that not only looks sleek but also delivers exceptional performance? Look no further than the Newmen GM101 Mechanical Keyboard. Packed with features designed to enhance your gaming experience, this keyboard is a must-have for any serious gamer.
-<Img src="/blogImages/newman2.jpg" src="newman keyboard" />
+<Img src="/blogImages/newman2.jpg" alt="newman keyboard" />
 ## Aluminium Panel
 One of the first things you'll notice about the Newmen GM101 is its stunning aluminium panel. The meticulously designed lines on the panel create a cool, eye-catching effect that adds a touch of style to your gaming rig. Crafted from top-grade aluminium alloy material with a matte-finish texture, this keyboard is not only stylish but also sturdy and robust enough to withstand the rigors of intense gaming sessions.
 
