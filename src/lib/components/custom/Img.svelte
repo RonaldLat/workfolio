@@ -3,5 +3,6 @@
 	export let alt: string
 </script>
 
-<img {src} {alt} loading="lazy" />
-
+<div>
+<img class="rounded-md" {src} {alt} loading="lazy" />
+</div>
