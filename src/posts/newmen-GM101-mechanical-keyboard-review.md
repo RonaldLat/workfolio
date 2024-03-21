@@ -4,6 +4,7 @@ author: Ronald Otieno
 date: 2023-03-21
 layout: blog
 published: true
+affiliate: 'https://amzn.to/3voxjWd'
 excerpt: Newmen GM101 Mechanical Gaming Keyboard with Wrist Rest, RGB LED Backlit 104 Anti-Ghosting Swappable, Aluminium Wired Keyboard for Windows/PC/MAC
 ---
 <script>
@@ -12,6 +13,7 @@ excerpt: Newmen GM101 Mechanical Gaming Keyboard with Wrist Rest, RGB LED Backli
 
 
 Are you looking to elevate your gaming setup with a keyboard that not only looks sleek but also delivers exceptional performance? Look no further than the Newmen GM101 Mechanical Keyboard. Packed with features designed to enhance your gaming experience, this keyboard is a must-have for any serious gamer.
+<Img src="/blogImages/newmen-2.jpg" alt="newman keyboard" />
 <Img src="/blogImages/newmen-2.jpg" alt="newman keyboard" />
 ## Aluminium Panel
 One of the first things you'll notice about the Newmen GM101 is its stunning aluminium panel. The meticulously designed lines on the panel create a cool, eye-catching effect that adds a touch of style to your gaming rig. Crafted from top-grade aluminium alloy material with a matte-finish texture, this keyboard is not only stylish but also sturdy and robust enough to withstand the rigors of intense gaming sessions.
@@ -28,6 +30,7 @@ Take your gaming and productivity to the next level with the GM101's multimedia 
 ## Fully Programmable Macros
 Unleash your creativity and maximize your efficiency with fully programmable macros. With the GM101, you can remap all keys and keypress combinations to execute complex commands with ease. Whether you're executing intricate combos in your favorite game or streamlining your workflow with custom shortcuts, the possibilities are endless. And with the included GM101 driver software, you can easily customize advanced features and personalize function keys to suit your unique needs.
 
+<Img src="/blogImages/newmen-programmable.jpg" alt="newman keyboard" />
 ## Foldable Wrist Rest
 Comfort meets convenience with the GM101's foldable wrist rest. Designed to provide ergonomic support during long gaming sessions, the wrist rest ensures optimal comfort and reduces fatigue. When not in use, simply fold down the wrist rest to protect your keyboard from dust and spills, keeping it looking and performing its best for years to come.
 
