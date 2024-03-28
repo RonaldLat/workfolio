@@ -34,11 +34,14 @@ Take your gaming and productivity to the next level with the GM101's multimedia 
 Unleash your creativity and maximize your efficiency with fully programmable macros. With the GM101, you can remap all keys and keypress combinations to execute complex commands with ease. Whether you're executing intricate combos in your favorite game or streamlining your workflow with custom shortcuts, the possibilities are endless. And with the included GM101 driver software, you can easily customize advanced features and personalize function keys to suit your unique needs.
 
 <Img src="/blogImages/newmen-programmable.jpg" alt="newman keyboard" />
+
 [Buy the Newmen GM101 Keyboard](https://amzn.to/3voxjWd)
 
 ## Foldable Wrist Rest
 Comfort meets convenience with the GM101's foldable wrist rest. Designed to provide ergonomic support during long gaming sessions, the wrist rest ensures optimal comfort and reduces fatigue. When not in use, simply fold down the wrist rest to protect your keyboard from dust and spills, keeping it looking and performing its best for years to come.
 
 <Img src="/blogImages/keyboard.jpg" alt="newman keyboard" />
+
 [Buy the Newmen Keyboard]({affiliate})
+
 Upgrade your gaming experience with the Newmen GM101 Mechanical Keyboard and unlock a new level of performance and customization. Visit our website to download the GM101 driver software and unleash the full potential of your gaming setup. With its premium build quality, customizable features, and ergonomic design, the GM101 is the perfect choice for gamers who demand nothing but the best.
