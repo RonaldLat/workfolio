@@ -15,6 +15,7 @@ excerpt: Newmen GM101 Mechanical Gaming Keyboard with Wrist Rest, RGB LED Backli
 Are you looking to elevate your gaming setup with a keyboard that not only looks sleek but also delivers exceptional performance? Look no further than the Newmen GM101 Mechanical Keyboard. Packed with features designed to enhance your gaming experience, this keyboard is a must-have for any serious gamer.
 
 <Img src="/blogImages/newmen-2.jpg" alt="newman keyboard" />
+
 [Buy the Newmen GM101 Keyboard](https://amzn.to/3voxjWd)
 
 ## Aluminium Panel
