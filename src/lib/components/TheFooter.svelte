@@ -10,11 +10,11 @@
   <div class="max-w-md pt-3" />
   <ul class="flex font-[Play] capitalize gap-3 text-myColor-300">
     <li><a href="/">Home</a></li>
-    <li><a href="portofolio">Portofolio</a></li>
+    <li><a href="products">Products</a></li>
     <li><a href="/blog">Blog</a></li>
   </ul>
 
   <p class="text-sm text-gray-500">
-    &copy {new Date().getFullYear()} Ronald Otieno. All Rights Reserved.
+    &copy {new Date().getFullYear()} Bytebox. All Rights Reserved.
   </p>
 </footer>
