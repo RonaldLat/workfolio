@@ -35,7 +35,7 @@ Dive into a world of vibrant colors and lighting effects with the GM101's RGB ba
 
 <BuyCta2 {affiliateUrl}>
 <Img src="/blogImages/newmen-multimedia-keys.jpg" alt="newman keyboard" />
-</BuyCta2>
+<BuyCta2/>
 
 Say goodbye to soldering issues and hello to hassle-free customization with the GM101's hot-swappable design. Easily pull out and pop in switches without any tools, allowing you to tailor your keyboard to your preferred typing feel and sound. Whether you're a hardcore gamer or a dedicated typist, the GM101 offers the flexibility you need to create your perfect keyboard setup.
 
