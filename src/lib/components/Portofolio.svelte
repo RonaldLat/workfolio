@@ -2,6 +2,8 @@
  // import { ChevronRight, Code, ExternalLink } from 'lucide-svelte';
   import { scroll, animate, ScrollOffset} from 'motion'
   import { onMount } from 'svelte';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
   const projects = [
     {
@@ -32,38 +34,181 @@
 
   ];
 
-    let sectionPin ;
-    let slidingContent;
+    let trigger, box;
 
 onMount(() => {
+    gsap
+  .timeline({
+    scrollTrigger: {
+      trigger: trigger,
+      scrub: 0.5,
+      pin: true,
+      start: "top top",
+      end: "+=150%"
+    }
+  })
+  .to(".box", {
+    force3D: true,
+    duration: 1,
+    xPercent: 100,
+    ease: "power1.inOut",
+    stagger: { amount: 1 }
+  })
+  .to(".box", { ease: "power1.out", duration: 1, rotation: "45deg" }, 0)
+  .to(".box", { ease: "power1.in", duration: 1, rotation: "0deg" }, 1);
+
   });
 </script>
 
-<div class="body mt-14 hidden">
-<div class="container">
-  <section data-bgcolor="#bcb8ad" data-textcolor="#032f35" class="bg-myColor-800 h-[50vh] text-gray-900 hidden">
-    <div>
-      <h1 data-scroll data-scroll-speed="1"><span>My</span> <span>Projectz</span> </h1>
-    </div>
+<body>
+<section bind:this={trigger} class="trigger">
+  <span class="down">Scroll<br />Down</span>
+  <span class="up">Scroll<br />Up</span>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+</section>
 
-  </section>
+</body>
 
-  <section bind:this={sectionPin} id="sectionPin" class=" min-h-screen bg-myColor-200 rounded-md">
-    <div bind:this={slidingContent} class="pin-wrap flex gap-x-2 text-gray-800  ">
-      <h2 class="text-7xl">My Projects</h2>
-      {#each projects as project }
-      <div class="flex flex-col text-gray-700   border-2 border-gray-700 rounded-md py-8 h-auto ">
-      <img class="h-full w-auto py-6" src={project.img} alt={project.alt}>
-      <span>{project.name}</span>
-      </div>
-      {/each}
-    </div>
-  </section>
+<style>
+body {
+  --light: #e6f03a;
+  --light: #eee;
+  --dark: #161616;
+}
 
+section {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--light);
+}
 
-  <section data-bgcolor="#e3857a" data-textcolor="#f1dba7" class="hidden"><img src="https://images.pexels.com/photos/4791474/pexels-photo-4791474.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
-  </section>
+span {
+  position: absolute;
+  display: block;
+  text-align: center;
+  font-size: 50px;
+  z-index: 2;
+  width: 50%;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: var(--light);
+  top: calc(50vh - 56px);
 
-</div>
-</div>
+  &.up {
+    right: 0;
+  }
 
+  &.down {
+    left: 0;
+  }
+}
+
+.box {
+  height: 1.2vh;
+  width: 50vw;
+  margin-bottom: -0.2vh;
+  background: var(--dark);
+  display: block;
+}
+
+</style>

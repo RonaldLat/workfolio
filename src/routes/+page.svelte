@@ -4,6 +4,7 @@
   import Tools from '$lib/components/Tools.svelte';
   import DailyStoic from '$lib/components/DailyStoic.svelte';
   import FeaturedPosts from '$lib/components/ui/FeaturedPosts.svelte';
+    import Portfolio from '$lib/components/Portfolio.svelte';
   export let data;
 
   //const { quote } = data;
@@ -15,6 +16,6 @@
   {#if quote}
     <DailyStoic {quote} />
   {/if}
-  <Portofolio />
+  <Portfolio />
   <FeaturedPosts />
 </div>
