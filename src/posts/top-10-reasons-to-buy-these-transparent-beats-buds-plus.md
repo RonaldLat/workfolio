@@ -7,6 +7,11 @@ published: true
 affiliate: 'https://amzn.to/3VH34Vc'
 excerpt: Unleash exceptional sound with Beats Buds+. Enjoy personalized Active Noise Cancelling, 36-hour playtime, and crystal-clear calls. Find your perfect fit with four tip sizes. Dive into the Beats experience now.
 ---
+
+<script>
+    import Img from '$lib/components/custom/Img.svelte'
+</script>
+
 Are you seeking a premium audio experience that seamlessly integrates into your active lifestyle? Look no further than the Beats Buds+. Here are top ten reasons why these earbuds are a game-changer:
 
 1. **Immersive Sound:** Powered by Beats' custom acoustic platform, the Buds+ deliver rich, immersive sound quality whether you're jamming to your favorite tunes or engaging in important calls. Say goodbye to flat, uninspired audio.
