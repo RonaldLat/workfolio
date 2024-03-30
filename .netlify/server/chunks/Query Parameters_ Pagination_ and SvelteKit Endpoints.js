@@ -1,14 +1,16 @@
-import { c as create_ssr_component } from "./ssr.js";
+import { c as create_ssr_component } from './ssr.js';
 const metadata = {
-  "title": "Query Parameters, Pagination, and SvelteKit Endpoints",
-  "author": "Ronald Otieno",
-  "date": "2023-10-28T00:00:00.000Z",
-  "layout": "blog",
-  "published": true,
-  "excerpt": "SvelteKit's endpoints enable seamless use of query parameters and pagination, improving content retrieval for a smoother user experience."
+  title: 'Query Parameters, Pagination, and SvelteKit Endpoints',
+  author: 'Ronald Otieno',
+  date: '2023-10-28T00:00:00.000Z',
+  layout: 'blog',
+  published: true,
+  excerpt:
+    "SvelteKit's endpoints enable seamless use of query parameters and pagination, improving content retrieval for a smoother user experience."
 };
-const Queryu20Parameters_u20Pagination_u20andu20SvelteKitu20Endpoints = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<p data-svelte-h="svelte-157sive">In the landscape of web development, the integration of query parameters and pagination within URLs plays a pivotal role in enhancing user experiences and managing data retrieval. These tools offer valuable means for efficient navigation, data filtering, and resource organization on web applications and websites.</p> <h4 id="query-parameters-in-urls" data-svelte-h="svelte-tzkvmk"><strong>Query Parameters in URLs</strong></h4> <p data-svelte-h="svelte-1ylnmx2">Query parameters, denoted by key-value pairs added to a URL, are instrumental in customizing and filtering content fetched from a server. They appear after the <code>?</code> symbol in a URL, typically separated by <code>&amp;</code>. For instance, in the URL <code>https://www.example.com/search?q=term&amp;page=2</code>, <code>q=term</code> and <code>page=2</code> represent query parameters. Here, <code>q</code> might denote a search term, and <code>page</code> indicates the current accessed page.</p> <p data-svelte-h="svelte-eqgq72">Adding query parameters in a URL involves constructing the URL and appending the desired parameters using the appropriate syntax, either manually or programmatically in languages like JavaScript, PHP, or Python.</p> <!-- HTML_TAG_START -->${`<pre class="shiki monokai" style="background-color: #272822" tabindex="0"><code><span class="line"><span style="color: #66D9EF; font-style: italic">const</span><span style="color: #F8F8F2"> baseURL </span><span style="color: #F92672">=</span><span style="color: #F8F8F2"> </span><span style="color: #E6DB74">&#39;https://www.example.com/search&#39;</span><span style="color: #F8F8F2">;</span></span>
+const Queryu20Parameters_u20Pagination_u20andu20SvelteKitu20Endpoints =
+  create_ssr_component(($$result, $$props, $$bindings, slots) => {
+    return `<p data-svelte-h="svelte-157sive">In the landscape of web development, the integration of query parameters and pagination within URLs plays a pivotal role in enhancing user experiences and managing data retrieval. These tools offer valuable means for efficient navigation, data filtering, and resource organization on web applications and websites.</p> <h4 id="query-parameters-in-urls" data-svelte-h="svelte-tzkvmk"><strong>Query Parameters in URLs</strong></h4> <p data-svelte-h="svelte-1ylnmx2">Query parameters, denoted by key-value pairs added to a URL, are instrumental in customizing and filtering content fetched from a server. They appear after the <code>?</code> symbol in a URL, typically separated by <code>&amp;</code>. For instance, in the URL <code>https://www.example.com/search?q=term&amp;page=2</code>, <code>q=term</code> and <code>page=2</code> represent query parameters. Here, <code>q</code> might denote a search term, and <code>page</code> indicates the current accessed page.</p> <p data-svelte-h="svelte-eqgq72">Adding query parameters in a URL involves constructing the URL and appending the desired parameters using the appropriate syntax, either manually or programmatically in languages like JavaScript, PHP, or Python.</p> <!-- HTML_TAG_START -->${`<pre class="shiki monokai" style="background-color: #272822" tabindex="0"><code><span class="line"><span style="color: #66D9EF; font-style: italic">const</span><span style="color: #F8F8F2"> baseURL </span><span style="color: #F92672">=</span><span style="color: #F8F8F2"> </span><span style="color: #E6DB74">&#39;https://www.example.com/search&#39;</span><span style="color: #F8F8F2">;</span></span>
 <span class="line"><span style="color: #66D9EF; font-style: italic">const</span><span style="color: #F8F8F2"> searchTerm </span><span style="color: #F92672">=</span><span style="color: #F8F8F2"> </span><span style="color: #E6DB74">&#39;query&#39;</span><span style="color: #F8F8F2">;</span></span>
 <span class="line"><span style="color: #66D9EF; font-style: italic">const</span><span style="color: #F8F8F2"> page </span><span style="color: #F92672">=</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">2</span><span style="color: #F8F8F2">;</span></span>
 <span class="line"></span>
@@ -32,12 +34,16 @@ const Queryu20Parameters_u20Pagination_u20andu20SvelteKitu20Endpoints = create_s
 <span class="line"><span style="color: #F8F8F2">    &#125;</span></span>
 <span class="line"><span style="color: #F8F8F2">  &#125;;</span></span>
 <span class="line"><span style="color: #F8F8F2">&#125;</span></span></code></pre>`}<!-- HTML_TAG_END --> <p data-svelte-h="svelte-w3s61e">By incorporating SvelteKit’s <code>get()</code> function and accessing query parameters through <code>query.get()</code>, you can dynamically fetch data based on these parameters and return the appropriate response.</p> <h3 id="best-practices" data-svelte-h="svelte-1okg8lg"><strong>Best Practices</strong></h3> <ul data-svelte-h="svelte-1fvqhq9"><li><strong>Parameter Encoding:</strong> Always encode parameters using functions like <code>encodeURIComponent()</code> to handle special characters effectively.</li> <li><strong>Consistent Naming:</strong> Maintain consistent parameter names across the application for clarity and ease of use.</li> <li><strong>Error Handling:</strong> Implement robust error handling for scenarios involving invalid or missing parameters.</li> <li><strong>Security Measures:</strong> Validate and sanitize user input to prevent security vulnerabilities like SQL injection or cross-site scripting (XSS) attacks.</li></ul> <p data-svelte-h="svelte-wd35vu">Effectively employing query parameters and pagination in URLs is instrumental in enhancing the functionality and usability of web applications. With SvelteKit’s support for endpoints, managing and utilizing these components becomes more streamlined, improving the overall user experience.</p>`;
-});
-const __vite_glob_0_0 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
-  __proto__: null,
-  default: Queryu20Parameters_u20Pagination_u20andu20SvelteKitu20Endpoints,
-  metadata
-}, Symbol.toStringTag, { value: "Module" }));
-export {
-  __vite_glob_0_0 as _
-};
+  });
+const __vite_glob_0_0 = /* @__PURE__ */ Object.freeze(
+  /* @__PURE__ */ Object.defineProperty(
+    {
+      __proto__: null,
+      default: Queryu20Parameters_u20Pagination_u20andu20SvelteKitu20Endpoints,
+      metadata
+    },
+    Symbol.toStringTag,
+    { value: 'Module' }
+  )
+);
+export { __vite_glob_0_0 as _ };

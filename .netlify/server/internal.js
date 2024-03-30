@@ -1,4 +1,4 @@
-import { g, o, d, e, s, c } from "./chunks/internal.js";
+import { g, o, d, e, s, c } from './chunks/internal.js';
 export {
   g as get_hooks,
   o as options,

@@ -1,14 +1,16 @@
-import { c as create_ssr_component } from "./ssr.js";
+import { c as create_ssr_component } from './ssr.js';
 const metadata = {
-  "title": "11 Python tips and tricks to make you a better programmer",
-  "author": "Ronald Otieno",
-  "date": "2023-10-01T00:00:00.000Z",
-  "layout": "blog",
-  "published": true,
-  "excerpt": "Here are some python skills that will help you write better programs and code efficient algorithims."
+  title: '11 Python tips and tricks to make you a better programmer',
+  author: 'Ronald Otieno',
+  date: '2023-10-01T00:00:00.000Z',
+  layout: 'blog',
+  published: true,
+  excerpt:
+    'Here are some python skills that will help you write better programs and code efficient algorithims.'
 };
-const Pythonu20tricksu20foru20writingu20betteru20code = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<h2 id="ternary-operators" data-svelte-h="svelte-esxu9t">Ternary operators</h2> <!-- HTML_TAG_START -->${`<pre class="shiki monokai" style="background-color: #272822" tabindex="0"><code><span class="line"><span style="color: #F8F8F2">condition </span><span style="color: #F92672">=</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">True</span></span>
+const Pythonu20tricksu20foru20writingu20betteru20code = create_ssr_component(
+  ($$result, $$props, $$bindings, slots) => {
+    return `<h2 id="ternary-operators" data-svelte-h="svelte-esxu9t">Ternary operators</h2> <!-- HTML_TAG_START -->${`<pre class="shiki monokai" style="background-color: #272822" tabindex="0"><code><span class="line"><span style="color: #F8F8F2">condition </span><span style="color: #F92672">=</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">True</span></span>
 <span class="line"><span style="color: #F92672">if</span><span style="color: #F8F8F2"> condition:</span></span>
 <span class="line"><span style="color: #F8F8F2">    x</span><span style="color: #F92672">=</span><span style="color: #AE81FF">1</span></span>
 <span class="line"><span style="color: #F92672">else</span><span style="color: #F8F8F2">:</span></span>
@@ -92,12 +94,17 @@ To use it,</p> <!-- HTML_TAG_START -->${`<pre class="shiki monokai" style="backg
 This is more secure.</p> <h2 id="getting-help" data-svelte-h="svelte-1043f8q">Getting help()</h2> <p data-svelte-h="svelte-prwc0k">If you are stuck and don’t know what a certain module, keyword or function does, you can open python and terminal and run the <code>help()</code> function with the module or function as argument.
 To open python commandline, open your terminal emulator, type <code>python</code> and press enter.
 For example to get help on what the <code>math</code> module does, <code>help(&#39;math&#39;)</code></p>`;
-});
-const __vite_glob_0_7 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
-  __proto__: null,
-  default: Pythonu20tricksu20foru20writingu20betteru20code,
-  metadata
-}, Symbol.toStringTag, { value: "Module" }));
-export {
-  __vite_glob_0_7 as _
-};
+  }
+);
+const __vite_glob_0_7 = /* @__PURE__ */ Object.freeze(
+  /* @__PURE__ */ Object.defineProperty(
+    {
+      __proto__: null,
+      default: Pythonu20tricksu20foru20writingu20betteru20code,
+      metadata
+    },
+    Symbol.toStringTag,
+    { value: 'Module' }
+  )
+);
+export { __vite_glob_0_7 as _ };

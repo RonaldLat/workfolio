@@ -5,12 +5,10 @@ const load = async ({ fetch }) => {
     quote = await response.json();
   } catch (err) {
     console.log(err);
-    quote = "";
+    quote = '';
   }
   return {
     quote
   };
 };
-export {
-  load
-};
+export { load };

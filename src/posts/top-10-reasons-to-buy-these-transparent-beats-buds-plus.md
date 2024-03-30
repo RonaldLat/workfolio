@@ -4,13 +4,16 @@ author: Ronald Otieno
 date: 2024-03-20
 layout: blog
 published: true
-affiliate: 'https://amzn.to/3VH34Vc'
+affiliateUrl: 'https://amzn.to/3VH34Vc'
+banner: 'beats-buds3.jpg'
 excerpt: Unleash exceptional sound with Beats Buds+. Enjoy personalized Active Noise Cancelling, 36-hour playtime, and crystal-clear calls. Find your perfect fit with four tip sizes. Dive into the Beats experience now.
 ---
 
 <script>
     import Img from '$lib/components/custom/Img.svelte'
+    import BuyCta from '$lib/components/blog/BuyCta.svelte'
 </script>
+<BuyCta {affiliateUrl} />
 
 Are you seeking a premium audio experience that seamlessly integrates into your active lifestyle? Look no further than the Beats Buds+. Here are top ten reasons why these earbuds are a game-changer:
 

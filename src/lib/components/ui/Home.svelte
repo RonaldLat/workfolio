@@ -65,7 +65,7 @@
     bind:this={title2}
     class=" self-end w-full h-full text-gray-300 pr-5 pb-4 italic flex text-center items-end justify-end"
   >
-   Top-Notch Tech Blog
+    Top-Notch Tech Blog
   </p>
 </div>
 
@@ -79,8 +79,8 @@
       class="mb-5 font-[Maven] text-4xl font-extrabold first-letter:text-6xl first-letter:text-myColor-600 tracking-widest text-gray-900 sm:text-4xl sm:leading-none"
     >
       Welcome to the home of tech gadgets reviews,<br class="hidden md:block" />
-      <span class="inline-block text-deep-violet-accent-400"
-        > and deals alert.</span
+      <span class="inline-block text-deep-violet-accent-400">
+        and deals alert.</span
       >
     </h2>
 

@@ -20,12 +20,11 @@ async function getPosts(limit) {
   );
 
   //return posts.slice(0, limit);
-      if (limit) {
-        return posts.slice(0, limit);
-    } else {
-        return posts;
-    }
-
+  if (limit) {
+    return posts.slice(0, limit);
+  } else {
+    return posts;
+  }
 }
 
 export async function GET({ url }) {

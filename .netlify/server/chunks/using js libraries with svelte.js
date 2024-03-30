@@ -1,14 +1,16 @@
-import { c as create_ssr_component } from "./ssr.js";
+import { c as create_ssr_component } from './ssr.js';
 const metadata = {
-  "title": "Using JavaScript Libraries with Svelte",
-  "author": "Ronald Otieno",
-  "date": "2023-10-29T00:00:00.000Z",
-  "layout": "blog",
-  "published": true,
-  "excerpt": "Learn the techniques of using any JavaScript library in a Svelte app and most importantly discover the super powers hidden inside Svelte Actions."
+  title: 'Using JavaScript Libraries with Svelte',
+  author: 'Ronald Otieno',
+  date: '2023-10-29T00:00:00.000Z',
+  layout: 'blog',
+  published: true,
+  excerpt:
+    'Learn the techniques of using any JavaScript library in a Svelte app and most importantly discover the super powers hidden inside Svelte Actions.'
 };
-const Usingu20jsu20librariesu20withu20svelte = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<h2 id="introduction" data-svelte-h="svelte-p88ani">Introduction</h2> <p data-svelte-h="svelte-18f3tux">When using JavaScript libraries, the most important thing to do is usually to get a DOM reference that the library can interact with.
+const Usingu20jsu20librariesu20withu20svelte = create_ssr_component(
+  ($$result, $$props, $$bindings, slots) => {
+    return `<h2 id="introduction" data-svelte-h="svelte-p88ani">Introduction</h2> <p data-svelte-h="svelte-18f3tux">When using JavaScript libraries, the most important thing to do is usually to get a DOM reference that the library can interact with.
 In vanilla JavaScript projects, this is normally easy by using the native API’s such <code>querySelector</code> or <code>getDocumentById</code>. But when working with frameworks such as Svelte, Vue or React, different methods are use to get reference to the DOM. In Svelte we use <code>bind:this</code> directive.
 In this article I will go through different methods of using any JavaScript library in your Svelte app.</p> <h2 id="onmount-lifecycle" data-svelte-h="svelte-1gsro0p">onMount lifecycle</h2> <p data-svelte-h="svelte-oydlj2">The onMount is a lifecyle function designed for executing code when a component is first mounted in the DOM.</p> <p data-svelte-h="svelte-1fkbebb">Code written within the onMount block runs only once when the component is initially rendered. Allowing for actions such as fetching data, initializing variables, or interacting with DOM immediately after the component is mounted.</p> <h3 id="example-with-motion-one-animation-library" data-svelte-h="svelte-1u0nj37">Example with Motion One Animation Library</h3> <p data-svelte-h="svelte-1753hav">In this example we be using an animation library called (Motion One)[https:///motion.dev “Motion One website”].</p> <h3 id="install-the-library" data-svelte-h="svelte-1n2bxce">Install the library</h3> <p data-svelte-h="svelte-1nhf661"><code>npm install motion</code></p> <h3 id="import-and-use-the-libarary" data-svelte-h="svelte-bynags">Import and use the libarary</h3> <!-- HTML_TAG_START -->${`<pre class="shiki monokai" style="background-color: #272822" tabindex="0"><code><span class="line"><span style="color: #F8F8F2">&lt;</span><span style="color: #F92672">script</span><span style="color: #F8F8F2">&gt;</span></span>
 <span class="line"><span style="color: #F8F8F2">    </span><span style="color: #F92672">import</span><span style="color: #F8F8F2"> &#123;onMount&#125; </span><span style="color: #F92672">from</span><span style="color: #F8F8F2"> </span><span style="color: #E6DB74">&#39;svelte&#39;</span></span>
@@ -130,12 +132,17 @@ The color parameter will have a default of orangered in this example but we can 
 <span class="line"><span style="color: #F8F8F2">    &lt;/</span><span style="color: #F92672">script</span><span style="color: #F8F8F2">&gt;</span></span>
 <span class="line"></span>
 <span class="line"><span style="color: #F8F8F2">    &lt;</span><span style="color: #F92672">h1</span><span style="color: #F8F8F2"> </span><span style="color: #F92672">use</span><span style="color: #F8F8F2">:animateText=</span><span style="color: #F92672">&#123;</span><span style="color: #F8F8F2">&#123;color: </span><span style="color: #E6DB74">&#39;red&#39;</span><span style="color: #F8F8F2">&#125;</span><span style="color: #F92672">&#125;</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">class</span><span style="color: #F8F8F2">=</span><span style="color: #E6DB74">&quot;letters&quot;</span><span style="color: #F8F8F2">&gt; Example &lt;/</span><span style="color: #F92672">h1</span><span style="color: #F8F8F2">&gt;</span></span></code></pre>`}<!-- HTML_TAG_END --> <p data-svelte-h="svelte-zqmd90">If you can grasp the concept of Svelte actions you can consider yourself a Svelte power user.</p>`;
-});
-const __vite_glob_0_10 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
-  __proto__: null,
-  default: Usingu20jsu20librariesu20withu20svelte,
-  metadata
-}, Symbol.toStringTag, { value: "Module" }));
-export {
-  __vite_glob_0_10 as _
-};
+  }
+);
+const __vite_glob_0_10 = /* @__PURE__ */ Object.freeze(
+  /* @__PURE__ */ Object.defineProperty(
+    {
+      __proto__: null,
+      default: Usingu20jsu20librariesu20withu20svelte,
+      metadata
+    },
+    Symbol.toStringTag,
+    { value: 'Module' }
+  )
+);
+export { __vite_glob_0_10 as _ };

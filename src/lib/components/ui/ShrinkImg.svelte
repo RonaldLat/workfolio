@@ -20,6 +20,6 @@
   });
 </script>
 
-  <slot>
-    <img class="-z-10 w-full h-[80vh]" bind:this={images[index]} {src} alt="" />
-  </slot>
+<slot>
+  <img class="-z-10 w-full h-[80vh]" bind:this={images[index]} {src} alt="" />
+</slot>

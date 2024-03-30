@@ -5,6 +5,4 @@ const load = ({ url }) => {
     currentRoute
   };
 };
-export {
-  load
-};
+export { load };

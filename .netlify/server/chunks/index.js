@@ -5,7 +5,7 @@ class HttpError {
    */
   constructor(status, body) {
     this.status = status;
-    if (typeof body === "string") {
+    if (typeof body === 'string') {
       this.body = { message: body };
     } else if (body) {
       this.body = body;
@@ -39,18 +39,20 @@ class ActionFailure {
 }
 function error(status, body) {
   if (isNaN(status) || status < 400 || status > 599) {
-    throw new Error(`HTTP error status codes must be between 400 and 599 — ${status} is invalid`);
+    throw new Error(
+      `HTTP error status codes must be between 400 and 599 — ${status} is invalid`
+    );
   }
   return new HttpError(status, body);
 }
 function json(data, init) {
   const body = JSON.stringify(data);
   const headers = new Headers(init?.headers);
-  if (!headers.has("content-length")) {
-    headers.set("content-length", encoder.encode(body).byteLength.toString());
+  if (!headers.has('content-length')) {
+    headers.set('content-length', encoder.encode(body).byteLength.toString());
   }
-  if (!headers.has("content-type")) {
-    headers.set("content-type", "application/json");
+  if (!headers.has('content-type')) {
+    headers.set('content-type', 'application/json');
   }
   return new Response(body, {
     ...init,
@@ -60,9 +62,9 @@ function json(data, init) {
 const encoder = new TextEncoder();
 function text(body, init) {
   const headers = new Headers(init?.headers);
-  if (!headers.has("content-length")) {
+  if (!headers.has('content-length')) {
     const encoded = encoder.encode(body);
-    headers.set("content-length", encoded.byteLength.toString());
+    headers.set('content-length', encoded.byteLength.toString());
     return new Response(encoded, {
       ...init,
       headers

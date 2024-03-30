@@ -1,17 +1,19 @@
-import { c as create_ssr_component } from "./ssr.js";
+import { c as create_ssr_component } from './ssr.js';
 const metadata = {
-  "title": "How To Build Offline DarkMode On Your Website",
-  "description": "Using localStorage to add dark mode to any website in simple steps",
-  "img": "dark-website.webp",
-  "alt": "screenshot of dark-themed website",
-  "author": "Ron",
-  "date": "2023-09-15T00:00:00.000Z",
-  "published": true,
-  "layout": "blog",
-  "tags": ["css", "javascript"]
+  title: 'How To Build Offline DarkMode On Your Website',
+  description:
+    'Using localStorage to add dark mode to any website in simple steps',
+  img: 'dark-website.webp',
+  alt: 'screenshot of dark-themed website',
+  author: 'Ron',
+  date: '2023-09-15T00:00:00.000Z',
+  published: true,
+  layout: 'blog',
+  tags: ['css', 'javascript']
 };
-const Dark_mode = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<p data-svelte-h="svelte-xy4nw1">Dark mode and offline web development patterns have been on the rise lately. But why?
+const Dark_mode = create_ssr_component(
+  ($$result, $$props, $$bindings, slots) => {
+    return `<p data-svelte-h="svelte-xy4nw1">Dark mode and offline web development patterns have been on the rise lately. But why?
 I will give one simple answer. Accessibility.
 If you want to satistfy your customers of the your top concern should be on how they access your website. If you improve their experience when they are on your website they will be happier. Happy customers keep coming back and this means more profit for your business.</p> <p data-svelte-h="svelte-q9hn5s">You might wonder what dark mode and offline has to with making customers happier.
 Not everyone uses their phone under bright enviroment. And internet is expensive in some countries so some of your customers might save your website for offline viewing later on. I hope you get the point.
@@ -149,12 +151,17 @@ And that is how you enable dark to your website which works offline.</p> <h3 id=
 <span class="line"><span style="color: #F8F8F2">    </span><span style="color: #A6E22E">disableDarkMode</span><span style="color: #F8F8F2">();</span></span>
 <span class="line"><span style="color: #F8F8F2">  &#125;</span></span>
 <span class="line"><span style="color: #F8F8F2">&#125;);</span></span></code></pre>`}<!-- HTML_TAG_END -->`;
-});
-const __vite_glob_0_2 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
-  __proto__: null,
-  default: Dark_mode,
-  metadata
-}, Symbol.toStringTag, { value: "Module" }));
-export {
-  __vite_glob_0_2 as _
-};
+  }
+);
+const __vite_glob_0_2 = /* @__PURE__ */ Object.freeze(
+  /* @__PURE__ */ Object.defineProperty(
+    {
+      __proto__: null,
+      default: Dark_mode,
+      metadata
+    },
+    Symbol.toStringTag,
+    { value: 'Module' }
+  )
+);
+export { __vite_glob_0_2 as _ };

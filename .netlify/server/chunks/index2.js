@@ -1,4 +1,4 @@
-import { n as noop, a as safe_not_equal } from "./ssr.js";
+import { n as noop, a as safe_not_equal } from './ssr.js';
 const subscriber_queue = [];
 function readable(value, start) {
   return {
@@ -46,7 +46,4 @@ function writable(value, start = noop) {
   }
   return { set, update, subscribe };
 }
-export {
-  readable as r,
-  writable as w
-};
+export { readable as r, writable as w };
