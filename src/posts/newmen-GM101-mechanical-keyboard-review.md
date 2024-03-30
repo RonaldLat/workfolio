@@ -4,20 +4,24 @@ author: Ronald Otieno
 date: 2024-03-21
 layout: blog
 published: true
-affiliate: 'https://amzn.to/3voxjWd'
+affiliateUrl: 'https://amzn.to/3voxjWd'
 banner: 'newmen.jpg'
 excerpt: Newmen GM101 Mechanical Gaming Keyboard with Wrist Rest, RGB LED Backlit 104 Anti-Ghosting Swappable, Aluminium Wired Keyboard for Windows/PC/MAC
 ---
 
 <script>
     import Img from '$lib/components/custom/Img.svelte'
+    import BuyCta from '$lib/components/blog/BuyCta.svelte'
+    import BuyCta2 from '$lib/components/blog/BuyCta2.svelte'
 </script>
 
 Are you looking to elevate your gaming setup with a keyboard that not only looks sleek but also delivers exceptional performance? Look no further than the Newmen GM101 Mechanical Keyboard. Packed with features designed to enhance your gaming experience, this keyboard is a must-have for any serious gamer.
 
+<BuyCta2 {affiliateUrl}>
 <Img src="/blogImages/newmen-2.jpg" alt="newman keyboard" />
+</BuyCta2>
 
-[Buy the Newmen GM101 Keyboard](https://amzn.to/3voxjWd)
+<BuyCta {affiliateUrl}/>
 
 ## Aluminium Panel
 
@@ -29,6 +33,10 @@ Dive into a world of vibrant colors and lighting effects with the GM101's RGB ba
 
 ## Hot Swappable Mechanical Keyboard
 
+<BuyCta2 {affiliateUrl}>
+<Img src="/blogImages/newmen-multimedia-keys.jpg" alt="newman keyboard" />
+</BuyCta2>
+
 Say goodbye to soldering issues and hello to hassle-free customization with the GM101's hot-swappable design. Easily pull out and pop in switches without any tools, allowing you to tailor your keyboard to your preferred typing feel and sound. Whether you're a hardcore gamer or a dedicated typist, the GM101 offers the flexibility you need to create your perfect keyboard setup.
 
 ## Multimedia & Anti-Ghosting
@@ -39,9 +47,11 @@ Take your gaming and productivity to the next level with the GM101's multimedia 
 
 Unleash your creativity and maximize your efficiency with fully programmable macros. With the GM101, you can remap all keys and keypress combinations to execute complex commands with ease. Whether you're executing intricate combos in your favorite game or streamlining your workflow with custom shortcuts, the possibilities are endless. And with the included GM101 driver software, you can easily customize advanced features and personalize function keys to suit your unique needs.
 
+<BuyCta2 {affiliateUrl}>
 <Img src="/blogImages/newmen-programmable.jpg" alt="newman keyboard" />
+</BuyCta2>
 
-[Buy the Newmen GM101 Keyboard](https://amzn.to/3voxjWd)
+<BuyCta {affiliateUrl}/>
 
 ## Foldable Wrist Rest
 
@@ -49,6 +59,6 @@ Comfort meets convenience with the GM101's foldable wrist rest. Designed to prov
 
 <Img src="/blogImages/keyboard.jpg" alt="newman keyboard" />
 
-[Buy the Newmen Keyboard]({affiliate})
+<BuyCta {affiliateUrl}>Buy the Newmen GM101 Keyboard</BuyCta>
 
 Upgrade your gaming experience with the Newmen GM101 Mechanical Keyboard and unlock a new level of performance and customization. Visit our website to download the GM101 driver software and unleash the full potential of your gaming setup. With its premium build quality, customizable features, and ergonomic design, the GM101 is the perfect choice for gamers who demand nothing but the best.
