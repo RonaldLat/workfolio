@@ -59,4 +59,4 @@ Enjoy up to 6 hours of listening time with Active Noise Cancellation enabled, an
 
 The [Apple AirPods Pro]({affiliateUrl}) redefine what it means to experience sound on the go. With advanced features like enhanced noise cancellation, customizable fit, personalized spatial audio, and intuitive controls, these wireless earbuds are a must-have for audiophiles and casual listeners alike. Elevate your audio experience and embrace the future of wireless technology with [AirPods Pro]({affiliateUrl}).
 
-<BuyCta {affiliateUrl} />
+<BuyCta {affiliateUrl} >Buy the Apple Airpods Pro</BuyCta>
