@@ -17,7 +17,6 @@ excerpt: 'Immerse yourself in music with the Redmi Buds 5! Enjoy advanced noise 
 
 <BuyCta {affiliateUrl} />
 
-
 Hey there, music lover! Are you ready to take your audio experience to the next level? Let me introduce you to the Redmi Buds 5 – your new best friend in the world of wireless earbuds. With its advanced features and sleek design, these buds are here to elevate your music game like never before.
 
 ## Say Goodbye to Noise
@@ -63,11 +62,9 @@ Ready to take the plunge? Click [here] to grab your pair of Redmi Buds 5 and sta
 <BuyCta2 {affiliateUrl}>
 <Img src="/pinnable/redmi-buds-5-10h-play.png" alt="white  Redmi Buds 5"/>
 </BuyCta2>
-
 <BuyCta2 {affiliateUrl}>
-<Img src="/pinnable/redmi-buds-5-fast-pairing.png" alt="white  Redmi Buds 5"/>
+<Img src="/pinnable/redmi-buds-5-fast-pair.png" alt="white  Redmi Buds 5"/>
 </BuyCta2>
-
 <BuyCta2 {affiliateUrl}>
 <Img src="/pinnable/redmi-buds-5-noise-cancellation.png" alt="white  Redmi Buds 5"/>
 </BuyCta2>
