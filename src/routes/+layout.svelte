@@ -85,7 +85,7 @@
   {/key}
 
   <nav
-    class="fixed bottom-0 left-0 px-3 py-0.5 bg-gray-300 text-myColor-500 h-13 border-t border-gray-400 drop-shadow-md font-extrabold flex flex-row items-center w-full justify-between transition ease-in"
+    class="hidden fixed bottom-0 left-0 px-3 py-0.5 bg-gray-300 text-myColor-500 h-13 border-t border-gray-400 drop-shadow-md font-extrabold flex flex-row items-center w-full justify-between transition ease-in"
     class:bg-gray-900={showSideNav}
   >
     <div class="flex w-full gap-3">
