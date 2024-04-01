@@ -42,6 +42,7 @@ Get ready to be blown away by the incredible sound quality of the Redmi Buds 5. 
 <Img src="/blogImages/redmi-buds5-eq.png" alt="white Redmi Buds 5"/>
 </BuyCta2>
 
+<BuyCta {affiliateUrl} />
 Tailor your listening experience to your preferences with the Redmi Buds 5's built-in equalizer settings. Adjust bass, treble, and more to find the perfect sound profile for your favorite genres. Whether you're a bass head or a lover of crisp highs, the Redmi Buds 5 have you covered.
 
 ## Seamless Connectivity
@@ -68,3 +69,4 @@ Ready to take the plunge? Click [here] to grab your pair of Redmi Buds 5 and sta
 <BuyCta2 {affiliateUrl}>
 <Img src="/pinnable/redmi-buds-5-noise-cancellation.png" alt="white  Redmi Buds 5"/>
 </BuyCta2>
+<BuyCta {affiliateUrl} >Buy the Redmi Buds 5</BuyCta>
