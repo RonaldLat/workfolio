@@ -85,15 +85,8 @@
     </h2>
 
     <div class="flex flex-col gap-y-4 mb-5 text-base text-gray-700 md:text-lg">
-      <p>
-        Hello! I'm Ronald Otieno, a software developer specializing in web
-        development, data visualization, and machine learning.
-      </p>
-      <p>
-        With expertise in dynamic web applications and a focus on D3.js for
-        captivating visualizations, I'm excited to collaborate on impactful
-        projects. Let's make a difference together!
-      </p>
+      <p></p>
+      <p></p>
     </div>
 
     <p class="w-full hidden mb-14">
