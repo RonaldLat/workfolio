@@ -62,11 +62,11 @@ At Ekster, customer satisfaction is paramount. That's why they offer a [30-day f
 Some of [Ekster Men's Parliament Wallet photos.]({affiliateUrl})
 
 <BuyCta2 {affiliateUrl}>
-<Img src="/pinnable/ekster-parliament-pin-1.png" alt="Ekster black wallet"/>
+<Img src="/pinnable/ekster-parliament-wallet-pin-1.png" alt="Ekster black wallet"/>
 </BuyCta2>
 <BuyCta {affiliateUrl} >Buy the Ekster Men's Wallet</BuyCta>
 
 <BuyCta2 {affiliateUrl}>
-<Img src="/pinnable/ekster-parliament-pin-2.png" alt="Ekster black wallet"/> </BuyCta2>
+<Img src="/pinnable/ekster-parliament-wallet-pin-2.png" alt="Ekster black wallet"/> </BuyCta2>
 
 <BuyCta {affiliateUrl} >Buy the Ekster Leather Wallet</BuyCta>
