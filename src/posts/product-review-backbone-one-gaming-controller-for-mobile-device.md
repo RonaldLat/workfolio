@@ -64,10 +64,10 @@ The Backbone One is a game-changer for mobile gaming enthusiasts. With its versa
 Some of the product's photos,
 
 <BuyCta2 {affiliateUrl}>
-<Img src="/pinnable/backbone-one-pin.jpg" alt="white Blackbone One controller"/>
+<Img src="/pinnable/backbone-one-pin.png" alt="white Blackbone One controller"/>
 </BuyCta2>
 <BuyCta2 {affiliateUrl}>
-<Img src="/pinnable/backbone-one-pin2.jpg" alt="white Blackbone One controller"/>
+<Img src="/pinnable/backbone-one-pin2.png" alt="black Blackbone One controller"/>
 </BuyCta2>
 
 <BuyCta {affiliateUrl} >Buy the Backbone One Controller</BuyCta>
