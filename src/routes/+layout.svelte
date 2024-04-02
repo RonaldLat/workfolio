@@ -104,7 +104,7 @@
       </a>
     </div>
 
-    <div class="flex gap-3">
+    <div class="flex gap-3 hidden">
       <Linkedin class="" />
       <Mail />
       <a href="https://github.com/RonaldLat" class=""><Github /></a>

@@ -10,7 +10,7 @@
 </svelte:head>
 
 <div class="px-3 md:px-5 mx-auto w-full container">
-  <h1>Ronald's Blog</h1>
+  <h1 class="text-5xl text-center font-semibold">ByteBox</h1>
 
   <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 w-full mx-auto text-center">
     {#each data.posts as post}
