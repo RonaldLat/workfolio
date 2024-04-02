@@ -66,6 +66,8 @@ Some of the product's photos,
 <BuyCta2 {affiliateUrl}>
 <Img src="/pinnable/backbone-one-pin.png" alt="white Blackbone One controller"/>
 </BuyCta2>
+<BuyCta {affiliateUrl} >Buy the Backbone One Controller</BuyCta>
+
 <BuyCta2 {affiliateUrl}>
 <Img src="/pinnable/backbone-one-pin2.png" alt="black Blackbone One controller"/>
 </BuyCta2>
