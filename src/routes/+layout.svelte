@@ -78,7 +78,7 @@
   {/key}
 
   <nav
-    class="fixed z-30 top-0 left-0 px-3 py-0.5 bg-transparent text-gray-50 h-13  border-gray-400  font-extrabold flex flex-row items-center w-full justify-between transition ease-in"
+    class="fixed z-30 top-2 left-0 px-3 py-0.5 bg-transparent text-gray-50 h-13  border-gray-400  font-extrabold flex flex-row items-center w-full justify-between transition ease-in"
     class:bg-gray-900={showSideNav}
   >
     <div class="flex w-full gap-3">
