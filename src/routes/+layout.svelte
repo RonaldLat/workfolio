@@ -5,15 +5,8 @@
   import { onNavigate } from '$app/navigation';
   import { page } from '$app/stores';
   import { Bounce } from 'gsap/gsap-core';
+  import Icon from '@iconify/svelte'
 
-  import {
-    Menu,
-    Linkedin,
-    Github,
-    Newspaper,
-    ChevronFirst,
-    Mail
-  } from 'lucide-svelte';
   import TheFooter from '$lib/components/TheFooter.svelte';
   import { gsap } from 'gsap';
   import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -67,7 +60,7 @@
       class="p-2 text-3xl text-white fixed bottom-1 right-1"
       on:click={toggleSideNav}
     >
-      <ChevronFirst />
+      chrolet first icon
     </button>
     <!-- Add other side navigation content -->
     <Sidebar {route} />
@@ -85,30 +78,16 @@
   {/key}
 
   <nav
-    class="hidden fixed bottom-0 left-0 px-3 py-0.5 bg-gray-300 text-myColor-500 h-13 border-t border-gray-400 drop-shadow-md font-extrabold flex flex-row items-center w-full justify-between transition ease-in"
+    class="fixed z-30 top-0 left-0 px-3 py-0.5 bg-transparent text-gray-50 h-13  border-gray-400  font-extrabold flex flex-row items-center w-full justify-between transition ease-in"
     class:bg-gray-900={showSideNav}
   >
     <div class="flex w-full gap-3">
       <button
-        class="hover:text-myColor-700 transition duration-100 delay-75"
-        on:click={toggleSideNav}><Menu /></button
+        class="hover:text-myColor-50 transition duration-100 delay-75"
+        on:click={toggleSideNav}><Icon icon='mdi-light:menu' class="text-3xl" /></button
       >
-      <a
-        href="/blog"
-        class="flex items-center hover:text-myColor-700 transition duration-100 delay-75"
-      >
-        <span
-          class="text-sm hover:text-myColor-700 hover:scale-90 transition duration-100 delay-75 ease-in"
-          >Blog</span
-        >
-      </a>
     </div>
 
-    <div class="flex gap-3">
-      <Linkedin class="" />
-      <Mail />
-      <a href="https://github.com/RonaldLat" class=""><Github /></a>
-    </div>
   </nav>
   <TheFooter />
 </div>

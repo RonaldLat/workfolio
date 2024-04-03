@@ -1,5 +1,4 @@
 <script>
-  import { ChevronFirst } from 'lucide-svelte';
 
   let className = '';
   export { className as class };

@@ -53,18 +53,17 @@
 
 <div
   bind:this={header}
-  class="fixed z-10 py-8 px-3 top-0 left-0 w-screen h-[calc(100vh-29px)] grid grid-rows-6 place-items-center text-left  bg-[url('/choates.jpg')] bg-blend-overlay bg-cover bg-center"
-  id="sticky-parallax-header"
+  class="fixed z-10 py-8 px-3 top-0 left-0 w-screen h-[calc(100vh-0px)] grid place-items-center items-center justify-center text-center  bg-[url('/choates.jpg')] bg-blend-overlay bg-cover bg-center bg-[#6b6b6b]"
 >
   <p
     bind:this={title1}
-    class="h-full w-full font-bold font[Play] text-5xl text-gray-50 flex items-center"
+    class=" font-bold flex items-center justify-center w-full bg-green-300 font-[Play] text-5xl text-gray-50    "
   >
-    USA:THE CHOATES
+    USA : THE CHOATES
   </p>
   <p
     bind:this={title2}
-    class=" self-nd w-full h-full text-gray-300 pr-5 pb-4  flex text-5xl   items-nd jstify-end"
+    class=" w-full  text-gray-300   text-5xl   "
   >
 FAMILY OF COMPANIES LLC
   </p>
@@ -73,9 +72,3 @@ FAMILY OF COMPANIES LLC
   <div class="min-h-screen mt-96">
   </div>
 
-<style>
-  #content {
-    max-width: 60em;
-    margin-top: 100vh;
-  }
-</style>
