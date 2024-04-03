@@ -5,16 +5,16 @@
     subscribe
   </p>
   <p class="text-gray-400">
-    Subscribe to my newsletter to get regular content I publish on my blog.
+    Subscribe to our newsletter to get regular content publishled on our blog.
   </p>
   <div class="max-w-md pt-3" />
   <ul class="flex font-[Play] capitalize gap-3 text-myColor-300">
     <li><a href="/">Home</a></li>
-    <li><a href="portofolio">Portofolio</a></li>
-    <li><a href="/blog">Blog</a></li>
+    <li><a href="portofolio">About</a></li>
+    <li><a href="/blog">Projects</a></li>
   </ul>
 
   <p class="text-sm text-gray-500">
-    &copy {new Date().getFullYear()} Ronald Otieno. All Rights Reserved.
+    &copy {new Date().getFullYear()} Choates Capital Ventures . All Rights Reserved.
   </p>
 </footer>

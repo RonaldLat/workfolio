@@ -19,10 +19,10 @@
 
     scroll(
       animate(title1, {
-        paddingTop: [null, 0],
-        paddingLeft: '1.5rem',
-        paddingBottom: '0.5rem',
-        alignItems: 'center',
+        //paddingTop: [null, 0],
+        //paddingLeft: '1.5rem',
+        //paddingBottom: '0.5rem',
+        //alignItems: 'center',
         fontSize: [null, '1.5rem']
       }),
       {
@@ -55,12 +55,12 @@
   bind:this={header}
   class="fixed z-10 py-8 px-3 top-0 left-0 w-screen h-[calc(100vh-0px)] grid grid-rows-1 place-items-center text-center  bg-[url('/choates.jpg')] bg-blend-overlay bg-cover bg-center bg-[#6b6b6b]"
 >
+  <div class="absolute inset-0 bg-[black] opacity-40 rounded-md"></div>
   <div
-    bind:this={title1}
-    class=" font-bold  flex flex-col items-center justify-center  w-full bg-gren-300 font-[Play] text-5xl text-gray-50    "
+    class=" font-bold  flex flex-col items-center justify-center  w-full bg-gren-300 font-[Play] text-5xl text-gray-50  z-9  "
   >
-    <p class="pt-6">USA : THE CHOATES </p>
-    <p bind:this={title2}>family of companies llc</p>
+    <p bind:this={title1} class="pt-7 text-5xl">USA : THE CHOATES </p>
+    <p class="text-blue-200 text-4xl" bind:this={title2}>family of companies llc</p>
   </div>
   <p
     class="hidden w-full items-start bg-sky-400 h-full  text-gray-300   text-5xl   "
