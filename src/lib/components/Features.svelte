@@ -32,7 +32,7 @@ images.forEach((image) => {
 
 
 
-<div class="grid grid-cols-2 gap-14 md:grid-cols-3 md:gap-5 py-14">
+<div class="grid grid-cols-1 gap-14 md:grid-cols-3 md:gap-5 py-14">
 {#each content as data}
 
     <div class="rounded-xl bg-white p-6 text-center shadow-xl moton ">

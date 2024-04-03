@@ -41,7 +41,7 @@
 
     scroll(
       animate(image, {
-        clipPath: ['inset(0% 60% 0% 50%)', 'inset(0% 0% 0% 0%)'],
+        clipPath: ['inset(0% 50% 0% 50%)', 'inset(0% 0% 0% 0%)'],
       }),
       {
         offset: ['0vh', '90vh'] ,
@@ -55,12 +55,11 @@
   bind:this={header}
   class="fixed z-10 py-8 px-3 top-0 left-0 w-screen h-[calc(100vh-0px)] grid grid-rows-1 place-items-center text-center  bg-[url('/choates.jpg')] bg-blend-overlay bg-cover bg-center bg-[#6b6b6b]"
 >
-  <div class="absolute inset-0 bg-[black] opacity-40 rounded-md"></div>
+  <div class="hidde absolute inset-0 bg-[black] opacity-40 rounded-md"></div>
   <div
-    class=" font-bold  flex flex-col items-center justify-center  w-full bg-gren-300 font-[Play] text-5xl text-gray-50  z-9  "
+    class="absolute inset-0 font-bold  flex flex-col items-center justify-center  w-full bg-gren-300 font-[Play] text-5xl text-gray-50  z-9  "
   >
-    <p bind:this={title1} class="pt-7 text-5xl">USA : THE CHOATES </p>
-    <p class="text-blue-200 text-4xl" bind:this={title2}>family of companies llc</p>
+    <p bind:this={title1} class="pt-0 text-5xl">USA : THE CHOATES </p>
   </div>
   <p
     class="hidden w-full items-start bg-sky-400 h-full  text-gray-300   text-5xl   "
