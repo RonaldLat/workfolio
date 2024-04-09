@@ -7,8 +7,8 @@
 	import Cart from '$lib/Cart.svelte';
 </script>
 
-<div class="grid grid-cols-2 justify-items-start w-full items-center px-2 bg-stone-700 max-w-5xl mx-auto">
-	<a href="/" class="h-full flex flex-row items-center text-lime-600">
+<div class="grid grid-cols-2 justify-items-start w-full items-center px-2 bg-black py-1 max-w-5xl mx-auto">
+	<a href="/" class="h-full flex flex-row items-center text-myColor-1000">
   <p class="text-2xl text-center font-bold">TJ</p>
 		<svg class="inline-block h-16 py-2 fill-sky-100 text-sky-100 hidden" width="" viewBox="0 0 200 200"
 			><path

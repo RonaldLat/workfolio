@@ -3,7 +3,7 @@
 	import { page } from '$app/stores';
 	import Icon from '@iconify/svelte';
 	$: activeUrl = $page.url.pathname;
-	let activeClass = 'text-sky-700 dark:text-sky-300 hover:text-sky-900 dark:hover:text-sky-500';
+	let activeClass = 'text-sky-700 dark:text-sky-300 hover:text-myColor-700 dark:hover:text-sky-500';
 </script>
 
 <Button>Menu
@@ -18,12 +18,10 @@
 		/>
 	</DropdownItem>
 	<Dropdown placement="left-start">
-		<DropdownItem href="/living">Living</DropdownItem>
-		<DropdownItem href="/bedroom">Bedroom</DropdownItem>
-		<DropdownItem href="/dining">Dining</DropdownItem>
-		<DropdownItem href="/office">Office</DropdownItem>
-		<DropdownItem href="/home-decor">Home Decor</DropdownItem>
-		<DropdownItem href="/outdoor">Outdoor</DropdownItem>
+		<DropdownItem href="/audio">Audio</DropdownItem>
+		<DropdownItem href="/power">Power</DropdownItem>
+		<DropdownItem href="/grooming">Grooming</DropdownItem>
+		<DropdownItem href="/lifestyle">Lifestyle</DropdownItem>
 	</Dropdown>
 	<DropdownItem>Cart</DropdownItem>
 	<DropdownItem class="text-red-500" slot="footer">Sign out</DropdownItem>
