@@ -4,8 +4,8 @@
 
 <section class="grid place-items-center w-full space-y-6">
 	<div class="py-4 pb-10 space-y-6">
-		<h1 class="text-4xl text-stone-800 font-caudex text-center w-full leading-snug">WELCOME TO RUSTIQ HOME FURNITURE</h1>
-		<p class="text-center text-stone-700 italic">The Smarter way to buy furniture</p>
+		<h1 class="text-4xl uppercase text-stone-800 font-caudex text-center w-full leading-snug">look and feel smarter</h1>
+		<p class="text-center text-stone-700 italic capitalize">authorized oraimo dealer</p>
 	</div>
 	<div
 		class="text-[#4E5471] bg-no-repeat rounded bg-cover w-full p-4 bg-center max-w-md flex flex-col gap-4 bg-[url('$lib/ui/sofa_grey.png')]"
