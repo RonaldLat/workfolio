@@ -23,7 +23,7 @@ SHOP BY CATEGORY
 <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-stone-600"></span>
 </span>
 </div>
-	<div class="grid md:grid-cols-2 place-items-center align-center-justify-center  px-2 gap-4 w-full">
+	<div class="grid md:grid-cols-2 place-items-center align-center-justify-center  px-0 gap-4 w-full">
 		{#each $category_links as category}
 			<a class="w-full relative rounded-sm bg-gradient-to-b from-gray-950 to-[#525252] bg-gradient-to-r " href={category.link} data-sveltekit-preload-data="hover">
 				<img
@@ -33,7 +33,7 @@ SHOP BY CATEGORY
 				/>
 				<div class="absolute text-gray-100 top-5 left-4">
 					<p class="uppercase text-xl mb-2 text-myColor-1000">{category.title}</p>
-					<span class="border font-ubuntu p-1 rounded-sm  uppercase text-xs text-myColor-200 border-myColor-700"
+					<span class="border font-ubuntu p-1 rounded-sm  capitalize text-xs text-myColor-200 border-myColor-700"
 						>explore now</span
 					>
 				</div>

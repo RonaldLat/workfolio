@@ -12,7 +12,7 @@
 
 <main
 
-	class="md:px-6 container mx-auto py-4 max-w-5xl font-poppipns px-2 md:px-4 min-h-screen relative bg-gray-100"
+	class=" container mx-auto py-4 max-w-5xl font-poppipns px-2 md:px-0 min-h-screen relative bg-gray-100"
 >
 	<header class="w-full z-50 fixed top-0 left-0 gap-x-2">
 		<div class="bg-transparent">
@@ -26,4 +26,4 @@
 		</div>
 	{/key}
 </main>
-<Footer class="bg-stone-900 text-sky-200"/>
+<Footer class="bg-black text-sky-200"/>
