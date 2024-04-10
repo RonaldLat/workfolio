@@ -1,14 +1,15 @@
 <script>
 	import { category_links } from '$lib/store/products';
+  import Carousel from './components/Carousel.svelte';
 </script>
 
 <section class="grid place-items-center w-full space-y-6">
 	<div class="py-4 pb-10 space-y-6">
 		<h1 class="text-4xl uppercase text-stone-800 font-caudex text-center w-full leading-snug">see the power, <br>feel the beats</h1>
-		<p class="text-center text-stone-700 italic capitalize">authorized oraimo dealer</p>
+		<p class="text-center text-stone-700 italic capitalize">authorized auto spare parts dealer</p>
 	</div>
 	<div
-		class="text-myColor-300 bg-no-repeat rounded bg-cover w-full h-72 bg-zinc-700 p-4 bg-center max-w-xl flex flex-col justify-center bg-blend-overlay gap-4 bg-[url('/oraimo/burna-boy-buds.webp')]"
+		class="text-myColor-300 bg-no-repeat rounded bg-cover w-full h-72 bg-zinc-700 p-4 bg-center max-w-xl flex flex-col justify-center bg-blend-overlay gap-4 bg-[url('https://enovathemes.com/mobimax/wp-content/uploads/slider_pattern_white.png')]"
 	>
 		<p>SpacePods x Burna Boy <br /> ANC True Wireless EarPods</p>
 		<p>
@@ -41,3 +42,9 @@ SHOP BY CATEGORY
 		{/each}
 	</div>
 </section>
+
+<div class="mx-auto bg-myColor-200">
+<Carousel/>
+</div>
+
+
