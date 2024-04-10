@@ -4,10 +4,10 @@ export let cart = writable([])
 
 export const name = writable('lat')
 export const category_links = writable([
-  {link: '/audio', title: 'audio', img: 'earbuds.webp'},
-  {link: '/power', title: 'power', img: 'powerbank.webp'},
-  {link: '/grooming', title: 'grooming', img: 'trimmer.webp'},
-  {link: '/lifestyle', title: 'lifestyle', img: 'smartwatch2.webp'},
+  {link: '/audio', title: 'Lubricants', img: 'jeep7.jpg'},
+  {link: '/power', title: 'Suspensions', img: 'jeep3.jpg'},
+  {link: '/grooming', title: 'Engine Parts', img: 'jeep4.jpg'},
+  {link: '/lifestyle', title: 'Tyres', img: 'jeep6.jpg'},
   //{link: '/home-decor', title: 'home-decor', img: 'home_decor.jpg'},
   //{link: '/outdoor', title: 'outdoor', img: 'outdoor.jpg'},
 ])

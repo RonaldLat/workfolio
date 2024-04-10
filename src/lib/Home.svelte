@@ -5,14 +5,14 @@
 
 <section class="grid place-items-center w-full space-y-6">
 	<div class="py-4 pb-10 space-y-6">
-		<h1 class="text-4xl uppercase text-stone-800 font-caudex text-center w-full leading-snug">see the power, <br>feel the beats</h1>
+		<h1 class="text-4xl uppercase text-stone-800 font-caudex text-center w-full leading-snug">see the power, <br>feel the breeze</h1>
 		<p class="text-center text-stone-700 italic capitalize">authorized auto spare parts dealer</p>
 	</div>
 	<div
-		class="text-myColor-300 bg-no-repeat rounded bg-cover w-full h-72 bg-zinc-700 p-4 bg-center max-w-xl flex flex-col justify-center bg-blend-overlay gap-4 bg-[url('https://enovathemes.com/mobimax/wp-content/uploads/slider_pattern_white.png')]"
+		class="text-myColor-300 bg-no-repeat rounded bg-cover w-full h-72 bg-zinc-700 p-4 bg-center max-w-xl flex flex-col justify-center bg-blend-overlay gap-4 bg-[url('/files/jeep2.jpg')]"
 	>
-		<p>SpacePods x Burna Boy <br /> ANC True Wireless EarPods</p>
-		<p>
+		<p class="text-3xl font-bold font-maven text-gray-100">Jeep Spare Parts <br> Kenya</p>
+		<p class="hidden">
       <s>Ksh.8000</s>
 			<span class="text-2xl font-bold strike">Ksh.6900</span>
 		</p>
@@ -24,11 +24,11 @@ SHOP BY CATEGORY
 <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-stone-600"></span>
 </span>
 </div>
-	<div class="grid md:grid-cols-2 place-items-center align-center-justify-center  px-0 gap-4 w-full">
+	<div class="hidden grid md:grid-cols-2 place-items-center align-center-justify-center  px-0 gap-4 w-full">
 		{#each $category_links as category}
 			<a class="w-full relative rounded-sm bg-gradient-to-b from-gray-950 to-[#525252] bg-gradient-to-r " href={category.link} data-sveltekit-preload-data="hover">
 				<img
-					src={'oraimo/' + category.img}
+					src={'files/' + category.img}
 					class="w-auto rounded-md h-auto brightness-50 object-fit object-center hover:brightness-75 ease-in duration-300"
 					alt={category.title}
 				/>
@@ -43,7 +43,7 @@ SHOP BY CATEGORY
 	</div>
 </section>
 
-<div class="mx-auto bg-myColor-200">
+<div class="mx-auto w-full relative ">
 <Carousel/>
 </div>
 
