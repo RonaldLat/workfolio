@@ -9,7 +9,7 @@
       <img src="{image}" alt="Product" class="h-80 w-72 object-fit rounded-t-xl" />
       <div class="px-4 py-3 w-72">
         <span class="text-gray-400 mr-3 uppercase text-xs">{category}</span>
-        <p class="text-lg font-bold text-myColor-600 truncate block capitalize ">
+        <p class="text-lg font-bold text-myColor-600 truncate block capitalize underline decoration-myColor-200 ">
         <a href="/products/{id}">{name}</a>
         </p>
         <div class="flex items-center">

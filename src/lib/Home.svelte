@@ -18,12 +18,6 @@
 		</p>
 	</div>
 
-<div>
-<span class="group text-stone-600 font-extrabold text-2xl font-caudex transition duration-300">
-SHOP BY CATEGORY
-<span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-stone-600"></span>
-</span>
-</div>
 	<div class="hidden grid md:grid-cols-2 place-items-center align-center-justify-center  px-0 gap-4 w-full">
 		{#each $category_links as category}
 			<a class="w-full relative rounded-sm bg-gradient-to-b from-gray-950 to-[#525252] bg-gradient-to-r " href={category.link} data-sveltekit-preload-data="hover">
