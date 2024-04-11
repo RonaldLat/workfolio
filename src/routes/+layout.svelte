@@ -6,6 +6,7 @@
 	import Sidebar from '$lib/components/Sidebar.svelte';
 	import Navbar from '$lib/components/Navbar.svelte';
 	import Footer from '$lib/components/Footer.svelte';
+  import Footer2 from '$lib/components/Footer2.svelte';
 
 	export let data;
 </script>
@@ -26,4 +27,6 @@
 		</div>
 	{/key}
 </main>
-<Footer class="bg-black text-sky-200"/>
+<Footer className="bg-black text-sky-200"/>
+<Footer2 />
+

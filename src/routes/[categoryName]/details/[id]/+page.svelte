@@ -61,3 +61,4 @@
 		</div>
 	</div>
 </section>
+<hr class="my-4 bg-gray-500">

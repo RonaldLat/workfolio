@@ -1,8 +1,7 @@
 <script>
-	import Auth from '$lib/Auth.svelte';
 	import Home from '$lib/Home.svelte';
 	import Featured from '$lib/components/Featured.svelte';
-	import ProductForm from '$lib/ProductForm.svelte';
+  import Footer2 from '$lib/components/Footer2.svelte';
 
   export let data;
 </script>
