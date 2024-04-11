@@ -15,7 +15,7 @@
 
 <main
 
-	class=" container mx-auto py-4 max-w-5xl font-poppins f  px-2 md:px-0 min-h-screen relative bg-slate-100 overflow-hidden"
+	class=" container mx-auto py-4 max-w-5xl font-poppins f  px-2 md:px-0 min-h-screen relative bg-zinc-100 overflow-hidden"
 >
 	<header class="w-full z-50 fixed top-0 left-0 gap-x-2">
 		<div class="bg-transparent">

@@ -32,17 +32,16 @@ class="w-full max-w-[80%] mx-auto" >
       </Carousel.Item>
     {/each}
   </Carousel.Content>
-  <Carousel.Previous />
-  <Carousel.Next />
+  <p class="text-center text-3xl w-full">. . .</p>
 </Carousel.Root>
 
 
-<Collapsible.Root class="w-full space-y-2">
-  <div class="flex items-center justify- w space-x-4 px-4">
-    <h4 class="text-2xl font-semibold">shop by category</h4>
+<Collapsible.Root class="w-full space-y-2 mx-auto py-8">
+  <div class="flex items-center justify-center w space-x-4 px-4">
+    <h4 class="text-2xl font-semibold capitalize text-center">shop by category</h4>
     <Collapsible.Trigger asChild let:builder>
       <Button builders={[builder]} variant="ghost" size="sm" class="w-9 p-0">
-        <Icon icon="heroicons:chevron-up-down" class=" bg-myColor-400 text-2xl inline-block p-4 rounded-sm " />
+        <Icon icon="heroicons:chevron-up-down" class=" text-myColor-700 text-2xl inline-block  rounded-sm " />
         <span class="sr-only">Toggle</span>
       </Button>
     </Collapsible.Trigger>
@@ -50,12 +49,12 @@ class="w-full max-w-[80%] mx-auto" >
   <div class="rounded-md border px-4 py-3 font-mono text-sm">
     All our product categories...
   </div>
-  <Collapsible.Content class="space-y-2 w-full">
+  <Collapsible.Content class="space-y-2 w-full ">
 {#each $category_links as category }
-        <div class="p-1 h-auto mx-auto w-full">
-          <div style="background-image: url('/files/{category.img}')" class="  p-1 bg-center bg-cover bg-slate-600 bg-blend-overlay bg-no-repeat">
+        <div class="p-1 h-auto mx-auto w-full max-w-md  ">
+          <div style="background-image: url('/files/{category.img}')" class="  p-1 bg-center bg-cover bg-slate-600 bg-blend-overlay bg-no-repeat rounded-md">
             <div
-              class="flex flex-col gap-3 aspect-square items-center justify-center p-6"
+              class="flex flex-col gap-3  items-center justify-center p-6"
             >
               <span class="text-4xl font-semibold text-gray-100 bg-blend-overlay">{category.title}</span>
 					<span class="border font-ubuntu p-1 transition-all hover:bg-myColor-300 bg-myColor-200 rounded-sm  capitalize text-xs text-myColor-700 border-myColor-700"

@@ -157,7 +157,7 @@ Mobilgrease MP 3 is recommended for lubricating automotive chassis components, w
 		id: '15',
 		price: '22,000',
 		old_price: '25,000',
-		name: '1648880323 NEW DIAMOND GRILL',
+		name: 'NEW DIAMOND GRILL 1648880323 ',
 		category: 'jeep',
 		imageUrl: 'diamond-grill.jpg',
 		description: `Our vehicle deserves only Original genuine OEM parts and accessories. Affordable, reliable and built to last, # 1648880323 NEW DIAMOND GRILL for Mercedes stands out as the smart option. At A& K Autospares Ltd Located in Chogoria Rd, Nairobi Kenya. We offer the best quality for your needs and supply to customers within East and Central Africa. Above all We have experts available to assist you 24/7. `
