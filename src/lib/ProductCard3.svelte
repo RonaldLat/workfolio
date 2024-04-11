@@ -20,7 +20,7 @@
           {/if}
           </del>
           <div class="ml-auto">
-          <a href="https://wa.me/0723717089" target="_blank" class="flex justify-center items-center gap-0.5">
+          <a href="https://wa.me/+254723717089" target="_blank" class="flex justify-center items-center gap-0.5">
           <Icon icon="logos:whatsapp-icon" class="text-xl"/>
           <span class="text-xs">Order</span>
           </a>
