@@ -6,7 +6,7 @@
   export let data;
 </script>
 
-<main class="bg-gradient-to-r mt-20 relative from-gray-100 to-gray-300">
+<main class="bg-gradient-to-r mt-20 overflow-hidden w-full mx-auto relative from-gray-100 to-gray-300">
 
 	<Home />
 <Featured {data}/>

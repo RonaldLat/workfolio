@@ -7,11 +7,11 @@
 		address_3: 'Nairobi County, Kenya.',
 		phone_1: '0723 717089',
 		phone_2: '0721873318',
-		email: 'nemmnuchoauto1@gmail.com'
+		email: 'example@gmail.com'
 	};
 </script>
 
-<div class="bg-black text-gray-300 py-12">
+<div class="bg-black text-gray-300 py-12 w-screen">
 	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 		<div class="lg:text-center">
 			<h2 class="text-base text-myColor-500 font-semibold tracking-wide uppercase">Location</h2>
@@ -103,9 +103,9 @@
 	</div>
 </div>
 
-<footer class="bg-black text-gray-100 px-5">
+<footer class="bg-black text-gray-100 px-5 w-screen">
 	<p class="text-sm text-gray-100 py-3  ">
-		&copy {new Date().getFullYear()} Speedy Nucho Auto Spares. All Rights Reserved.
+		&copy {new Date().getFullYear()} A & K Auto Enterprise Ltd. All Rights Reserved.
 	</p>
   <ul class="text-myColor-400 flex gap-4">
   <li><a href="/">Home</a></li>

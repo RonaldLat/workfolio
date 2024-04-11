@@ -10,11 +10,11 @@
 
 <DropdownMenu.Root>
   <DropdownMenu.Trigger asChild let:builder>
-    <Button builders={[builder]} variant="outline">Menu
-    <Icon icon="mdi:chevron-down" class="ml-1 text-black"/>
+    <Button builders={[builder]} >
+    <Icon icon="line-md:close-to-menu-alt-transition" class=" text-2xl text-white"/>
     </Button>
   </DropdownMenu.Trigger>
-  <DropdownMenu.Content class="w-56">
+  <DropdownMenu.Content class="w-fit">
     <DropdownMenu.Label>Menu</DropdownMenu.Label>
     <DropdownMenu.Separator />
       <DropdownMenu.Item>

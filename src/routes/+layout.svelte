@@ -11,9 +11,11 @@
 	export let data;
 </script>
 
+<div class="overflow-hidden">
+
 <main
 
-	class=" container mx-auto py-4 max-w-5xl font-poppipns px-2 md:px-0 min-h-screen relative bg-gray-100"
+	class=" container mx-auto py-4 max-w-5xl font-poppins f  px-2 md:px-0 min-h-screen relative bg-slate-100 overflow-hidden"
 >
 	<header class="w-full z-50 fixed top-0 left-0 gap-x-2">
 		<div class="bg-transparent">
@@ -27,6 +29,6 @@
 		</div>
 	{/key}
 </main>
-<Footer className="bg-black text-sky-200"/>
 <Footer2 />
 
+</div>
