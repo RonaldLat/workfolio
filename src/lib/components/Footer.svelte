@@ -36,7 +36,7 @@
 			</ul>
 		</div>
 
-    <p class="text-gray-800 bg-black mx-auto w-fit my-6 border border-b-myColor-1000 border-r-0 border-l-0 border-t-0  px-4 py-6 rounded-md grid grid-cols-4 md:grid-cols-3 items-center justify-center place-items-center gap-4">
+    <p class="text-gray-800 bg-black mx-auto w-fit my-6 border border-b-myColor-1000 border-r-0 border-l-0 border-t-0  px-4 py-6 rounded-md grid grid-cols-2 grid-rows-1 md:grid-cols-3 items-center justify-center place-items-center gap-4">
     <Button class="bg-gray-400 hover:brightness-50 transition ease-in-out" href="tel:+254714703045">
     <Icon icon="solar:phone-broken" class="mr-2 h-4 w-4"/>
     <span>Call</span>
@@ -46,7 +46,7 @@
     <span>WhatsApp</span>
     </Button>
 
-    <span class="text-gray-400 col-span-2">to  place order.</span>
+    <span class="text-gray-400 ">to  place order.</span>
     </p>
 
 		<hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
