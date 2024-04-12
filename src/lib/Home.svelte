@@ -28,7 +28,7 @@ SHOP BY CATEGORY
 			<a class="w-full relative rounded-sm bg-gradient-to-b from-gray-950 to-[#525252] bg-gradient-to-r " href={category.link} data-sveltekit-preload-data="hover">
 				<img
 					src={'oraimo/' + category.img}
-					class="w-auto rounded-md h-auto brightness-50 object-fit object-center hover:brightness-75 ease-in duration-300"
+					class="w-auto rounded-md h-auto brightness-50 object-fit object-center hover:brightness-[35%] ease-in duration-75 delay-75"
 					alt={category.title}
 				/>
 				<div class="absolute text-gray-100 top-5 left-4">

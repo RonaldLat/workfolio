@@ -34,9 +34,9 @@
           <Icon icon="carbon:expand-categories" class="mr-2 h-4 w-4" />
           <span>Categories</span>
         </DropdownMenu.SubTrigger>
-        <DropdownMenu.SubContent class="bg-gray-400">
+        <DropdownMenu.SubContent class="bg-gray-300">
           <DropdownMenu.Item>
-            <Icon icon="tdesign:audio" class="mr-2 h-4 w-4 text-myColor-500" />
+            <Icon icon="tdesign:audio" class="mr-2 h-4 w-4 ext-myColor-500" />
             <span><a href="/audio">Audio</a></span>
           </DropdownMenu.Item>
           <DropdownMenu.Item>
@@ -44,11 +44,11 @@
             <span><a href="/power">Power</a></span>
           </DropdownMenu.Item>
           <DropdownMenu.Item>
-            <Icon icon="arcticons:apple" class="mr-2 h-4 w-4" />
+            <Icon icon="arcticons:apple" class="mr-2 h-4 w-4 text-black" />
             <span><a href="/lifestyle">Lifestyle</a></span>
           </DropdownMenu.Item>
           <DropdownMenu.Item>
-            <Icon icon="icon-park-outline:shaver" class="mr-2 h-4 w-4" />
+            <Icon icon="icon-park-outline:shaver" class="mr-2 h-4 w-4 text-black" />
             <span><a href="/grooming">Grooming</a></span>
           </DropdownMenu.Item>
         </DropdownMenu.SubContent>

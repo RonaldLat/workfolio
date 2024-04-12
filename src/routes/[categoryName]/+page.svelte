@@ -15,9 +15,9 @@
 		{category} Category
 	</h2>
 	<div class="mx-auto">
-		<ul class=" mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-2 md:gap-4 ">
+		<ul class="  w-full  grid grid-cols-1 gap-y-12 place-items-center justify-center items-center md:grid-cols-3 lg:grid-cols-3 gap-2 md:gap-4 ">
 			{#each items as item}
-				<li class=" w-full">
+				<li >
 					<ProductCard {item} />
 				</li>
 			{/each}
