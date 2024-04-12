@@ -52,7 +52,7 @@
 								addToCart(product);
 							}}
 							{disabled}
-							class="flex ml-auto text-white bg-blue-500 border-0 my-3 py-2 px-6 focus:outline-none hover:bg-sky-600 transition ease-in-out delay-150 rounded"
+							class="flex ml-auto text-white bg-black border-0 my-3 py-2 px-6 focus:outline-none hover:bg-gray-500 transition ease-in-out delay-150 rounded"
 							>Add to Cart</button
 						>
 					</span>
