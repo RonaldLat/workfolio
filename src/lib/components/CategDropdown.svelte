@@ -58,7 +58,7 @@
     <DropdownMenu.Separator />
     <DropdownMenu.Item>
       <Icon icon="mynaui:logout" class="mr-2 h-4 w-4" />
-      <span>Log out</span>
+      <span>Login</span>
     </DropdownMenu.Item>
   </DropdownMenu.Content>
 </DropdownMenu.Root>

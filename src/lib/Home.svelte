@@ -1,10 +1,12 @@
 <script>
 	import { category_links } from '$lib/store/products';
+  import { Button } from "$lib/components/ui/button";
+  import Icon from '@iconify/svelte'
 </script>
 
 <section class="grid place-items-center w-full space-y-6">
 	<div class="py-4 pb-10 space-y-6">
-		<h1 class="text-4xl uppercase text-stone-800 font-caudex text-center w-full leading-snug">see the power, <br>feel the beats</h1>
+		<h1 class="text-4xl uppercase text-stone-800 font-caudex text-center w-full leading-snug">look & feel <br>smart</h1>
 		<p class="text-center text-stone-700 italic capitalize">authorized oraimo dealer</p>
 	</div>
 	<div
@@ -18,10 +20,23 @@
 	</div>
 
 <div>
-<span class="group text-stone-600 font-extrabold text-2xl font-caudex transition duration-300">
+<div class="group text-stone-600 font-extrabold text-2xl font-caudex text-center transition duration-300">
 SHOP BY CATEGORY
 <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-stone-600"></span>
-</span>
+</div>
+
+    <p class="text-gray-800 bg-black mx-auto w-fit my-6 border border-gray-200 px-4 py-6 rounded-md">
+    <Button class="bg-gray-400 hover:brightness-50 transition ease-in-out" href="tel:+254714703045">
+    <Icon icon="solar:phone-broken" class="mr-2 h-4 w-4"/>
+    <span>Call</span>
+    </Button>
+    <Button class="bg-gray-300 hover:brightness-50 transition ease-in-out" href="https://wa.me/+254714703045?text=I'm%20ordering">
+    <Icon icon="mdi:whatsapp" class="mr-2 h-4 w-4"/>
+    <span>WhatsApp</span>
+    </Button>
+    <span class="text-gray-300">to  place order.</span>
+    </p>
+
 </div>
 	<div class="grid md:grid-cols-2 place-items-center align-center-justify-center  px-0 gap-4 w-full">
 		{#each $category_links as category}
