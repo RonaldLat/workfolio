@@ -46,7 +46,7 @@
     <span>WhatsApp</span>
     </Button>
 
-    <span class="text-gray-400 ">to  place order.</span>
+    <span class="text-gray-400 text-center">to  place order.</span>
     </p>
 
 		<hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
