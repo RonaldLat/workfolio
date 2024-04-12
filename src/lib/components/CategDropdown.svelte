@@ -12,6 +12,7 @@
 
 	const logOut = async () => {
 		const { error } = await supabase.auth.signOut();
+    goto('/')
 		if (error) {
 			//console.log('sign out error: ', error);
 		}
@@ -94,13 +95,13 @@
       <Icon icon="mynaui:logout" class="mr-2 h-4 w-4" />
 {#if $currentUser}
 <button  class="bg-transparent">
-<span>Logged In</span>
+<span class="text-red-500" on:click={logOut}>LogOut</span>
 
 
 </button>
 {:else}
 <button class="bg-gray-200 text-slate-800 px-3 py-2 rounded-sm" on:click={()=>goto('/login')}>
-<span>Login</span>
+<span >Login</span>
 </button>
 {/if}
     </DropdownMenu.Item>

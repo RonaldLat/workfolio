@@ -37,7 +37,10 @@
 
 {#if $currentUser}
 	<button  class="bg-transparent">
+    <div class="hidden">
     <Avatar />
+    </div>
+    <p class="text-myColor-1000 font-semibold font-caudex">{$currentUser.user_metadata.username}</p>
 
 
 	</button>
