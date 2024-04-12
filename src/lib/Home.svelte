@@ -25,7 +25,8 @@ SHOP BY CATEGORY
 <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-stone-600"></span>
 </div>
 
-    <p class="text-gray-800 bg-black mx-auto w-fit my-6 border border-gray-200 px-4 py-6 rounded-md grid grid-cols-2 grid-rows-2 md:grid-cols-3 items-center justify-center place-items-center gap-4">
+    <p class="text-gray-800 bg-black mx-auto w-fit my-6 border border-gray-200 px-4 py-6 rounded-md flex flex-row items-center justify-center">
+<div class="flex items-center justify-between">
     <Button class="bg-gray-400 hover:brightness-50 transition ease-in-out" href="tel:+254714703045">
     <Icon icon="solar:phone-broken" class="mr-2 h-4 w-4"/>
     <span>Call</span>
@@ -34,6 +35,7 @@ SHOP BY CATEGORY
     <Icon icon="mdi:whatsapp" class="mr-2 h-4 w-4"/>
     <span>WhatsApp</span>
     </Button>
+<div>
     <span class="text-gray-300">to  place order.</span>
     </p>
 
