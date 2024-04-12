@@ -23,8 +23,8 @@
 	</a>
 
     <div class="flex gap-3 justify-self-end h-5/6 items-center">
-		<CategDropdown />
 	<Cart />
 	<Auth  />
+		<CategDropdown />
     </div>
 </div>
