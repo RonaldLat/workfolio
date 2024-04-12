@@ -4,6 +4,40 @@
 
   import { Button } from "$lib/components/ui/button/index.js";
   import * as DropdownMenu from "$lib/components/ui/dropdown-menu/index.js";
+  //Auth features
+	import { goto } from '$app/navigation';
+	import { supabase } from '$lib/supabaseClient.js';
+	import { currentUser } from '$lib/store/authState.js';
+
+
+	const logOut = async () => {
+		const { error } = await supabase.auth.signOut();
+		if (error) {
+			//console.log('sign out error: ', error);
+		}
+	};
+	const navigateTo = () => {
+		goto('/login');
+	};
+	$: supabase.auth.onAuthStateChange((event, session) => {
+		console.log('event: ', event, 'session: ', session);
+		try {
+			$currentUser = session.user;
+		} catch {
+			console.log('No session available');
+			$currentUser = null;
+		}
+		///getCurrentUser();
+	});
+	const getCurrentUser = async () => {
+		const {
+			data: { user }
+		} = await supabase.auth.getUser();
+		if (user) {
+			$currentUser = user;
+		}
+	};
+
 
 
 </script>
@@ -58,7 +92,17 @@
     <DropdownMenu.Separator />
     <DropdownMenu.Item>
       <Icon icon="mynaui:logout" class="mr-2 h-4 w-4" />
-      <span>Login</span>
+{#if $currentUser}
+<button  class="bg-transparent">
+<span>Logged In</span>
+
+
+</button>
+{:else}
+<button class="bg-gray-200 text-slate-800 px-3 py-2 rounded-sm" on:click={()=>goto('/login')}>
+<span>Login</span>
+</button>
+{/if}
     </DropdownMenu.Item>
   </DropdownMenu.Content>
 </DropdownMenu.Root>
