@@ -1,5 +1,6 @@
 <script>
 	import { category_links } from '$lib/store/products';
+  import { business}  from '$lib/store/details'
   import { Button } from "$lib/components/ui/button";
   import Icon from '@iconify/svelte'
 </script>

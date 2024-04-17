@@ -2,6 +2,9 @@
 	import Logo from "./Logo.svelte";
   import { Button } from "$lib/components/ui/button";
   import Icon from '@iconify/svelte'
+  import { business}  from '$lib/store/details'
+
+
 
 
 	let className = '';
@@ -13,9 +16,9 @@
 		<div class="sm:flex sm:items-center sm:justify-between gap-5">
 			<a href="/" class="flex flex-row justify-between text-myColor-1000  items-center w-full  mb-4 sm:mb-0">
                 <Logo class="h-9 hidden  w-fit mr-4"/>
-                <p class="text-2xl font-semibold">TJ</p>
+                <p class="text-2xl font-semibold">{$business.abbrev}</p>
 				<span class="font-ubuntu self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
-					>The Jujari</span
+					> {$business.name_part1} {$business.name_part2}</span
 				>
 			</a>
 			<ul
@@ -36,22 +39,27 @@
 			</ul>
 		</div>
 
-    <p class="text-gray-800 bg-black mx-auto w-fit my-6 border border-b-myColor-1000 border-r-0 border-l-0 border-t-0  px-4 py-6 rounded-md">
-    <Button class="bg-gray-400 hover:brightness-50 transition ease-in-out" href="tel:+254714703045">
+    <div class="text-gray-800 bg-black w-fit mx-auto max-w-xs my-6 border border-b-myColor-1000 border-r-0 border-l-0 border-t-0  px-1 py-4 rounded-md flex flex-col space-y-2  justify-between">
+
+    <p class="flex items-center justify-between w-full gap-4  ">
+    <Button class="bg-gray-400 hover:brightness-50 transition ease-in-out" href="tel:+254{$business.phone}">
     <Icon icon="solar:phone-broken" class="mr-2 h-4 w-4"/>
     <span>Call</span>
     </Button>
-    <Button class="bg-gray-300 hover:brightness-50 transition ease-in-out" href="https://wa.me/+254714703045?text=I'm%20ordering">
+
+    <Button class="bg-gray-300 hover:brightness-50 transition ease-in-out" href="https://wa.me/+254{$business.phone}?text=I'm%20ordering">
     <Icon icon="mdi:whatsapp" class="mr-2 h-4 w-4"/>
     <span>WhatsApp</span>
     </Button>
-    <span class="text-gray-400">to  place order.</span>
     </p>
+
+    <span class="text-gray-400  text-center">to  place order.</span>
+    </div>
 
 		<hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
 
 		<span class="block text-sm text-gray-500 text-xs sm:text-center dark:text-gray-400"
-			>© 2024 <a href="https://ronaldotieno.netlify.com" target="_blank" class="hover:underline  whitespace-nowrap">The Jujari™ by <span class="text-myColor-1000 font-ubuntu hover:cursor-pointer">Ronald Otieno.</span></a>   <span
+			>© 2024 <a href="https://ronaldotieno.netlify.com" target="_blank" class="hover:underline  whitespace-nowrap">{$business.name_part1} {$business.name_part2}™ by <span class="text-myColor-1000 font-ubuntu hover:cursor-pointer">Ronald Otieno.</span></a>   <span
 		>
 
 	</div>
