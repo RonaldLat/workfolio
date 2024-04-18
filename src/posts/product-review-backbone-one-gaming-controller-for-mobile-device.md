@@ -6,6 +6,8 @@ layout: blog
 published: true
 affiliateUrl: 'https://amzn.to/3TZvUic'
 banner: 'backbone-1.jpg'
+categories:
+    - gaming
 excerpt: "Experience console-quality gaming on the go with the Backbone One - the ultimate mobile gaming controller. With wide compatibility, low latency, and ergonomic design, it's your ticket to immersive gaming experiences anywhere, anytime"
 ---
 <script>

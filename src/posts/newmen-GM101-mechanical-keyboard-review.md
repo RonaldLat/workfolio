@@ -6,6 +6,9 @@ layout: blog
 published: true
 affiliateUrl: 'https://amzn.to/3voxjWd'
 banner: 'newmen.jpg'
+categories:
+    - keyboard
+    - gaming
 excerpt: Newmen GM101 Mechanical Gaming Keyboard with Wrist Rest, RGB LED Backlit 104 Anti-Ghosting Swappable, Aluminium Wired Keyboard for Windows/PC/MAC
 ---
 

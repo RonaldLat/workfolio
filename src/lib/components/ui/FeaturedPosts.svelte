@@ -6,7 +6,6 @@
     const response = await fetch(`/api/posts?limit=4`);
     latestPosts = await response.json();
   });
-  console.log(latestPosts);
 </script>
 
 <section>
