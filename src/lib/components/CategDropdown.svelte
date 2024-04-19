@@ -21,11 +21,11 @@
 		goto('/login');
 	};
 	$: supabase.auth.onAuthStateChange((event, session) => {
-		console.log('event: ', event, 'session: ', session);
+		//console.log('event: ', event, 'session: ', session);
 		try {
 			$currentUser = session.user;
 		} catch {
-			console.log('No session available');
+			//console.log('No session available');
 			$currentUser = null;
 		}
 		///getCurrentUser();
