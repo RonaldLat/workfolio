@@ -7,6 +7,7 @@
 		const res = await fetch(`/bedroom.json`);
 		let data = await res.json();
 		items = data;
+    console.log(items)
 	});
 </script>
 
