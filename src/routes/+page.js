@@ -1,15 +1,11 @@
-export async function load() {
+export async function load({fetch}) {
 
-  let req = await fetch('bakeries.json')
-  let res = await req.json()
-  console.log('response: ',res)
+  const req = await fetch('/api/leads')
+  const data = await req.json()
 
-
-  const bake = 'bake me'
 
   return {
-    //bakeries: await res,
-    bake
+    leads : data,
   };
 }
 

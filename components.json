@@ -10,5 +10,6 @@
 		"components": "$lib/components",
 		"utils": "$lib/utils"
 	},
-	"typescript": false
+	"typescript": true
+
 }
