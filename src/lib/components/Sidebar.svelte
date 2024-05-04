@@ -12,6 +12,7 @@
       <a class="block" href="/group">Groups</a>
       <a class="block" href="/report">Report</a>
       <a class="block" href="/account">Account</a>
+      <a class="block" href="/register2">Register</a>
     </nav>
   </aside>
 </div>

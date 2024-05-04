@@ -3,14 +3,20 @@
 
   export let data;
   const {leads, } = data;
+  console.log('Root page',data)
 
 </script>
 
 <main class="bg-gradient-to-r mt-20 relative from-gray-100 to-gray-300">
-<pre>
-{leads}
-</pre>
-<ul>
+
+{#if data.session}
+<p>Welcome, {data.session.user.email}</p>
+{:else}
+<p class="text-rose-600 text-center">not loggen in home page</p>
+
+{/if}
+
+<ul class="hidden">
 {#if leads}
 <p>{leads.data.length} prospects</p>
 {#each leads.data as lead }

@@ -6,37 +6,14 @@
   import * as DropdownMenu from "$lib/components/ui/dropdown-menu/index.js";
   //Auth features
 	import { goto } from '$app/navigation';
-	import { supabase } from '$lib/supabaseClient.js';
-	import { currentUser } from '$lib/store/authState.js';
 
 
 	const logOut = async () => {
-		const { error } = await supabase.auth.signOut();
     goto('/')
-		if (error) {
 			//console.log('sign out error: ', error);
-		}
 	};
 	const navigateTo = () => {
 		goto('/login');
-	};
-	$: supabase.auth.onAuthStateChange((event, session) => {
-		//console.log('event: ', event, 'session: ', session);
-		try {
-			$currentUser = session.user;
-		} catch {
-			//console.log('No session available');
-			$currentUser = null;
-		}
-		///getCurrentUser();
-	});
-	const getCurrentUser = async () => {
-		const {
-			data: { user }
-		} = await supabase.auth.getUser();
-		if (user) {
-			$currentUser = user;
-		}
 	};
 
 
@@ -93,7 +70,7 @@
     <DropdownMenu.Separator />
     <DropdownMenu.Item>
       <Icon icon="mynaui:logout" class="mr-2 h-4 w-4" />
-{#if $currentUser}
+{#if true}
 <button  class="bg-transparent">
 <span class="text-red-500" on:click={logOut}>LogOut</span>
 

@@ -6,10 +6,36 @@
 	import Sidebar from '$lib/components/Sidebar.svelte';
 	import Navbar from '$lib/components/Navbar.svelte';
 	import Footer from '$lib/components/Footer.svelte';
-  import { onNavigate } from '$app/navigation';
+  import { invalidateAll, onNavigate, goto, invalidate } from '$app/navigation';
   import { page } from '$app/stores';
+	import { onMount } from 'svelte';
 
+	export let data;
   const route = $page.route;
+
+  //Auth
+  $: ({ session, supabase } = data);
+
+	onMount(() => {
+		const { data } = supabase.auth.onAuthStateChange((_, newSession) => {
+			if (!newSession) {
+				/**
+				 * Queue this as a task so the navigation won't prevent the
+				 * triggering function from completing
+				 */
+				setTimeout(() => {
+					goto('/', { invalidateAll: true });
+				});
+			}
+			if (newSession?.expires_at !== session?.expires_at) {
+				invalidate('supabase:auth');
+			}
+		});
+
+		return () => data.subscription.unsubscribe();
+	});
+
+
 
   onNavigate(() => {
     showSideNav = false;
@@ -18,7 +44,6 @@
 
   const toggleSideNav = () => (showSideNav = !showSideNav);
 
-	export let data;
 </script>
 
 
