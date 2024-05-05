@@ -1,5 +1,4 @@
 import {writable, readable} from "svelte/store";
-console.log(readable)
 
 export const business = writable({
   phone: '712000000',
