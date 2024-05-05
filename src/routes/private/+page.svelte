@@ -1,1 +1,2 @@
 <p>Private Page under private directory</p>
+<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci quae dolore neque reiciendis asperiores alias quidem, magnam, quaerat minus eos aut voluptatibus repellendus corrupti tenetur doloremque deserunt, mollitia accusantium. Exercitationem, pariatur magni rerum minima temporibus voluptatum quasi. Animi, libero quidem dignissimos ipsum exercitationem, autem soluta expedita voluptatem alias corrupti culpa?</p>

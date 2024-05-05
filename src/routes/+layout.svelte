@@ -6,20 +6,18 @@
 	import Sidebar from '$lib/components/Sidebar.svelte';
 	import Navbar from '$lib/components/Navbar.svelte';
 	import Footer from '$lib/components/Footer.svelte';
-  import { onNavigate, goto, invalidate } from '$app/navigation';
+  import { onNavigate, goto, invalidate, invalidateAll } from '$app/navigation';
   import { page } from '$app/stores';
 	import { onMount } from 'svelte';
 
 	export let data;
   const route = $page.route;
-  console.log('Layout data: ', data)
 
   //Auth
   $: ({ session, supabase } = data);
 
 	onMount(() => {
 		const { data } = supabase.auth.onAuthStateChange((_, newSession) => {
-      console.log(newSession)
 			if (!newSession) {
 				/**
 				 * Queue this as a task so the navigation won't prevent the
@@ -76,7 +74,11 @@
 			<Navbar {toggleSideNav} />
 		</div>
 	</header>
-  <button class="bg-red-500 tex-black p-2 mt-10" on:click={()=>{data.supabase.auth.signOut()}}> LogOut</button>
+
+  <form action="/auth/logout" method="POST">
+  <button type="submit" class="bg-rose-500 tex-black p-2 mt-10"> LogOut</button>
+  </form>
+
 	{#key data.pathname}
 		<div in:fly={{ x: -30, duration: 200, delay: 150 }} out:fly={{ x: -30, duration: 150 }} class="pt-10">
 			<slot />

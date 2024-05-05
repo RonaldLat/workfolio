@@ -1,5 +1,4 @@
 import { json } from "@sveltejs/kit"
-import {SECRET_API_KEY} from '$env/static/private'
 import { bakeries } from "$lib/bakeries"
 
 export async function GET({request}){
@@ -10,7 +9,6 @@ export async function GET({request}){
  // }
 
   const data = leads()
-  console.log('data:', data)
 
   return new Response(JSON.stringify({data,  request}), {status:200})
 }

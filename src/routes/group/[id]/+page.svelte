@@ -1,6 +1,8 @@
 <script>
-    import {page} from '$app/stores'
-    const groupName = $page.params.id
+
+    export let data;
+
+    console.log('Groups data', data)
 </script>
 
-<h1>Group {groupName} </h1>
+<h1>Group {data.id} </h1>

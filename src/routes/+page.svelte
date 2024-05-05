@@ -3,7 +3,7 @@
 
   export let data;
   const {leads, } = data;
-  console.log('Root page',data)
+  console.log('Root page',data.session)
 
 </script>
 
