@@ -1,20 +1,19 @@
 <script lang="ts">
-    import { createTable, Render, Subscribe, createRender} from "svelte-headless-table";
-    import { addPagination, addSortBy,  addTableFilter, addHiddenColumns, addSelectedRows } from "svelte-headless-table/plugins";
+import { createTable, Render, Subscribe, createRender} from "svelte-headless-table";
+import { addPagination, addSortBy,  addTableFilter, addHiddenColumns, addSelectedRows } from "svelte-headless-table/plugins";
 
 
-    import * as Table from "$lib/components/ui/table";
-    import { readable } from "svelte/store";
-      import ArrowUpDown from "lucide-svelte/icons/arrow-up-down";
-        import ChevronDown from "lucide-svelte/icons/chevron-down";
+import * as Table from "$lib/components/ui/table";
+import { readable } from "svelte/store";
+import ArrowUpDown from "lucide-svelte/icons/arrow-up-down";
+import ChevronDown from "lucide-svelte/icons/chevron-down";
 
 
-      import DataTableActions from "./data-table-actions.svelte";
-        import { Button } from "$lib/components/ui/button";
-        import { Input } from "$lib/components/ui/input";
-        import * as DropdownMenu from "$lib/components/ui/dropdown-menu";
-        import DataTableCheckbox from "./data-table-checkbox.svelte";
-
+import DataTableActions from "./data-table-actions.svelte";
+import { Button } from "$lib/components/ui/button";
+import { Input } from "$lib/components/ui/input";
+import * as DropdownMenu from "$lib/components/ui/dropdown-menu";
+import DataTableCheckbox from "./data-table-checkbox.svelte";
 
 
 
@@ -47,6 +46,9 @@
 
 
   });
+
+
+
 
 
   const columns = table.createColumns([
@@ -129,9 +131,9 @@
     }),
   ]);
 
-      const { headerRows, pageRows, tableAttrs, tableBodyAttrs, pluginStates, flatColumns, rows } =
 
-    table.createViewModel(columns);
+     const { headerRows, pageRows, tableAttrs, tableBodyAttrs, pluginStates, flatColumns, rows } = table.createViewModel(columns);
+
       const { hasNextPage, hasPreviousPage, pageIndex } = pluginStates.page;
       const { filterValue } = pluginStates.filter;
       const { hiddenColumnIds } = pluginStates.hide;
@@ -141,13 +143,11 @@
       const ids = flatColumns.map((col) => col.id);
       let hideForId = Object.fromEntries(ids.map((id) => [id, true]));
 
-    $: $hiddenColumnIds = Object.entries(hideForId)
-.filter(([, hide]) => !hide)
-    .map(([id]) => id);
+    $: $hiddenColumnIds = Object.entries(hideForId).filter(([, hide]) => !hide).map(([id]) => id);
+
+
 
     const hidableCols = ["status", "email", "amount"];
-
-
 
 </script>
 

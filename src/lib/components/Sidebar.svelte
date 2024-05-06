@@ -15,6 +15,7 @@
       <a class="block" href="/auth/signup">Signup</a>
       <a class="block" href="/auth/login">Login</a>
       <a class="block" href="/private">Private</a>
+      <a class="block" href="/lists">Lists</a>
     </nav>
   </aside>
 </div>
