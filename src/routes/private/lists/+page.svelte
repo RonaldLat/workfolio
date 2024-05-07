@@ -5,6 +5,6 @@
   let {leads} = data;
 </script>
 
-<div class="container mx-auto py-10">
+<div class="  mx-auto py-10">
   <DataTable leads={leads.data}/>
 </div>

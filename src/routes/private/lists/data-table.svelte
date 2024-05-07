@@ -189,7 +189,7 @@
   $pageSize = 10
 </script>
 
-<div class="w-full">
+<div class="w-full bg-slat-200 border rounded-sm px-5">
   <div class="flex items-center py-4">
     <Input
       class="max-w-sm"
@@ -216,7 +216,7 @@
   </div>
   <div class="w-full py-8 flex items-center gap-5">
   <label for="page-size">Page size {$pageSize}</label>
-  <input id="page-size" type="range"   bind:value={$pageSize} max={$rows.length} step={5} class="max-w-sm w-full text-black   appearance-none bg-transparent [&::-webkit-slider-runnable-track]:rounded-full [&::-webkit-slider-runnable-track]:bg-gray-300 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-[25px] [&::-webkit-slider-thumb]:w-[25px] [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-sky-500" />
+  <input id="page-size" type="range"   bind:value={$pageSize} max={$rows.length} step={5} class="max-w-sm w-full text-black   appearance-none bg-transparent [&::-webkit-slider-runnable-track]:rounded-full [&::-webkit-slider-runnable-track]:bg-gray-300 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-[25px] [&::-webkit-slider-thumb]:w-[25px] [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-myColor-500" />
 
   </div>
   <div class="rounded-md border">
@@ -234,7 +234,7 @@
                 >
                   <Table.Head
                     {...attrs}
-                    class={cn("[&:has([role=checkbox])]:pl-3")}
+                    class={cn("[&:has([role=checkbox])]:pl-3 text-black")}
                   >
                     {#if cell.id === "data.phone_number"}
                       <div class="text-right font-medium">

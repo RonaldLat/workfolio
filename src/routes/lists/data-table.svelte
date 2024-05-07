@@ -219,9 +219,9 @@
   <input id="page-size" type="range"   bind:value={$pageSize} max={$rows.length} step={5} class="max-w-sm w-full text-black   appearance-none bg-transparent [&::-webkit-slider-runnable-track]:rounded-full [&::-webkit-slider-runnable-track]:bg-gray-300 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-[25px] [&::-webkit-slider-thumb]:w-[25px] [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-sky-500" />
 
   </div>
-  <div class="rounded-md border">
+  <div class="rounded-md border w-full bg-gray-600 hidden">
     <Table.Root {...$tableAttrs}>
-      <Table.Header>
+      <Table.Header class="bg-sky-600">
         {#each $headerRows as headerRow}
           <Subscribe rowAttrs={headerRow.attrs()}>
             <Table.Row>
