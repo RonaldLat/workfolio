@@ -26,7 +26,7 @@
   import { Input } from "$lib/components/ui/input/index.js";
 
   export let leads;
-  console.log('datatable',leads)
+//  console.log('datatable',leads)
 
   type Lead = {
     business_id: string;
@@ -214,6 +214,11 @@
       </DropdownMenu.Content>
     </DropdownMenu.Root>
   </div>
+  <div class="w-full py-8 flex items-center gap-5">
+  <label for="page-size">Page size {$pageSize}</label>
+  <input id="page-size" type="range"   bind:value={$pageSize} max={$rows.length} step={5} class="max-w-sm w-full text-black   appearance-none bg-transparent [&::-webkit-slider-runnable-track]:rounded-full [&::-webkit-slider-runnable-track]:bg-gray-300 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-[25px] [&::-webkit-slider-thumb]:w-[25px] [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-sky-500" />
+
+  </div>
   <div class="rounded-md border">
     <Table.Root {...$tableAttrs}>
       <Table.Header>
@@ -322,10 +327,7 @@
       on:click={() => ($pageIndex = $pageIndex + 1)}>Next</Button
     >
   </div>
-  <p>  {$pageIndex + 1} out of {$pageCount}</p>
-  <div class="mx-auto flex flex-cols items-center justistify-center w-full bg-stone-400">
-  <label for="page-size">Page size {$pageSize}</label>
-  <Slider id="page-size"  value={[pageSize]} max={$rows.length} step={5} class="max-w-[70%] text-black" />
-
+  <p class="text-sm text-gray-800"> Page {$pageIndex + 1} out of {$pageCount}</p>
+  <div class="mx-auto flex flex-cols items-center justistify-center w-full ">
   </div>
   </div>

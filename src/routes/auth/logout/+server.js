@@ -5,6 +5,7 @@ export const POST = async({locals})=>{
   if(error){
 
   console.log('localskl', locals )
+    console.log(err)
     throw error(500, 'Something went wront when logging you out')
   }
 
