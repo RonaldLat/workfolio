@@ -9,7 +9,7 @@
   import { onNavigate, goto, invalidate, invalidateAll } from '$app/navigation';
   import { page } from '$app/stores';
 	import { onMount } from 'svelte';
-	import { Toaster } from 'svelte-sonner';
+	import { Toaster } from '$lib/components/ui/sonner';
 
 	export let data;
   const route = $page.route;
