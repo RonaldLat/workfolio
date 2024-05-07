@@ -16,6 +16,7 @@
       <a class="block" href="/auth/login">Login</a>
       <a class="block" href="/private">Private</a>
       <a class="block" href="/private/lists">Lists</a>
+      <a class="block" href="/tts">TTS</a>
     </nav>
   </aside>
 </div>

@@ -9,6 +9,7 @@
   import { onNavigate, goto, invalidate, invalidateAll } from '$app/navigation';
   import { page } from '$app/stores';
 	import { onMount } from 'svelte';
+	import { Toaster } from 'svelte-sonner';
 
 	export let data;
   const route = $page.route;
@@ -81,6 +82,7 @@
 
 	{#key data.pathname}
 		<div in:fly={{ x: -30, duration: 200, delay: 150 }} out:fly={{ x: -30, duration: 150 }} class="pt-10">
+      <Toaster/>
 			<slot />
 		</div>
 	{/key}
