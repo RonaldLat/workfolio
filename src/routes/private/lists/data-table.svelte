@@ -90,7 +90,7 @@
           }
         },
         sort:{
-            disabled: false
+            //disabled: false
         }
       }
     }),
@@ -263,6 +263,11 @@
                     {:else if cell.id === "name"}
                       <Button variant="ghost" on:click={props.sort.toggle}>
                         <Render of={cell.render()} />
+                        								{#if props.sort.order === 'asc'}
+								⬇️
+								{:else if props.sort.order === 'desc'}
+								⬆️
+								{/if}
                         <ArrowUpDown
                           class={cn(
                             $sortKeys[0]?.id === cell.id && "text-foreground",
