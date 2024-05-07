@@ -323,9 +323,10 @@
     >
   </div>
   <p>  {$pageIndex + 1} out of {$pageCount}</p>
-  <div class="mx-auto flex flex-cols items-center justistify-center w-full bg-stone-400">
-  <label for="page-size">Page size {$pageSize}</label>
-  <Slider id="page-size"  value={[pageSize]} max={$rows.length} step={5} class="max-w-[70%] text-black" />
+  <div class="mx-auto flex flex-cols items-center justistify-center w-full">
+  <label for="page-size">Page size</label>
+  <input id="page-size" type="number" min={1} bind:value={$pageSize} />
+  <Slider bind:value={$pageSize} max={$rows.length} step={5} class="max-w-[70%]" />
 
   </div>
   </div>
