@@ -1,6 +1,13 @@
-
 import { json } from '@sveltejs/kit';
 import * as PlayHT from 'playht';
+
+PlayHT.init({
+  apiKey: '81291023f5384beab82f4ac44b87225f',
+  userId: 'Z2gZpfwLfAVlMmvqi4HJjhkDZHr1',
+  defaultVoiceId: 's3://peregrine-voices/oliver_narrative2_parrot_saad/manifest.json',
+  defaultVoiceEngine: 'PlayHT2.0',
+});
+
 export async function load({fetch}) {
 
   const voices = await list_voices()
@@ -28,12 +35,6 @@ export const actions ={
 const play =async (text)=>{
   console.log(text)
 
-  PlayHT.init({
-    apiKey: '81291023f5384beab82f4ac44b87225f',
-    userId: 'Z2gZpfwLfAVlMmvqi4HJjhkDZHr1',
-    defaultVoiceId: 's3://peregrine-voices/oliver_narrative2_parrot_saad/manifest.json',
-    defaultVoiceEngine: 'PlayHT2.0',
-  });
     const sentence = text;
 
   const generated = await PlayHT.generate(sentence, {
