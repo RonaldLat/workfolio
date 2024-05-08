@@ -7,8 +7,10 @@
   export let data;
   console.log('categories', data)
   </script>
+
 	{#key data.pathname}
 <h1>Groups </h1>
+<h1>{data.count} chances.  </h1>
 <ul class="flex">
 <li>
 <Button class="bg-sky-300">

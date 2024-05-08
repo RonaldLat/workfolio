@@ -5,10 +5,17 @@ export async function load({fetch, locals: { supabase }}  ) {
     .from('latcrm96')
     .select('types', {distinct: true})
 
+  const { count, error: err } = await supabase
+    .from('latcrm96')
+    .select('*', {count: 'exact', head: true})
+
+
+
 
 
   return {
-    categories
+    categories,
+    count
   };
 }
 
