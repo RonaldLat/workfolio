@@ -13,7 +13,7 @@
     const { voices} = data
     console.log('voices',form)
 </script>
-
+<main class="text-gray-900">
 <p>hello tts</p>
 
 <form method="POST" action="?/tts" class="w-2/3 space-y-6 flex flex-col border p-2 rounded-md border-slate-300 gap-2 mx-auto" use:enhance>
@@ -34,3 +34,5 @@
 
 <ul>
 </ul >
+
+</main>
