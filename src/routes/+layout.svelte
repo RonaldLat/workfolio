@@ -2,7 +2,6 @@
 	import { fly } from 'svelte/transition';
 	import '../app.css';
 	import Categories from '$lib/category_links.svelte';
-	import Cart from '$lib/Cart.svelte';
 	import Sidebar from '$lib/components/Sidebar.svelte';
 	import Navbar from '$lib/components/Navbar.svelte';
 	import Footer from '$lib/components/Footer.svelte';
@@ -67,7 +66,7 @@
   </div>
 <main
 
-	class=" container mx-auto py-4 max-w-5xl font-poppipns px-2 md:px-0 min-h-screen relative bg-gray-100"
+	class=" container mx-auto text-gray-900 py-4 max-w-5xl font-poppipns px-2 md:px-0 min-h-screen relative bg-gray-100"
 >
 	<header class="w-full z-50 fixed top-0 left-0 gap-x-2">
 		<div class="bg-transparent">

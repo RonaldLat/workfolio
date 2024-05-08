@@ -1,7 +1,6 @@
 <script>
 	import Icon from '@iconify/svelte';
 	import CategDropdown from './CategDropdown.svelte';
-	import Cart from '$lib/Cart.svelte';
   import { business}  from '$lib/store/details'
 
    export let toggleSideNav
@@ -21,7 +20,6 @@
 	</div>
 
     <div class="flex gap-3 justify-self-end h-5/6 items-center">
-	<Cart />
 		<CategDropdown />
     </div>
 </div>
