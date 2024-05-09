@@ -15,7 +15,7 @@ export async function load({fetch, locals: { supabase }}  ) {
 
   return {
     categories,
-    count : ||''
+    count : count ||''
   };
 }
 
