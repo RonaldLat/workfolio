@@ -12,7 +12,7 @@
     addSortBy,
     addTableFilter
   } from "svelte-headless-table/plugins";
-  import { readable } from "svelte/store";
+  import { readable, writable } from "svelte/store";
   import ArrowUpDown from "lucide-svelte/icons/arrow-up-down";
   import ChevronDown from "lucide-svelte/icons/chevron-down";
   import Actions from "./data-table-actions.svelte";
@@ -26,7 +26,8 @@
   import { Input } from "$lib/components/ui/input/index.js";
 
   export let leads;
-//  console.log('datatable',leads)
+  export let count;
+  //console.log('datatable',count)
 
   type Lead = {
     business_id: string;
@@ -180,13 +181,17 @@
     .filter(([, hide]) => !hide)
     .map(([id]) => id);
 
-  const { hasNextPage, hasPreviousPage, pageIndex, pageSize, pageCount } = pluginStates.page;
+  let { hasNextPage, hasPreviousPage, pageIndex, pageSize, pageCount, serverSide, serverItemCount } = pluginStates.page;
+
   const { filterValue } = pluginStates.filter;
 
   const { selectedDataIds } = pluginStates.select;
 
   const hideableCols = ["review_count", "name", "website", 'city', 'verified', 'niche'];
   $pageSize = 10
+
+  serverSide= true;
+  serverItemCount = writable(count)
 </script>
 
 <div class="w-full bg-slat-200 border rounded-sm px-5">

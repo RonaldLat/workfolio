@@ -7,5 +7,6 @@
 </script>
 
 <div class="  mx-auto py-10">
-  <DataTable leads={leads2}/>
+<p>{data.count}</p>
+  <DataTable leads={leads2} count={data.count}/>
 </div>
