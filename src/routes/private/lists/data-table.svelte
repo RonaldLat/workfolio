@@ -36,7 +36,7 @@
 
 	const table = createTable(readable(data), {
 		sort: addSortBy({ disableMultiSort: true }),
-		page: addPagination(),
+		page: addPagination({ serverSide: true, serverItemCount: writable(count) }),
 		filter: addTableFilter({
 			fn: ({ filterValue, value }) => value.includes(filterValue)
 		}),
@@ -188,10 +188,8 @@
 	const { selectedDataIds } = pluginStates.select;
 
 	const hideableCols = ['review_count', 'name', 'website', 'city', 'verified', 'niche'];
-	$pageSize = 10;
+	//$pageSize = 10;
 
-	serverSide = true;
-	serverItemCount = writable(count);
 	console.log('countx', count);
 </script>
 
