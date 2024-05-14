@@ -1,3 +1,8 @@
+<script>
+	export let form;
+	console.log(form);
+</script>
+
 <h1 class="text-2xl text-center font-semibold mt-10">Login</h1>
 <form method="POST" action="?/login">
 	<label>

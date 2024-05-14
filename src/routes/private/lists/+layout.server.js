@@ -1,13 +1,12 @@
-export async function load({fetch, locals: { supabase }}  ) {
-
+export async function load({ fetch, locals: { supabase } }) {
 
   let { data: categories, error } = await supabase
     .from('latcrm96')
-    .select('types', {distinct: true})
+    .select('types', { distinct: true })
 
   const { count, error: err } = await supabase
     .from('latcrm96')
-    .select('*', {count: 'exact', head: true})
+    .select('*', { count: 'exact', head: true })
 
 
 
@@ -15,7 +14,7 @@ export async function load({fetch, locals: { supabase }}  ) {
 
   return {
     categories,
-    count : count ||''
+    count: count || ''
   };
 }
 

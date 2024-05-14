@@ -27,7 +27,16 @@ export const actions: Actions = {
       console.error(error)
       return redirect(303, '/auth/error')
     } else {
-      return redirect(303, '/private')
+      return redirect(303, '/private/lists')
     }
   },
+  login2: async ({ request, locals: { supabase } }) => {
+    const formData = await request.formData()
+    const email = formData.get('email') as string
+    const password = formData.get('password') as string
+
+    return formData
+
+    // return redirect(303, '/private')
+  }
 }
