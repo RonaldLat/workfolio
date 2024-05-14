@@ -9,6 +9,6 @@ export const POST = async ({ locals }) => {
   }
 
 
-  console.log('logged out successfully')
-  throw redirect(300, '/auth/login')
+  // console.log('logged out successfully')
+  throw redirect(303, '/auth/login')
 }

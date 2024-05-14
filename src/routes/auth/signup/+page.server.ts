@@ -11,9 +11,9 @@ export const actions: Actions = {
     const { error } = await supabase.auth.signUp({ email, password })
     if (error) {
       console.error(error)
-      return redirect(303, '/error')
+      throw redirect(303, '/error')
     } else {
-      return redirect(303, '/')
+      throw redirect(303, '/')
     }
   },
   login: async ({ request, locals: { supabase } }) => {
@@ -24,9 +24,9 @@ export const actions: Actions = {
     const { error } = await supabase.auth.signInWithPassword({ email, password })
     if (error) {
       console.error(error)
-      return redirect(303, '/error')
+      throw redirect(303, '/error')
     } else {
-      return redirect(303, '/private')
+      throw redirect(303, '/private')
     }
   },
 }
