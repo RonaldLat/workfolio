@@ -71,15 +71,15 @@
     <DropdownMenu.Item>
       <Icon icon="mynaui:logout" class="mr-2 h-4 w-4" />
 {#if true}
-<button  class="bg-transparent">
-<p class="text-red-500" on:click={logOut}>LogOut</p>
-
-
-</button>
+<p  class="bg-transparent">
+<button class="text-red-500" on:click={logOut}>LogOut</button>
+</p>
 {:else}
+
 <button class="bg-gray-200 text-slate-800 px-3 py-2 rounded-sm" on:click={()=>goto('/login')}>
-<span >Login</span>
+Login
 </button>
+
 {/if}
     </DropdownMenu.Item>
   </DropdownMenu.Content>
