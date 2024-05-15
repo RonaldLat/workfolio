@@ -16,6 +16,7 @@ const config = {
       edge: false,
       split: false
     }),
+    outDir: 'build',
     csrf: {
       checkOrigin: false //remember to remove this in final production
     }
