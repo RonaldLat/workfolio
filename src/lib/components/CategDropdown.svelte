@@ -72,7 +72,7 @@
       <Icon icon="mynaui:logout" class="mr-2 h-4 w-4" />
 {#if true}
 <button  class="bg-transparent">
-<span class="text-red-500" on:click={logOut}>LogOut</span>
+<p class="text-red-500" on:click={logOut}>LogOut</p>
 
 
 </button>
