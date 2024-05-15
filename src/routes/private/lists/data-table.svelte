@@ -22,7 +22,7 @@
 
 	export let leads;
 	export let count;
-	//console.log('datatable',count)
+	console.log('datatable',leads)
 
 	type Lead = {
 		business_id: string;
@@ -52,7 +52,7 @@
 					checked: allPageRowsSelected
 				});
 			},
-			accessor: data.business_id,
+			accessor: 'business_id',
 			cell: ({ row }, { pluginStates }) => {
 				const { getRowState } = pluginStates.select;
 				const { isSelected } = getRowState(row);
