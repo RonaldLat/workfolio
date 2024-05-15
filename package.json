@@ -39,7 +39,6 @@
 		"formsnap": "^1.0.0",
 		"lucide-svelte": "^0.378.0",
 		"mode-watcher": "^0.3.0",
-		"mongodb": "^6.5.0",
 		"motion": "^10.17.0",
 		"playht": "^0.9.8",
 		"svelte-radix": "^1.1.0",
