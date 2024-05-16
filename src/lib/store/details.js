@@ -1,9 +1,9 @@
 import { writable, readable } from "svelte/store";
 
 export const business = writable({
-  phone: '712000000',
-  email: 'example@email.com',
-  whatsapp: '0712973489',
+  phone: '712973489',
+  email: 'ronnlats@gmail.com',
+  whatsapp: '712973489',
   address_1: 'Odeon',
   address_2: 'Nairobi, Kenya',
   name_part1: 'lat',

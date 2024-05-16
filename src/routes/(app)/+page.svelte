@@ -6,7 +6,7 @@
 	console.log('Root page', data.session);
 </script>
 
-<section class="section-process text-9xl">
+<section class="section-process text-7xl md:text-8xl lg:text-9xl font-blackops">
 	<div class="section-container">
 		<div class="process-steps-container container-medium with-padding">
 			<div class="process-step-container process-step-1">
@@ -40,7 +40,7 @@
 			<Button type="submit" class="bg-red-400">Logout</Button>
 		</form>
 	{:else}
-		<Button href="/auth/login" class="bg-sky-400">Login</Button>
+		<Button href="/auth/login" class="bg-sky-400 w-fit">Login</Button>
 	{/if}
 </div>
 

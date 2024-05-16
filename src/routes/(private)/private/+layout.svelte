@@ -17,16 +17,18 @@
 	export let data;
 </script>
 
-<aside class="inset-y fixed left-0 z-20 flex h-full flex-col border-r bg-slate-600 w-14 md:w-20">
+<aside
+	class="inset-y fixed left-0 z-20 flex h-full flex-col border-r bg-black font-ubuntu text-sky-400 w-12 md:w-20"
+>
 	<div class="border-b p-2">
-		<a href="/private">
+		<a href="/private" class="flex items-center flex-col justify-center">
 			<Button variant="outline" size="icon" aria-label="Home">
-				<Triangle class="size-5 fill-foreground" />
+				<Triangle class="size-4 fill-foreground" />
 			</Button>
-			<p class="text-xs text-center pt-0.5">Home</p>
+			<p class="text-xs text-center pt-0.5 font-semibold">Home</p>
 		</a>
 	</div>
-	<nav class="grid gap-1 p-2">
+	<nav class="grid gap-1 p-2 justify-center">
 		<Tooltip.Root>
 			<Tooltip.Trigger asChild let:builder>
 				<a href="/private/tts">
@@ -107,7 +109,7 @@
 			<Tooltip.Content side="right" sideOffset={5}>Settings</Tooltip.Content>
 		</Tooltip.Root>
 	</nav>
-	<nav class="mt-auto grid gap-1 p-2">
+	<nav class="mt-auto grid gap-1 p-2 justify-center">
 		<Tooltip.Root>
 			<Tooltip.Trigger asChild let:builder>
 				<Button
@@ -137,7 +139,7 @@
 					>
 						<SquareUser class="size-5" />
 					</Button>
-					<button type="submit" class="truncate text-xs text-red-400"> Logout</button>
+					<button type="submit" class="truncate text-xs text-red-500"> Logout</button>
 				</form>
 			</Tooltip.Trigger>
 			<Tooltip.Content side="right" sideOffset={5} class="text-myColor-700">Logout</Tooltip.Content>
