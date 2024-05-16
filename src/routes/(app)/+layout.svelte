@@ -67,7 +67,7 @@
 		</div>
 	</header>
 
-	<form action="/auth/logout" method="POST">
+	<form action="/auth/logout" method="POST" class="hidden">
 		<button type="submit" class="bg-orange-500 text-black p-2 mt-10"> LogOut</button>
 	</form>
 
