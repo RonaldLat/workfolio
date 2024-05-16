@@ -17,7 +17,7 @@
 	export let data;
 </script>
 
-<aside class="inset-y fixed left-0 z-20 flex h-full flex-col border-r bg-slate-600">
+<aside class="inset-y fixed left-0 z-20 flex h-full flex-col border-r bg-slate-600 w-14 md:w-20">
 	<div class="border-b p-2">
 		<a href="/private">
 			<Button variant="outline" size="icon" aria-label="Home">
@@ -91,15 +91,18 @@
 		</Tooltip.Root>
 		<Tooltip.Root>
 			<Tooltip.Trigger asChild let:builder>
-				<Button
-					variant="ghost"
-					size="icon"
-					class="rounded-lg"
-					aria-label="Settings"
-					builders={[builder]}
-				>
-					<Settings2 class="size-5" />
-				</Button>
+				<a href="/private/lists/new">
+					<Button
+						variant="ghost"
+						size="icon"
+						class="rounded-lg"
+						aria-label="Settings"
+						builders={[builder]}
+					>
+						<Settings2 class="size-5" />
+					</Button>
+					<p class="text-xs text-center">New</p>
+				</a>
 			</Tooltip.Trigger>
 			<Tooltip.Content side="right" sideOffset={5}>Settings</Tooltip.Content>
 		</Tooltip.Root>
@@ -116,27 +119,28 @@
 				>
 					<LifeBuoy class="size-5" />
 				</Button>
-				<p class="text-xs text-center">Account</p>
+				<p class="text-xs text-center truncate">Account</p>
 				<Tooltip.Content side="right" sideOffset={5}>Account</Tooltip.Content>
 			</Tooltip.Trigger>
 			<Tooltip.Content side="right" sideOffset={5}>Help</Tooltip.Content>
 		</Tooltip.Root>
 		<Tooltip.Root>
 			<Tooltip.Trigger asChild let:builder>
-				<form action="/auth/logout" method="POST" class="inline-flex hidden">
+				<form action="/auth/logout" method="POST" class="inline">
 					<Button
 						variant="ghost"
 						size="icon"
 						class="mt-auto rounded-lg"
 						aria-label="Account"
 						builders={[builder]}
+						type="submit"
 					>
 						<SquareUser class="size-5" />
 					</Button>
-					<button type="submit" class=" text-xs p-2 mt-10"> LogOut</button>
+					<button type="submit" class="truncate text-xs text-red-400"> Logout</button>
 				</form>
 			</Tooltip.Trigger>
-			<Tooltip.Content side="right" sideOffset={5}>Account</Tooltip.Content>
+			<Tooltip.Content side="right" sideOffset={5} class="text-myColor-700">Logout</Tooltip.Content>
 		</Tooltip.Root>
 	</nav>
 </aside>
