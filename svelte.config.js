@@ -17,7 +17,7 @@ const config = {
       split: true
     }),
     csrf: {
-      //checkOrigin: false //remember to remove this in final production
+      checkOrigin: false //remember to remove this in final production
     }
   }
 };
