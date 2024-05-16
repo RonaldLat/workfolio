@@ -2,7 +2,7 @@ import { createBrowserClient, createServerClient, isBrowser, parse } from '@supa
 
 import { PUBLIC_SUPABASE_ANON_KEY, PUBLIC_SUPABASE_URL } from '$env/static/public'
 
-import type { LayoutLoad } from './$types'
+import type { LayoutLoad } from '../$types'
 
 export const load: LayoutLoad = async ({ data, depends, fetch }) => {
   /**

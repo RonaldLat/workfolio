@@ -1,0 +1,155 @@
+<script lang="ts">
+	import { fly } from 'svelte/transition';
+	import Triangle from 'lucide-svelte/icons/triangle';
+	import Bot from 'lucide-svelte/icons/bot';
+	import SquareTerminal from 'lucide-svelte/icons/square-terminal';
+	import CodeXML from 'lucide-svelte/icons/code-xml';
+	import Settings2 from 'lucide-svelte/icons/settings-2';
+	import LifeBuoy from 'lucide-svelte/icons/life-buoy';
+	import Book from 'lucide-svelte/icons/book';
+	import SquareUser from 'lucide-svelte/icons/square-user';
+	import '../../../app.css';
+
+	import { Button } from '$lib/components/ui/button/index.js';
+	import { Toaster } from '$lib/components/ui/sonner';
+	import * as Tooltip from '$lib/components/ui/tooltip/index.js';
+
+	export let data;
+</script>
+
+<aside class="inset-y fixed left-0 z-20 flex h-full flex-col border-r bg-slate-600">
+	<div class="border-b p-2">
+		<a href="/private">
+			<Button variant="outline" size="icon" aria-label="Home">
+				<Triangle class="size-5 fill-foreground" />
+			</Button>
+			<p class="text-xs text-center pt-0.5">Home</p>
+		</a>
+	</div>
+	<nav class="grid gap-1 p-2">
+		<Tooltip.Root>
+			<Tooltip.Trigger asChild let:builder>
+				<a href="/private/tts">
+					<Button
+						variant="ghost"
+						size="icon"
+						class="rounded-lg bg-muted"
+						aria-label="Playground"
+						builders={[builder]}
+					>
+						<SquareTerminal class="size-5" />
+					</Button>
+					<p class="text-xs text-center">TTS</p>
+				</a>
+			</Tooltip.Trigger>
+			<Tooltip.Content side="right" sideOffset={5}>Playground</Tooltip.Content>
+		</Tooltip.Root>
+		<Tooltip.Root>
+			<Tooltip.Trigger asChild let:builder>
+				<a href="/private/lists">
+					<Button
+						variant="ghost"
+						size="icon"
+						class="rounded-lg"
+						aria-label="Models"
+						builders={[builder]}
+					>
+						<Bot class="size-5" />
+					</Button>
+					<p class="text-xs text-center">Leads</p>
+				</a>
+			</Tooltip.Trigger>
+			<Tooltip.Content side="right" sideOffset={5}>Models</Tooltip.Content>
+		</Tooltip.Root>
+		<Tooltip.Root>
+			<Tooltip.Trigger asChild let:builder>
+				<Button
+					variant="ghost"
+					size="icon"
+					class="rounded-lg"
+					aria-label="API"
+					builders={[builder]}
+				>
+					<CodeXML class="size-5" />
+				</Button>
+			</Tooltip.Trigger>
+			<Tooltip.Content side="right" sideOffset={5}>API</Tooltip.Content>
+		</Tooltip.Root>
+		<Tooltip.Root>
+			<Tooltip.Trigger asChild let:builder>
+				<Button
+					variant="ghost"
+					size="icon"
+					class="rounded-lg"
+					aria-label="Documentation"
+					builders={[builder]}
+				>
+					<Book class="size-5" />
+				</Button>
+			</Tooltip.Trigger>
+			<Tooltip.Content side="right" sideOffset={5}>Documentation</Tooltip.Content>
+		</Tooltip.Root>
+		<Tooltip.Root>
+			<Tooltip.Trigger asChild let:builder>
+				<Button
+					variant="ghost"
+					size="icon"
+					class="rounded-lg"
+					aria-label="Settings"
+					builders={[builder]}
+				>
+					<Settings2 class="size-5" />
+				</Button>
+			</Tooltip.Trigger>
+			<Tooltip.Content side="right" sideOffset={5}>Settings</Tooltip.Content>
+		</Tooltip.Root>
+	</nav>
+	<nav class="mt-auto grid gap-1 p-2">
+		<Tooltip.Root>
+			<Tooltip.Trigger asChild let:builder>
+				<Button
+					variant="ghost"
+					size="icon"
+					class="mt-auto rounded-lg"
+					aria-label="Help"
+					builders={[builder]}
+				>
+					<LifeBuoy class="size-5" />
+				</Button>
+				<p class="text-xs text-center">Account</p>
+				<Tooltip.Content side="right" sideOffset={5}>Account</Tooltip.Content>
+			</Tooltip.Trigger>
+			<Tooltip.Content side="right" sideOffset={5}>Help</Tooltip.Content>
+		</Tooltip.Root>
+		<Tooltip.Root>
+			<Tooltip.Trigger asChild let:builder>
+				<form action="/auth/logout" method="POST" class="inline-flex hidden">
+					<Button
+						variant="ghost"
+						size="icon"
+						class="mt-auto rounded-lg"
+						aria-label="Account"
+						builders={[builder]}
+					>
+						<SquareUser class="size-5" />
+					</Button>
+					<button type="submit" class=" text-xs p-2 mt-10"> LogOut</button>
+				</form>
+			</Tooltip.Trigger>
+			<Tooltip.Content side="right" sideOffset={5}>Account</Tooltip.Content>
+		</Tooltip.Root>
+	</nav>
+</aside>
+
+{#key data.pathname}
+	<div
+		in:fly={{ x: -30, duration: 200, delay: 150 }}
+		out:fly={{ x: -30, duration: 150 }}
+		class="pt-10"
+	>
+		<main class="text-gray-900 ml-16 pt-4 h-[200vh] mx-auto">
+			<slot />
+			<Toaster />
+		</main>
+	</div>
+{/key}

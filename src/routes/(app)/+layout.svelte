@@ -1,6 +1,7 @@
 <script>
 	import { fly } from 'svelte/transition';
-	import '../app.css';
+	// import '../app.css';
+	import '../../app.css';
 	import Categories from '$lib/category_links.svelte';
 	import Sidebar from '$lib/components/Sidebar.svelte';
 	import Navbar from '$lib/components/Navbar.svelte';

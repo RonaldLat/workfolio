@@ -32,6 +32,7 @@
 		"@supabase/ssr": "^0.3.0",
 		"@supabase/supabase-js": "^2.43.1",
 		"@sveltejs/adapter-vercel": "^4.0.0",
+		"@vercel/blob": "^0.23.2",
 		"bits-ui": "^0.21.7",
 		"clsx": "^2.1.0",
 		"embla-carousel-svelte": "^8.0.4",
