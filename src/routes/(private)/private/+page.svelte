@@ -4,6 +4,7 @@
 	import DollarSign from 'lucide-svelte/icons/dollar-sign';
 	import Users from 'lucide-svelte/icons/users';
 	import { Progress as Progress2 } from 'bits-ui';
+	import Echart from '$lib/components/Echart.svelte';
 
 	export let data;
 </script>
@@ -49,3 +50,5 @@
 		</Card.Content>
 	</Card.Root>
 </section>
+
+<Echart />

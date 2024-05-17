@@ -153,7 +153,7 @@
 		out:fly={{ x: -30, duration: 150 }}
 		class="pt-10"
 	>
-		<main class="text-gray-900 ml-16 pt-4 h-[200vh] mx-auto">
+		<main class="text-gray-900 ml-16 pt-4 h-[200vh] w-full pl-2 md:4 ml-14 mx-auto">
 			<slot />
 			<Toaster />
 		</main>
