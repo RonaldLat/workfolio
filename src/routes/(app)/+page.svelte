@@ -3,7 +3,7 @@
 	import Button from '$lib/components/ui/button/button.svelte';
 
 	export let data;
-	console.log('Root page', data.session);
+
 </script>
 
 <section class="section-process text-7xl md:text-8xl lg:text-9xl font-blackops">

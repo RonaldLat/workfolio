@@ -65,15 +65,18 @@
 		</Tooltip.Root>
 		<Tooltip.Root>
 			<Tooltip.Trigger asChild let:builder>
-				<Button
-					variant="ghost"
-					size="icon"
-					class="rounded-lg"
-					aria-label="API"
-					builders={[builder]}
-				>
-					<CodeXML class="size-5" />
-				</Button>
+				<a href="/private/uvp">
+					<Button
+						variant="ghost"
+						size="icon"
+						class="rounded-lg"
+						aria-label="Models"
+						builders={[builder]}
+					>
+						<Bot class="size-5" />
+					</Button>
+					<p class="text-xs text-center">UVP</p>
+				</a>
 			</Tooltip.Trigger>
 			<Tooltip.Content side="right" sideOffset={5}>API</Tooltip.Content>
 		</Tooltip.Root>

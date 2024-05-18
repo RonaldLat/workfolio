@@ -2,8 +2,6 @@
 	import * as echarts from 'echarts';
 	import { onMount } from 'svelte';
 
-	console.log(echarts)
-
 	let chartDom;
 	onMount(() => {
 		let myChart = echarts.init(chartDom);
