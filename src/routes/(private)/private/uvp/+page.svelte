@@ -1,12 +1,16 @@
 <script>
+	import { enhance } from '$app/forms';
+
 	export let form;
 	$: console.log(form);
+	enhance;
 </script>
 
-<form method="POST" action="api/upv">
-	<input type="text" name="businessName" class="dark:bg-gray-200" />
-	<input type="file" name="logo" class="dark:bg-gray-200" />
-	<input type="text" name="phoneNumber" class="dark:bg-gray-200" />
+<form method="POST" action="/api/uvp" enctype="multipart/form-data" use:enhance>
+	<input type="text" name="name" class="dark:bg-gray-200" />
+	<input type="text" name="initials" class="dark:bg-gray-200" />
+	<input type="file" name="logo_url" class="dark:bg-gray-200" />
+	<input type="text" name="phone_number" class="dark:bg-gray-200" />
 	<input type="text" name="slogan" class="dark:bg-gray-200" />
 	<button type="submit">Save</button>
 </form>
