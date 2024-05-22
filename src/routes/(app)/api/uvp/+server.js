@@ -1,18 +1,19 @@
 import { createReadableStream } from "@sveltejs/kit/node";
+import { put } from "@vercel/blob";
 
-// Import necessary modules
-
-// Initialize Supabase client
-
-// Define the API endpoint
 export async function POST({ request, locals: { supabase } }) {
-  // Extract form data from the request body
-  // let { businessName, logo, slogan, phoneNumber, } = await request.formData();
   const form_data = await request.formData()
   const inputs = Object.fromEntries(form_data)
   console.log(inputs)
   // Check if logo file is present
   if (inputs.logo) {
+    console.log(inputs.logo)
+    const { url } = await put(inputs.logo.name, request.body, { access: 'public' });
+    console.log('url', url)
+
+    return Response.json({
+      url
+    });
     // Create a file stream for the logo
     const logoStream = createReadableStream(logo.path);
 
