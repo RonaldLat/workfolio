@@ -3,13 +3,17 @@
 	import Label from '$lib/components/ui/label/label.svelte';
 
 	export let form;
-	$: console.log(form);
-	enhance;
+	export let data;
+	console.log(data);
+	$: {
+		console.log(form, data);
+	}
 </script>
 
+<h1 class="font-semibold text-2xl text-center mb-5">Enter New Lead's Details</h1>
 <form
 	method="POST"
-	action="/api/uvp"
+	action="?/uvp"
 	enctype="multipart/form-data"
 	class="max-w-md mx-auto flex flex-col gap-2"
 	use:enhance
