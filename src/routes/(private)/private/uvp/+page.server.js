@@ -49,7 +49,7 @@ export const actions = {
 
 
     console.log('data', data)
-    return { dat: 'fucking data' }
-    // return { data }
+    //return { dat: 'fucking data' }
+    return { data }
   },
 };
