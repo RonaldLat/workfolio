@@ -38,7 +38,8 @@ export const actions = {
     // insert data into the 'uvp' table
     const { data, error: err } = await supabase
       .from('uvp')
-      .insert(inputs);
+      .insert(inputs)
+      .select();
 
     // handle the response
     if (err) {
