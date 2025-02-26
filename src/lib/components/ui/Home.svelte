@@ -78,7 +78,7 @@
     <h2
       class="mb-5 font-[Maven] text-4xl font-extrabold first-letter:text-6xl first-letter:text-myColor-600 tracking-widest text-gray-900 sm:text-4xl sm:leading-none"
     >
-      I build intelligent sytems,<br class="hidden md:block" />
+      Let's build intelligent sytems,<br class="hidden md:block" />
       <span class="inline-block text-deep-violet-accent-400"
         >one line at a time.</span
       >
