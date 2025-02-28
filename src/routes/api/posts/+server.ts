@@ -22,8 +22,11 @@ async function getPosts(limit=10) {
   return posts.slice(0,limit);
 }
 
-export async function GET({url}) {
-  const limit = url.searchParams.get('limit');
+export async function GET({url}, limit=10) {
+  if (!limit){
+    limit = url.searchParams.get('limit');
+  }
+  
   const posts = await getPosts(limit);
   return json(posts);
 }

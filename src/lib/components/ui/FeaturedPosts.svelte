@@ -7,7 +7,7 @@ onMount(async()=>{
   latestPosts = await response.json();
 
         })
-console.log(latestPosts)
+console.log('latest posts',latestPosts)
 </script>
 <section>
 

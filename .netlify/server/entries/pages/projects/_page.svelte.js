@@ -1,4 +1,4 @@
-import { l as get_store_value, c as create_ssr_component, f as compute_rest_props, e as escape, h as spread, j as escape_attribute_value, i as escape_object, d as add_attribute, k as setContext, o as compute_slots, g as getContext, v as validate_component } from "../../../chunks/ssr.js";
+import { l as get_store_value, c as create_ssr_component, f as compute_rest_props, h as spread, e as escape, i as escape_object, d as add_attribute, k as setContext, o as compute_slots, g as getContext, j as escape_attribute_value, v as validate_component } from "../../../chunks/ssr.js";
 import { w as writable, r as readable } from "../../../chunks/index2.js";
 const stores = {};
 function localStorageStore(key, initialValue, options) {
@@ -30,12 +30,13 @@ function prefersReducedMotion() {
 readable(prefersReducedMotion(), (set) => {
 });
 let cBase$2 = "flex aspect-square text-surface-50 font-semibold justify-center items-center overflow-hidden isolate";
-let cImage = "w-full h-full object-cover";
+let cImage = "w-full object-cover";
 const Avatar = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let classesBase;
   let $$restProps = compute_rest_props($$props, [
     "initials",
     "fill",
+    "fontSize",
     "src",
     "fallback",
     "action",
@@ -47,8 +48,9 @@ const Avatar = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     "shadow",
     "cursor"
   ]);
-  let { initials = "AB" } = $$props;
+  let { initials = "" } = $$props;
   let { fill = "fill-token" } = $$props;
+  let { fontSize = 150 } = $$props;
   let { src = "" } = $$props;
   let { fallback = "" } = $$props;
   let { action = () => {
@@ -68,6 +70,8 @@ const Avatar = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     $$bindings.initials(initials);
   if ($$props.fill === void 0 && $$bindings.fill && fill !== void 0)
     $$bindings.fill(fill);
+  if ($$props.fontSize === void 0 && $$bindings.fontSize && fontSize !== void 0)
+    $$bindings.fontSize(fontSize);
   if ($$props.src === void 0 && $$bindings.src && src !== void 0)
     $$bindings.src(src);
   if ($$props.fallback === void 0 && $$bindings.fallback && fallback !== void 0)
@@ -89,22 +93,16 @@ const Avatar = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   if ($$props.cursor === void 0 && $$bindings.cursor && cursor !== void 0)
     $$bindings.cursor(cursor);
   classesBase = `${cBase$2} ${background} ${width} ${border} ${rounded} ${shadow} ${cursor} ${$$props.class ?? ""}`;
-  return `  <figure class="${"avatar " + escape(classesBase, true)}" data-testid="avatar">${src ? `<img${spread(
+  return `<figure${spread(
     [
       {
-        class: "avatar-image " + escape(cImage, true)
+        class: "avatar " + escape(classesBase, true)
       },
-      {
-        style: escape_attribute_value($$props.style ?? "")
-      },
-      { src: escape_attribute_value(src) },
-      {
-        alt: escape_attribute_value($$props.alt || "")
-      },
+      { "data-testid": "avatar" },
       escape_object(prunedRestProps())
     ],
     {}
-  )}>` : `<svg class="avatar-initials w-full h-full" viewBox="0 0 512 512"><text x="50%" y="50%" dominant-baseline="central" text-anchor="middle" font-weight="bold"${add_attribute("font-size", 150, 0)} class="${"avatar-text " + escape(fill, true)}">${escape(String(initials).substring(0, 2).toUpperCase())}</text></svg>`}</figure>`;
+  )}>${src || fallback ? `<img class="${"avatar-image " + escape(cImage, true)}"${add_attribute("style", $$props.style ?? "", 0)}${add_attribute("src", src, 0)}${add_attribute("alt", $$props.alt || "", 0)}>` : `${initials ? `<svg class="avatar-initials w-full h-full" viewBox="0 0 512 512"><text x="50%" y="50%" dominant-baseline="central" text-anchor="middle" font-weight="bold"${add_attribute("font-size", fontSize, 0)} class="${"avatar-text " + escape(fill, true)}">${escape(String(initials).substring(0, 2).toUpperCase())}</text></svg>` : `${slots.default ? slots.default({}) : ``}`}`}</figure>`;
 });
 const ProgressBar_svelte_svelte_type_style_lang = "";
 const cBase$1 = "space-y-4";
@@ -160,7 +158,7 @@ const TabGroup = create_ssr_component(($$result, $$props, $$bindings, slots) => 
   classesBase = `${cBase$1} ${$$props.class ?? ""}`;
   classesList = `${cList} ${justify} ${border} ${regionList}`;
   classesPanel = `${cPanel} ${regionPanel}`;
-  return `  <div class="${"tab-group " + escape(classesBase, true)}" data-testid="tab-group"> <div class="${"tab-list " + escape(classesList, true)}" role="tablist"${add_attribute("aria-labelledby", labelledby, 0)}>${slots.default ? slots.default({}) : ``}</div>  ${$$slots.panel ? `<div class="${"tab-panel " + escape(classesPanel, true)}" role="tabpanel"${add_attribute("aria-labelledby", panel, 0)} tabindex="0">${slots.panel ? slots.panel({}) : ``}</div>` : ``}</div>`;
+  return `<div class="${"tab-group " + escape(classesBase, true)}" data-testid="tab-group"> <div class="${"tab-list " + escape(classesList, true)}" role="tablist"${add_attribute("aria-labelledby", labelledby, 0)}>${slots.default ? slots.default({}) : ``}</div>  ${$$slots.panel ? `<div class="${"tab-panel " + escape(classesPanel, true)}" role="tabpanel"${add_attribute("aria-labelledby", panel, 0)} tabindex="0">${slots.panel ? slots.panel({}) : ``}</div>` : ``}</div>`;
 });
 const cBase = "text-center cursor-pointer transition-colors duration-100";
 const cInterface = "";
@@ -246,8 +244,10 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let tabSet = 0;
   let $$settled;
   let $$rendered;
+  let previous_head = $$result.head;
   do {
     $$settled = true;
+    $$result.head = previous_head;
     $$rendered = `<h1 data-svelte-h="svelte-136d6se">Projects</h1> ${validate_component(Avatar, "Avatar").$$render($$result, { src: "lat2-smaller.webp" }, {}, {})} ${validate_component(TabGroup, "TabGroup").$$render($$result, {}, {}, {
       panel: () => {
         return ` ${tabSet === 0 ? `<span data-svelte-h="svelte-1yi59d7">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim eos
